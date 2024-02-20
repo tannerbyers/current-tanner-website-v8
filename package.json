@@ -1,7 +1,7 @@
 {
-  "name": "11ty-midnight",
+  "name": "11ty-midnight-tannerbyers.com",
   "version": "1.0.0",
-  "description": "Minimalist dark mode starter template for 11ty",
+  "description": "Minimalist dark mode starter template for 11ty used for tannerbyers.com",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sidswork/11ty-midnight.git"
+    "url": "git://github.com/tannerbyers/tanner-website-v8"
   },
   "author": {
-    "name": "Sid",
-    "url": "https://11ty-midnight.com/"
+    "name": "Tanner Byers",
+    "url": "https://tannerbyers.com/"
   },
   "license": "MIT",
-  "homepage": "https://github.com/sidswork/11ty-midnight#readme",
+  "homepage": "https://github.com/tannerbyers/tanner-website-v8#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
