@@ -1,14 +1,15 @@
 ---
 layout: layouts/post.njk
-title: 11ty Midnight Blog Starter
+title: About Tanner Byers
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
   order: 3
 ---
 
-Minimalist dark mode starter template for 11ty with support for jsfiddle embeds and prismjs syntax highlighting.
+Hey I'm Tanner.
 
-Demo [https://11ty-midnight.netlify.app](https://11ty-midnight.netlify.app)
+I've been coding since 2017 and am currently working on building this blog. 
+Polyglot Programmer w/ focus on web development.
 
-Github [https://github.com/sidswork/11ty-midnight.git](https://github.com/sidswork/11ty-midnight.git)
+[My Github](https://github.com/tannerbyers)
