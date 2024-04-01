@@ -2,9 +2,9 @@
   "title": "Tanner Byers",
   "url": "https://tannerbyers.com/",
   "language": "en",
-  "description": "Polyglot Cloud Programmers Blog",
+  "description": "Fullstack Cloud Programmers Blog",
   "feed": {
-    "subtitle": "Polyglot Cloud Programmers Blog",
+    "subtitle": "Fullstack Cloud Programmers Blog",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://tannerbyers.com/"

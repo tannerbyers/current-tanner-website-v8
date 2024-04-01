@@ -1,8 +1,6 @@
-# Eleventy Midnight Blog Starter
+# tannerbyers.com
 
 Minimalist dark mode starter template for 11ty with support for jsfiddle embeds and prismjs syntax highlighting.
-
-Demo [https://11ty-midnight.netlify.app](https://11ty-midnight.netlify.app)
 
 ## Features
 
@@ -18,8 +16,6 @@ Demo [https://11ty-midnight.netlify.app](https://11ty-midnight.netlify.app)
 ```
 git clone https://github.com/sidswork/11ty-midnight.git my-blog-name
 ```
-
-Or you can click the `Use this template` button on the repository to make a copy of the repository.
 
 ### 2. Navigate to the directory
 

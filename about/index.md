@@ -10,6 +10,6 @@ eleventyNavigation:
 Hey I'm Tanner.
 
 I've been coding since 2017 and am currently working on building this blog. 
-Polyglot Programmer w/ focus on web development.
+Fullstack Cloud Developer w/ focus on web development.
 
 [My Github](https://github.com/tannerbyers)
