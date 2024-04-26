@@ -12,13 +12,13 @@ A friend of mine, who has a degree in tech but doesn't code often, reached out f
 
 I think there's lots of people who are in similar positions so I decided to make this post.
 
-First thing I will say is, Java is not the first language I would recommend due to all it's boierplate, abstractions, and focus on OOP. These are great for corporate implementations but it's a lot for someone to learn at once (I recommend python or javascript for first languages). 
-
-Understanding Object-Oriented Programming (OOP) is crucial for developing corporate solutions. Testing early and frequently, and utilizing version control (such as Git), are essential practices in professional Java development.
+First thing I will say is, Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding. 
+These are great for corporate implementations (large teams, ownership transfer, verbose code leads to self documented code) 
+P.S. I recommend python or javascript for first languages. 
 
 ## Focus on Building
 
-Remember, learning coding is best done through practical application. Instead of overwhelming yourself with infinite possibilities to learn, concentrate on building small projects and acquiring the necessary knowledge along the way.
+Remember, learning to code is best done through practical application. Instead of overwhelming yourself with infinite things you can learn, concentrate on building projects and acquiring the necessary knowledge along the way.
 
 **I highly recommend you read this book first (it's only 9 pages)**
 [7 TIPS ON HOW TO THINK LIKE A PROGRAMMER](https://drive.google.com/file/d/18QxTGFdWUGPUBTutetzIqPiCZmG1hEZW/view)
@@ -27,7 +27,7 @@ Remember, learning coding is best done through practical application. Instead of
 
 1. **Set Up Your Development Environment**
    
-   Ensure you know which version of Java is prevalent in your target industry. Options range from legacy Java 8 to the latest Java 22. Tailor your environment accordingly. 
+   Ensure you know which version of Java is used in your target industry or company. Options can range from legacy Java 8 to the latest Java 22. Tailor your environment accordingly. 
    
    Here's a comprehensive guide to setting up your Java development environment: [How to Set Up a Java Development Environment](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/)
 
@@ -36,7 +36,8 @@ Remember, learning coding is best done through practical application. Instead of
 
 2. **Studying (dont spend more than a month here)**
    
-   Start by watching introductory videos like [Learn Java in 14 Minutes on YouTube](https://www.youtube.com/watch?v=RRubcjpTkks&t=16s&ab_channel=AlexLee). Then, delve into free resources such as:
+   Start by watching introductory videos like [Learn Java in 14 Minutes on YouTube](https://www.youtube.com/watch?v=RRubcjpTkks&t=16s&ab_channel=AlexLee). 
+   Then, delve into free resources such as:
    - [Java Tutorial on Udemy](https://www.udemy.com/course/java-tutorial/)
    - [Java Programming MOOC](https://java-programming.mooc.fi/)
    - [Oracle's Getting Started with Java Development](https://learn.oracle.com/ols/course/getting-started-with-java-development/55593/65768)
@@ -45,7 +46,7 @@ Remember, learning coding is best done through practical application. Instead of
 
 3. **Explore Frameworks and Tools**
    
-    Increase your Java Application Development profiency with tooling and frameworks like Spring, Spring Boot, Maven, and Gradle. 
+    Increase your Java productivity with tooling and frameworks like Spring, Spring Boot, Maven, and Gradle. 
 
     #### Spring and Spring Boot
     Spring is a powerful framework for building enterprise-level Java applications. Begin by understanding the core concepts of Spring, such as dependency injection, Spring MVC, Spring Data, and Spring Security. These form the backbone of most Java-based corporate projects.
@@ -70,7 +71,10 @@ Remember, learning coding is best done through practical application. Instead of
 4. **Undertake Projects**
    
    Apply your knowledge by working on practical projects. Start with small-scale applications and don't worry if you don't finish them. 
-   We're building these to learn, not to deliver code complete projects.
+   We're building these to learn, not to deliver code complete projects. 
    I've got [a running list of application ideas here](/posts/coding-ideas/) but I recommend you build whatever you're interested in!
+
+
+#### Remember to have fun along the way! You're not getting paid to learn this (YET).
 
 By following these steps, you'll be well-prepared to pursue a rewarding career in Java development.
