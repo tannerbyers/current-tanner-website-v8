@@ -7,9 +7,16 @@ eleventyNavigation:
   order: 3
 ---
 
-Hey I'm Tanner.
+## About Me
 
-I've been coding since 2017 and am currently working on building this blog. 
-Fullstack Cloud Developer w/ focus on web development.
+Hi, I'm Tanner Byers, a software dev with years of experience in frontend and full-stack development, specializing in the healthcare IT sector. I've worked with a range of technologies including JavaScript, React, Angular, Node.js, and AWS services.
 
-[My Github](https://github.com/tannerbyers)
+I've developed and maintained applications for companies like Amazon Web Services and Availity, handling projects such as:
+
+- Migrating legacy systems to modern frameworks.
+- Building cloud-native applications.
+- Creating custom automation scripts and tools.
+
+My goal is to build efficient, scalable solutions.
+
+[Get in Touch](/contact)
