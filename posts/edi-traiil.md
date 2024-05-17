@@ -36,4 +36,8 @@ Check on board for current tasks to implement
 Setup company email
 Setup sign up on website
 Make photo bigger on landing page
+Setup social media (tik tok)
+Create github account for editrail
+Create trello or github project board
+Add link to my website for support (consulting)
 Work on getting prototype working with file storage
