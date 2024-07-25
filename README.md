@@ -1,45 +1,13 @@
 # tannerbyers.com
 
-Minimalist dark mode starter template for 11ty with support for jsfiddle embeds and prismjs syntax highlighting.
 
-## Features
-
-1. Minimalist dark mode design
-2. Color gradient highlights
-3. Support for jsfiddle embeds
-4. Code formatting using prisma
-
-## Getting Started
-
-### 1. Clone this Repository
-
-```
-git clone https://github.com/sidswork/11ty-midnight.git my-blog-name
-```
-
-### 2. Navigate to the directory
-
-```
-cd my-blog-name
-```
-
-Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
-
-### 3. Install dependencies
+### 3. Setup & Start
 
 ```
 npm install
-```
-
-### 4. Edit \_data/metadata.json
-
-This file contains all the metadata related to the blog like the title, description, etc.
-
-### 5. Run Eleventy
-
-```
 npx eleventy
 ```
+
 
 Or build and host locally for local development
 
@@ -93,5 +61,3 @@ Example
 ## References
 
 Dark mode blog starter based on the [Official Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog)
-
-Eleventy Home Page [https://www.11ty.dev](https://www.11ty.dev)

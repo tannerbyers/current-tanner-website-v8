@@ -9,15 +9,13 @@ eleventyNavigation:
 
 ## About Me
 
-Hi, I'm Tanner Byers, a software dev/consultant with 5+ years of experience in frontend and full-stack development, specializing in the healthcare IT sector. I've worked with a range of technologies including JavaScript, React, Angular, Node.js, and AWS services.
+ I build websites and work as a software dev/cloud consultant with 5+ years of experience in cloud and full-stack development, specializing in the EDI and the healthcare IT sector. 
+ 
+ I've used Vue, React, Angular, Node.js, Rust and almost all AWS services.
 
-I've developed and maintained applications for companies like Amazon Web Services and Availity, handling projects such as:
+I've designed, developed, deployed and maintained web applications for many enterprise companies like AWS and Availity(nation’s largest health information network), as well as startups like Glidian (Healthcare SaaS)
 
-- Migrating legacy systems to modern frameworks.
-- Building cloud-native applications.
-- Creating custom automation scripts and tools.
-
-My goal is to build efficient, scalable solutions.
+I also have cofounding PayForTime.io (I cofounded this Appointment Scheduling SaaS) and made tons of personal SaaS under [my github](https://github.com/tannerbyers).
 
 Get in Touch
 programtanner@gmail.com
