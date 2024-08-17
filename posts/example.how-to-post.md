@@ -4,6 +4,8 @@ description: a template to use for how-to blog posts
 date: 2021-08-06
 tags: guide
 layout: layouts/post.njk
+permalink: false
+eleventyExcludeFromCollections: true
 
 ---
 
