@@ -1,5 +1,5 @@
 ---
-title: My To Do List
+title: My Idea List
 description: a to do post for me
 date: 2024-08-17
 tags: random
@@ -7,7 +7,7 @@ layout: layouts/post.njk
 
 ---
 
-# To Do
+# Idea
 
 Value in problem solving
 
@@ -21,3 +21,7 @@ Value in problem solving
 
 2. SaaS (Did this (payfortime.io), dont wanna do by myself while having family)
 3. Automate common tasks like proessing files, emails, or scraping websites or documents.
+
+## To Do
+---
+1. Build clearinghouse where you can check eligibility
