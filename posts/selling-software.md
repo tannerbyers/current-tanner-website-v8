@@ -34,8 +34,6 @@ This is a mainstream option because the recurring revenue and if you can keep a 
 
 This is an option I think that works will with premium features in open source development although this goes against my belief that you should own all software you buy. No license check every month to make sure you still own it. I will not be using this option
 
-## 4. 
-
 ## To Do
 ---
 1. Build clearinghouse where you process a transaction in a test system

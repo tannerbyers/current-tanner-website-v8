@@ -25,5 +25,5 @@ A/B Testing for EDI Systems
 
 
 Requires SDK for sending A/B Data and validation requests from Node js system
-Requires backend server running
-Requires UI running to make experiments and such
+Requires backend server running to receive
+Requires UI (react) to configure A/B Testing and view results
