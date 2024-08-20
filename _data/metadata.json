@@ -2,9 +2,9 @@
   "title": "Tanner Byers",
   "url": "https://tannerbyers.com/",
   "language": "en",
-  "description": "Fullstack Cloud Programmers Blog",
+  "description": "Fullstack Development on AWS",
   "feed": {
-    "subtitle": "Fullstack Cloud Programmers Blog",
+    "subtitle": "Dev Blog",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://tannerbyers.com/"

@@ -2,7 +2,7 @@
 title: Learning Java for a Corporate Career
 description: A step-by-step guide to mastering Java for your professional journey.
 date: 2024-04-24
-tags: java, learning
+tags: [java, learning, programming]
 layout: layouts/post.njk
 ---
 

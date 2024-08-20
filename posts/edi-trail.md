@@ -1,43 +1,29 @@
 ---
-title: EDI Trail
-description: A look at my plan for building an EDI SaaS Startup.
-date: 2024-05-17
-tags: EDI, startup, building, design
+title: EDI Trail - My Solution to Responsible Validation of EDI
+description: I've seen how EDI transactions are processed and the current systems roll them out based on company code releases, not operational feedback.
+date: 2024-08-19
+tags: [startup, web devlopment, business, EDI]
 layout: layouts/post.njk
+
 ---
 
-# Building out EDI Trail
+I think EDI transaction validation should be handled with more care. Current systems roll them out based on company code releases, not operational feedback.
 
-So if you haven't heard (and I know you haven't), I'm building a startup called **EDI Trail** that is an open source EDI Storage Platform. This is the first of many products I want to build to try and make more open source products that companies can use over the $1000's/year black box licensed software currently in use. 
+## Background
 
-## Design 
+Imagine you are processing an EDI file (850 purchase order or 997 functional acknowledgement anyone?) and want to add an edit to check for certain conditions based on requirements a trading partner emailed you. For this example lets say you want to check that a specific memberid prefix is not used after a certain date. 
 
-![Design Photo]
-- Build out on AWs as this is where I'm most comfortable and I am confident in my cost saving skills ;) 
+Now most companies would start building out an edit in their edit system of choice and would wait for a release date. The problem here is if there's a mistake in the logic of the edit, the only way said companies will know if there's an issue is if the transactions trigger some alarm (most likely set too high) or customers file complaints. 
 
-- Frontend will either be angular or react. 
+Now both of these options above do work, but I think a more gradual roll out and handing validation based on dynamic factors like location or time.  
 
-- Backend will be an event driven processing system w/ API connected to data sources 
-
-- Storage will be S3 compatible
-
-## Schedule
-
-Mon-Fri
-6-8 AM
-
-Check Company Email
-Create & Post Social Media content for the day
-Checkout github open source issues & pull requests
-Check on board for current tasks to implement
+## EDI Trail
+A/B Testing for EDI Systems
+1. Gradual Rollouts
+2. Advanced Targeting
+3. Experiments
 
 
-## TODO
-Setup company email
-Setup sign up on website
-Make photo bigger on landing page
-Setup social media (tik tok)
-Create github account for editrail
-Create trello or github project board
-Add link to my website for support (consulting)
-Work on getting prototype working with file storage
+Requires SDK for sending A/B Data and validation requests from Node js system
+Requires backend server running
+Requires UI running to make experiments and such
