@@ -11,7 +11,7 @@ layout: layouts/post.njk
 
 Intro
 - Hook
-- Brief overview of the topic and why care
+- Brief overview of åthe topic and why care
 
 Body
 1. Key Concept 1
