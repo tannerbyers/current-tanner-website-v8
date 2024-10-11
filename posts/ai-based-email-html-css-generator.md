@@ -7,15 +7,16 @@ layout: layouts/post.njk
 
 --- 
 
-Follow my thought process while building my first AI based SaaS (a custom email html template generator)!
+Follow my thought process while building my first AI based SaaS.
+I'll be building a custom email html template generator!
 
 ## Start with a Problem
 
-Creating & changing email templates (HTML & CSS) requires coding knowledge as well as up to date specialized knowledge (email client limitations, responsive, & accessible design).
+Creating & modifying email templates requires coding knowledge as well as up to date specialized knowledge (html, css, email client limitations, responsive & accessible design).
 
 ## My Pitch
 
-Generate *good* email templates by chatting with specialized AI agent, saving you time and money.
+Generate *good* email templates within seconds using Bassoon AI.
 
 ## Requirements for MVP
 
@@ -41,8 +42,6 @@ I like static site generators for this (I used [hugo](https://gohugo.io/)) since
 
 I'm going to use [hugoplate](https://github.com/zeon-studio/hugoplate)
 
-![hugoplate template screenshot](hugoplate-template-screenshot.png)
-
 We've got our template, lets get it deployed and then we can customize it.
 I'll be using netlify just because it's free and I don't want to write code for deployment on a side project.
 
@@ -63,32 +62,48 @@ Now we use some creativity (and AI) to rewrite the placeholder landing page cont
 
 We can give a prompt like so and update the template content by reusing our requirements and success criteria
 
-Before:
 
-After:
-
-You'll notice we added some illustrations as well. I have a few sites I use for free illustrations:
-
-But make sure to check attributions and such.
+<div style="display: flex">
+<div>
+<h4>Before</h4>
+<img src="/img/ai-based-email-html-css-generator/hugo-plate-template.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+</div>
+<div>
+<h4>After</h4>
+<img src="/img/ai-based-email-html-css-generator/bassoon-ai-content-rewrite.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+</div>
+</div>
 
 ### Adding Attribution page
 
 Have to shout out the awesome work done by these folks who made this website so easy to look good.
 
 template: <https://github.com/zeon-studio/hugoplate>
-images: <https://storyset.com/email>
+illustrations: <https://storyset.com/email>
 
 ### Now we use the AI to make the AI
 
-We'll use chatgpt to create basic project for mvp purposes. I provide the stack and it provdes the commands & code.
+We'll use chatgpt to create basic project for mvp purposes. I provide the stack and it provides the commands & code.
 
 Chat gpt prompt
 
 ```
+You are a professional web developer. Your design philosophy prioritizes simplicity, using minimal technologies such as HTML and client-side JavaScript, with backend services only when necessary.
 
+Task:
+Build a demo page for an AI-based email template generator with the following features:
+
+Chat with AI Agent: Users can chat with an AI agent, which responds to their queries.
+Code Editor: The AI agent updates a read-only code editor with HTML and CSS based on user interactions. The editor shows email template code.
+Live Preview: Display a real-time preview of the email template reflecting the HTML/CSS updates from the code editor.
+This is for demo purposes only, so the code editor should remain read-only. Feel free to ask any clarifying questions before starting.
 ```
 
 Modify MVP as needed to get working example.
+
+**Iterate**
+
+Now we've got a working demo!
 
 Let's record a demo and post on twitter:
 
@@ -115,6 +130,8 @@ These metrics will give me a clear picture of whether the product’s value prop
 ---
 
 **Timeline for Validation**
+
+<img src="/img/ai-based-email-html-css-generator/funny_meme_waiting_for_clients.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
 
 I'll validate the MVP over a 30-day period, aiming to achieve 250 visitors per week with 20-50 signups overall. This structured timeline ensures I gather enough data to make informed decisions about the product’s future. Here’s how I’m breaking it down:
 
