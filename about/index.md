@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/base.njk
 title: About Tanner Byers
 templateClass: tmpl-post
 eleventyNavigation:
@@ -7,13 +7,15 @@ eleventyNavigation:
   order: 3
 ---
 
-## About Me
+# About Me
 
- I build websites and work as a software dev/cloud consultant with 5+ years of experience in cloud and full-stack development, specializing in Web Dev and Healthcare IT sector. 
- 
- I've used Vue, React, Angular, Node.js, Rust and almost all AWS services.
+<img width="300" src="/img/tanner.jpg"/>
 
-I've worked at AWS, Availit, Glidian, and PayForTime
+I have 5+ years of full-stack experience in corporate america building enterprise web applications that scale on AWS.
 
-Get in Touch
-programtanner@gmail.com
+I prefer to use React, Node.js, and AWS CDK or Cloudformation.
+
+<p>I run a <a href="https://www.dxand.com" target= "_blank">healthcare blog</a> (with 2k+ monthly visitors), built <a target= "_blank" href="https://www.bassoonai.com">bassoonAI</a> (email template editor & generator), PayForTime.io (deprecated - Calendly but you paid for the time in advance), and worked at <a href="https://www.aws.com" target= "_blank">AWS</a>, <a target= "_blank" href="https://www.availity.com">Availity</a>, & <a href="https://www.glidian.com" target= "_blank">Glidian</a> (<a href="/resume">my resume </a>if you're interested).</p>
+
+I check my email daily
+<programtanner@gmail.com>

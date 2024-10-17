@@ -2,10 +2,9 @@
 title: Building an AI based Email HTML/CSS Generator SaaS
 description: This blog post will go over the design decisions and thought process while building my first AI based SaaS.
 date: 2021-08-06
-tags: SaaS, AI, Business
+tags: [SaaS, AI, Business]
 layout: layouts/post.njk
-
---- 
+---
 
 Follow my thought process while building my first AI based SaaS.
 I'll be building a custom email html template generator!
@@ -16,7 +15,7 @@ Creating & modifying email templates requires coding knowledge as well as up to 
 
 ## My Pitch
 
-Generate *good* email templates within seconds using Bassoon AI.
+Generate _good_ email templates within seconds using Bassoon AI.
 
 ## Requirements for MVP
 
@@ -34,11 +33,11 @@ Generate *good* email templates within seconds using Bassoon AI.
 
 ## Let's get building
 
-Normally I would jump straight to building the mvp because that's the most fun thing to do. However my previous experience building SaaS (thanks payfortime.io) tells me I should validate my market before spending hours building a lame product no one may wants. 
+Normally I would jump straight to building the mvp because that's the most fun thing to do. However my previous experience building SaaS (thanks payfortime.io) tells me I should validate my market before spending hours building a lame product no one may wants.
 
 The quickest way to do this is a landing page w/ waitlist sign up page.
 
-I like static site generators for this (I used [hugo](https://gohugo.io/)) since they're (usually) FREE, open source, and have lots of really nice templates with common web app patterns (landing page, blog, contact form, comments, analytics, themes) all set up for you. 
+I like static site generators for this (I used [hugo](https://gohugo.io/)) since they're (usually) FREE, open source, and have lots of really nice templates with common web app patterns (landing page, blog, contact form, comments, analytics, themes) all set up for you.
 
 I'm going to use [hugoplate](https://github.com/zeon-studio/hugoplate)
 
@@ -47,7 +46,7 @@ I'll be using netlify just because it's free and I don't want to write code for 
 
 Easy setup, just import and run with default configurations found in template.
 
-> **_NOTE:_**  If this marketing site get's over 2k visitors a month, I'll make a github action to build the project and put it on a cdn (static site generators are awesome.) to reduce cost and latency.
+> **_NOTE:_** If this marketing site get's over 2k visitors a month, I'll make a github action to build the project and put it on a cdn (static site generators are awesome.) to reduce cost and latency.
 
 ## Let's get configuring
 
@@ -61,7 +60,6 @@ Alright we've got our template, let's configure the base services. here's the on
 Now we use some creativity (and AI) to rewrite the placeholder landing page content with new text!
 
 We can give a prompt like so and update the template content by reusing our requirements and success criteria
-
 
 <div style="display: flex">
 <div>
@@ -88,26 +86,29 @@ We'll use chatgpt to create basic project for mvp purposes. I provide the stack 
 Chat gpt prompt
 
 ```
-You are a professional web developer. Your design philosophy prioritizes simplicity, using minimal technologies such as HTML and client-side JavaScript, with backend services only when necessary.
+You are a professional web developer.
+Your design philosophy prioritizes simplicity,
+using minimal technologies such as HTML and client-side JavaScript,
+ with backend services only when necessary.
 
 Task:
 Build a demo page for an AI-based email template generator with the following features:
 
-Chat with AI Agent: Users can chat with an AI agent, which responds to their queries.
-Code Editor: The AI agent updates a read-only code editor with HTML and CSS based on user interactions. The editor shows email template code.
-Live Preview: Display a real-time preview of the email template reflecting the HTML/CSS updates from the code editor.
-This is for demo purposes only, so the code editor should remain read-only. Feel free to ask any clarifying questions before starting.
+Chat with AI Agent: Users can chat with an AI agent,
+which responds to their queries.
+Code Editor: 
+The AI agent updates a read-only code editor with 
+HTML and CSS based on user interactions.
+The editor shows email template code.
+Live Preview:
+Display a real-time preview of the email template
+reflecting the HTML/CSS updates from the code editor.
+This is for demo purposes only,
+so the code editor should remain read-only.
+Feel free to ask any clarifying questions before starting.
 ```
 
 Modify MVP as needed to get working example.
-
-**Iterate**
-
-Now we've got a working demo!
-
-Let's record a demo and post on twitter:
-
-[screen recording]()
 
 ---
 
@@ -117,13 +118,13 @@ Let's record a demo and post on twitter:
 
 To validate demand and gauge whether I’m on the right track, I'll closely monitor these metrics. They’ll inform whether to proceed with development or pivot the approach if needed.
 
-| Metric                    | Description                                            | Formula                                      |
-|----------------------------|--------------------------------------------------------|----------------------------------------------|
-| Visitors                   | Total landing page visitors                            | Sum(Visitors)                                |
-| Conversion Rate            | % of visitors who sign up                              | (Sign-ups / Visitors) * 100                  |
-| Referral Rate              | % of users who referred others                         | (Referrals / Sign-ups) * 100                 |
-| CTA Conversion Rate        | % of clicks on CTAs leading to sign-ups                | (CTA Clicks / Visitors) * 100                |
-| Bounce Rate                | % of visitors leaving without interacting              | (Bounces / Visitors) * 100                   |
+| Metric              | Description                               | Formula                        |
+| ------------------- | ----------------------------------------- | ------------------------------ |
+| Visitors            | Total landing page visitors               | Sum(Visitors)                  |
+| Conversion Rate     | % of visitors who sign up                 | (Sign-ups / Visitors) \* 100   |
+| Referral Rate       | % of users who referred others            | (Referrals / Sign-ups) \* 100  |
+| CTA Conversion Rate | % of clicks on CTAs leading to sign-ups   | (CTA Clicks / Visitors) \* 100 |
+| Bounce Rate         | % of visitors leaving without interacting | (Bounces / Visitors) \* 100    |
 
 These metrics will give me a clear picture of whether the product’s value proposition resonates with the people who would actually pay for it.
 
@@ -136,7 +137,7 @@ These metrics will give me a clear picture of whether the product’s value prop
 I'll validate the MVP over a 30-day period, aiming to achieve 250 visitors per week with 20-50 signups overall. This structured timeline ensures I gather enough data to make informed decisions about the product’s future. Here’s how I’m breaking it down:
 
 | Week | Target Visitors | Target Signups (Low) | Target Signups (High) |
-|------|-----------------|----------------------|-----------------------|
+| ---- | --------------- | -------------------- | --------------------- |
 | 1    | 250             | 5                    | 13                    |
 | 2    | 500             | 10                   | 25                    |
 | 3    | 750             | 15                   | 38                    |
@@ -151,7 +152,6 @@ If I’m trending below these sign-up numbers, I’ll assess the product positio
 Once I hit the target signups, I’ll begin opening the product up to the waitlist in small batches, ensuring that I collect detailed feedback. These users will help me refine core features before expanding further.
 
 - **Collect qualitative feedback**: I'll focus on in-depth feedback from the initial users. Understanding what they like, what’s missing, and where they hit friction will help prioritize feature iterations.
-  
 - **Measure usage patterns**: I'll track which features users engage with most to inform which parts of the product to scale up. A key lesson in micro-SaaS is staying lean—only building what users actually need and will pay for.
 
 ## Conclusion
