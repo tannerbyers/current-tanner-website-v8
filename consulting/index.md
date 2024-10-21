@@ -10,11 +10,11 @@ eleventyNavigation:
 ## Consulting
 
 ## Areas of Interest
-Healthcare IT 
-EDI 
+- Healthcare IT 
+- EDI 
 
 ## Preferred Tech Stack
-- React 
+- React & TailwindCSS
 - Node.js
 - AWS 
 
