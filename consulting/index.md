@@ -7,17 +7,25 @@ eleventyNavigation:
   order: 5
 ---
 
-
 ## Consulting
 
-### Areas
-Healthcare EDI Design/Development
-Fullstack JS/TS Development
-Web Application Design
-Cloud Modernization
+## Areas of Interest
+Healthcare IT 
+EDI 
 
-- $150/hr
-- retainer based pay for long term contracts
+## Preferred Tech Stack
+- React 
+- Node.js
+- AWS 
+
+## Services
+- Fullstack JS/TS Development
+- Web Application & Infrastructure Design
+- Cloud Modernization
+
+## Payment
+- $90/hr solo consulting
+- Retainer or Project based pay for long term contracts depending on size of work
 
 Contact me any time
 <programtanner@gmail.com>
