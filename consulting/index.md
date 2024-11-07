@@ -9,23 +9,24 @@ eleventyNavigation:
 
 ## Consulting
 
-## Areas of Interest
+## Areas of Expertise
 - Healthcare IT 
 - EDI 
+- AWS
 
 ## Preferred Tech Stack
-- React & TailwindCSS
-- Node.js
-- AWS 
+- Frontend: React & TailwindCSS
+- Backend: Node.js or Python
+- Infra: AWS 
 
 ## Services
-- Fullstack JS/TS Development
+- Fullstack Development
 - Web Application & Infrastructure Design
 - Cloud Modernization
 
-## Payment
-- $90/hr solo consulting
-- Retainer or Project based pay for long term contracts depending on size of work
+## Provide
+- Hourly solo consulting
+- Retainer or Project based pay for longer term contracts (6+ month plus)
 
 Contact me any time
 <programtanner@gmail.com>

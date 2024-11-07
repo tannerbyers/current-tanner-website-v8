@@ -25,7 +25,6 @@ Experienced Software Developer with **5+ years of development experience** and s
 **CERTIFICATIONS** 
 
 - **AWS Certified Database \- Specialty** | Oct 2024
-
 - **AWS Certified Security \- Specialty** | Oct 2023  
 - **AWS Certified Solutions Architect \- Associate** | May 2023  
 - **AWS Certified Developer \- Associate |** Jan 2023  
@@ -35,7 +34,7 @@ Experienced Software Developer with **5+ years of development experience** and s
 
 ***Amazon Web Services***
 
-*Cloud Application Developer* **	Oct 2022 – Current**
+*Cloud Application Developer* **Oct 2022 – Current**
 
 - **Reduced UI searching times** by designing and implementing a flexible document repository in Angular, cutting retrieval time from average 1 minute searching across multiple pages to 15 seconds on one search page with dynamic filters.  
 - **Ranked top 10 AWS Jam in 2023** for developing the Python and Node.js code, CloudFormation templates, and IAM policies for **Foundational DevOps** & **AI Customer Sentiment Showdown** jams.  
