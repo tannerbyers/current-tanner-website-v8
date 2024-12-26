@@ -24,9 +24,5 @@ eleventyNavigation:
 - Web Application & Infrastructure Design
 - Cloud Modernization
 
-## Provide
-- Hourly solo consulting
-- Retainer or Project based pay for longer term contracts (6+ month plus)
-
-Contact me any time
+Business contact:
 <programtanner@gmail.com>
