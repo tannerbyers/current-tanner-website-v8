@@ -1,7 +1,7 @@
 ---
 title: Solving Problems with Scalable Solutions
 description: A post on the thought process when designing, planning, and building scalable web applications & sites.
-date: 2024-04-24
+date: 2024-12-28
 tags: [learning, solution, consulting, process]
 layout: layouts/post.njk
 ---
