@@ -1,0 +1,100 @@
+---
+title: Solving Problems with Scalable Solutions
+description: A post on the thought process when designing, planning, and building scalable web applications & sites.
+date: 2024-04-24
+tags: [learning, solution, consulting, process]
+layout: layouts/post.njk
+---
+# Solving Problems with Scalable Solutions
+
+Every solution starts with a problem—and a customer experiencing it. So, let’s start with the customer.
+
+## 1. Understanding the Customer
+
+- **Who are they?** What are their demographics?  
+- **What’s their pain?** How big is the problem’s impact on their life?  
+- **What’s been tried?** Why haven’t existing solutions worked?  
+- **What’s missing?** What are the perceived drawbacks of current options?
+
+Gathering insights early is key. We aim to fix the problem as effectively and efficiently as possible.
+
+---
+
+## 2. Planning and Scoping
+
+### Researching Existing Solutions  
+Start by identifying existing options, especially open-source solutions. Leveraging previous work saves time and resources, letting us focus on innovating where it matters.
+
+### Matching Solutions to Scale  
+Solutions must fit the customer’s size and needs. For example, if you’re a team of fewer than five, a shared Google Sheet might work better than a costly custom CRM. Scale thoughtfully—don’t burn capital where efficiency can thrive.
+
+**Key questions to answer:**  
+- How many users?  
+- Peak activity times?  
+- Seasonal patterns or planned traffic spikes?  
+- What data are we storing, and what processes do we need?  
+
+---
+
+## 3. Regulatory Considerations  
+Address compliance from the start. Depending on the industry, regulations like **HIPAA, 508, FEDRAMP, FINRA**, or **HITECH** may apply. Non-compliance risks are not worth cutting corners.
+
+---
+
+## 4. Design Phase  
+
+After scoping, draft user stories, mockups, and data maps. For more robust projects, include infrastructure diagrams and threat models to align the technical foundation with user needs and regulatory requirements.
+
+### Bootstrap the System  
+Build from starter templates or similar implementations. A monolithic architecture is often ideal for small teams (<100 employees). 
+
+**Example:**  
+*For a custom patient coordinator CRM, I’d use React.js (frontend) and Node.js (backend) with AWS for HIPAA compliance.*  
+
+Break features into manageable chunks—no more than 4 hours per task:  
+- *E.g., “Users can log in to access their dashboard and view daily patient schedules in one place.”*
+
+---
+
+## 5. Development and Testing  
+
+### Frontend and Backend Principles  
+- Keep the stack aligned (e.g., React frontend + Node or Rust backend).  
+- Follow KISS (Keep It Simple, Stupid): Static frontend + API + cron jobs for maintenance is often enough.  
+
+**Backend Model:**  
+`Server → API ← Job`  
+
+**Frontend Model:**  
+`Data Mapper → Components → View → Solves Problem`  
+
+### Testing and Analytics  
+- Prioritize E2E testing for user scenarios and unit testing for sanity checks.  
+- Add logging and analytics to track user behavior and system performance (e.g., load times, error rates).  
+
+---
+
+## 6. Scaling and Reliability  
+
+Build for scale based on:  
+- Active connections  
+- User count  
+- Data size per session  
+
+Plan for uptime with:  
+- Disaster recovery  
+- High availability  
+- Automated deployments via CI/CD pipelines and infrastructure-as-code (Terraform or Pulumi).  
+
+AWS remains a top choice for healthcare applications due to its reliability and scalability. 
+
+---
+
+## Final Touches  
+
+- **Styling:** Stick with accessible libraries like `react-508-components` to maintain 508 compliance.  
+- **Linting & Formatting:** Consistency matters more than the tool—just enforce standards.
+
+---
+
+That’s the process in a nutshell. What’d I miss?
