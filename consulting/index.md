@@ -10,19 +10,21 @@ eleventyNavigation:
 ## Consulting
 
 ## Areas of Expertise
-- Healthcare IT 
+- Frontend Development
+- U.S. Healthcare IT 
+- X12, HL7, & FHIR
 - EDI 
 - AWS
 
 ## Preferred Tech Stack
 - Frontend: React & TailwindCSS
 - Backend: Node.js or Python
-- Infra: AWS 
+- Infra: AWS w/ Terraform
 
 ## Services
-- Fullstack Development
+- Frontend Development
 - Web Application & Infrastructure Design
-- Cloud Modernization
+- MVP & POC Development 
 
 Business contact:
 <programtanner@gmail.com>
