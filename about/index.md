@@ -12,9 +12,9 @@ eleventyNavigation:
 <img width="600" src="/img/tanner.jpg"/>
 </p>
 
-I solve healthcare problems.
+I solve tech problems.
 
-<p>I've multiple fullstack web applications ([healthcare codeset search web app](https://github.com/tannerbyers/Ediapi), [Zoom Transcription web app](https://github.com/tannerbyers/Scribe-Backend), [daily horoscope SPA](https://github.com/tannerbyers/Bewitching-Magic-PWA), [food truck finder web app](https://github.com/tannerbyers/Food-Truck-Finder)) and have founded multiple companies like <a target= "_blank" href="https://www.bassoonai.com">bassoonAI</a> (AI email template generator) and PayForTime.io (failed biz - think Calendly but for sales reps and you paid for the appointments in advance).
+<p>I've multiple fullstack web applications (<a href="https://github.com/tannerbyers/Ediapi">healthcare codeset search web app</a>, <a href="https://github.com/tannerbyers/Scribe-Backend">zoom transcription web app</a>, <a href="https://github.com/tannerbyers/Bewitching-Magic-PWA" >daily horoscope SPA</a>, <a href="https://github.com/tannerbyers/Food-Truck-Finder" >food truck finder web app </a>) and have founded multiple companies like <a target= "_blank" href="https://www.bassoonai.com">bassoonAI</a> (AI email template generator) and PayForTime.io (failed biz - think Calendly but for sales reps and you paid for the appointments in advance).
 
 I've worked at <a href="https://www.aws.com" target= "_blank">AWS</a>, <a target= "_blank" href="https://www.availity.com">Availity</a>, and <a href="https://www.glidian.com" target= "_blank">Glidian</a> and have consulted for many other companies.</p>
 
