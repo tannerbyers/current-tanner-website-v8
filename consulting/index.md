@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Consulting
 
-I specialize in solving U.S. healthcare and tech sector problems by stsrting with in-depth audits followed by decisive expert consulting.
+I specialize in solving U.S. healthcare and tech sector problems by starting with in-depth audits followed by decisive expert consulting.
 ---
 
 ### Areas of Expertise
@@ -33,7 +33,6 @@ I specialize in solving U.S. healthcare and tech sector problems by stsrting wit
   - Disaster Recovery
   - Code Reviews and more.  
 - Deliverables include a 12-section report, prioritized action plan, and live presentation.  
-- **Investment**: $10,000 - $20,000 (2 weeks of research, 30-day delivery).  
 
 #### **2. MVP & POC Development**
 - Accelerate innovation with minimum viable products and proof-of-concept projects.  
