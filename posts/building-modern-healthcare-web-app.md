@@ -29,10 +29,10 @@ Start by identifying existing options, especially open-source solutions. Leverag
 Solutions must fit the customer’s size and needs. For example, if you’re a team of fewer than five, a shared Google Sheet might work better than a costly custom CRM. Scale thoughtfully—don’t burn capital where efficiency can thrive.
 
 **Key questions to answer:**  
-- How many users?  
+- How many users/active connections at one time?  
 - Peak activity times?  
 - Seasonal patterns or planned traffic spikes?  
-- What data are we storing, and what processes do we need?  
+- What and how much data are we storing, and what processes do we need (zip, encrypt, upload)?  
 
 ---
 
@@ -46,7 +46,7 @@ Address compliance from the start. Depending on the industry, regulations like *
 After scoping, draft user stories, mockups, and data maps. For more robust projects, include infrastructure diagrams and threat models to align the technical foundation with user needs and regulatory requirements.
 
 ### Bootstrap the System  
-Build from starter templates or similar implementations. A monolithic architecture is often ideal for small teams (<100 employees). 
+Build from starter templates or similar implementations. A monolithic architecture is often ideal for small teams (<20 employees). 
 
 **Example:**  
 *For a custom patient coordinator CRM, I’d use React.js (frontend) and Node.js (backend) with AWS for HIPAA compliance.*  

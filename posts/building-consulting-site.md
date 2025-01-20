@@ -48,28 +48,17 @@ Before choosing the tech stack, I outlined the primary requirements:
 - Audit log and live monitoring for all interactions with infrastructure and exceeding performance, error & cost thresholds.
 
 ---
+Will add architecture diagrams soon
+---
 
 ### Analytics Integration
 - Posthog looks really cool so I'll be trying it for monitoring performance and user traits. 
 
 ### Future Scalability
-- Gatsby support makes it easy to extend this in many directions (bloggging or maybe authentication)!
-
-## Challenges and Lessons Learned
-- **Challenges**: Any issues faced during setup or deployment.
-- **Lessons**: Key takeaways for similar projects in the future.
-
----
+- Gatsby support makes it easy to extend this in many directions (blogging or maybe authentication)!
 
 ## Conclusion
 A thoughtfully designed tech stack and deployment strategy are critical for any project, especially for a business landing page. This approach ensures scalability, performance, and maintainability, aligning with the needs of a growing consulting business.
 
-**Call to Action**:  
 If you're looking for a similar setup or need help modernizing your tech stack, feel free to reach out!
 
----
-
-## Additional Sections (Optional)
-- Diagrams of the architecture.
-- Code snippets for deployment scripts.
-- FAQs about the tech stack.
