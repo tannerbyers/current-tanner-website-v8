@@ -5,13 +5,12 @@ date: 2024-12-28
 tags: [learning, solution, consulting, process]
 layout: layouts/post.njk
 ---
-# Solving Problems with Scalable Solutions
 
-Every solution starts with a problem—and a customer experiencing it. So, let’s start with the customer.
+Every solution starts with a problem and a customer experiencing it so we'll start with the customer.
 
 ## 1. Understanding the Customer
 
-- **Who are they?** What are their demographics?  
+- **Who are they?** What are their demographics?  Do Dr's and Programmers use websites the same way? Probably not. So make sure you know who you're building for. 
 - **What’s their pain?** How big is the problem’s impact on their life?  
 - **What’s been tried?** Why haven’t existing solutions worked?  
 - **What’s missing?** What are the perceived drawbacks of current options?

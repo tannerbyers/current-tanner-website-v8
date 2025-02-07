@@ -6,8 +6,6 @@ tags: [learning, consulting]
 layout: layouts/post.njk
 ---
 
-# Choosing the Tech Stack and Deployment Strategy for My Consulting Business Landing Page
-
 ## Introduction
 Building a landing page is one of the first steps to establishing an online presence for any business. For my tech consulting business, the goal was to create a simple, cost-effective, and professional site that could grow with my needs (currently 0 but can grow to atleast 1000's of requests). Here's how I approached selecting the tech stack, deployment strategy, and management process.
 
