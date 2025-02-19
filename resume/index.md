@@ -12,7 +12,7 @@ eleventyNavigation:
  [LinkedIn](https://www.linkedin.com/in/tanner-byers/) | [Github](https://github.com/tannerbyers)
 
 **PROFESSIONAL SUMMARY**   
-Experienced Software Developer with **10+ years of development experience** and strong preference for javascript development and a proven track record completing full-stack cloud development. Proficient in React, NodeJs and AWS services with expertise in the healthcare IT industry. 
+Experienced Software Developer with **8+ years of development experience** and strong preference for javascript development and a proven track record completing full-stack cloud development. Proficient in React, NodeJs and AWS services with expertise in the healthcare IT industry. 
 
 **SKILLS** 
 
