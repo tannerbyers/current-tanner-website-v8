@@ -12,11 +12,11 @@ eleventyNavigation:
 <img width="600" src="/img/tanner.jpg"/>
 </p>
 
-I solve tech problems.
+<p><b>TLDR:</b>I solve problems—mostly in healthcare. Mostly deal with outdated, slow, and expensive to maintain systems. I help modernize them, making them scalable and cost-efficient.</p>
 
-<p>I've created multiple fullstack web applications (<a href="https://github.com/tannerbyers/Ediapi">healthcare codeset search</a>, <a href="https://github.com/tannerbyers/Scribe-Backend">zoom transcription</a>, <a href="https://github.com/tannerbyers/Bewitching-Magic-PWA" >daily horoscope SPA</a>, <a href="https://github.com/tannerbyers/Food-Truck-Finder" >food truck finder </a>) and have founded multiple companies: <a target= "_blank" href="https://www.bassoonai.com">bassoonAI</a> (AI email template generator) and 
-    <br/> PayForTime.io (failed biz - think Calendly but for sales reps and you paid for the appointments in advance).
+<p>I've worked at AWS, Availity, and Glidian, and I’ve consulted for other healthcare companies that needed their tech to actually work for them—not against them.
 
-I've worked at <a href="https://www.aws.com" target= "_blank">AWS</a>, <a target= "_blank" href="https://www.availity.com">Availity</a>, and <a href="https://www.glidian.com" target= "_blank">Glidian</a> <br/> and have consulted for many other companies.</p>
+These days, I also run The Florida Marketer, helping local healthcare businesses get results with digital marketing.
 
-Business contact: <programtanner@gmail.com>
+I always love talking shop and figuring out how to make things better. Shoot me an email and we can setup a call! 
+ <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a>

@@ -8,11 +8,11 @@ layout: layouts/post.njk
 
 # How to Learn Java for a Corporate Career
 
-A friend of mine, who has a degree in tech but doesn't code often, reached out for my advice on learning Java.   
+A friend of mine from work reached out for advice on learning Java.   
 
-I think there's lots of people who are in similar positions so I decided to make this post.
+I think there's at least one other person who is interested in this so I decided to make this post.
 
-First thing I will say is, Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding. 
+First thing I will say is, Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding.
 These are great for corporate implementations (large teams, ownership transfer, verbose code leads to self documented code) 
 P.S. I recommend python or javascript for first languages. 
 
@@ -75,6 +75,6 @@ Remember, learning to code is best done through practical application. Instead o
    I've got [a running list of application ideas here](/posts/coding-ideas/) but I recommend you build whatever you're interested in!
 
 
-#### Remember to have fun along the way! You're not getting paid to learn this (YET).
+#### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
 
-By following these steps, you'll be well-prepared to pursue a rewarding career in Java development.
+By following these steps, you'll be somewhat prepared to use Java at work!

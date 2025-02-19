@@ -59,4 +59,3 @@ Will add architecture diagrams soon
 A thoughtfully designed tech stack and deployment strategy are critical for any project, especially for a business landing page. This approach ensures scalability, performance, and maintainability, aligning with the needs of a growing consulting business.
 
 If you're looking for a similar setup or need help modernizing your tech stack, feel free to reach out!
-
