@@ -6,53 +6,66 @@ eleventyNavigation:
   key: Consulting
   order: 5
 ---
-
 ## Consulting
 
-I specialize in solving U.S. healthcare and tech sector problems.
+I help U.S. healthcare and tech companies solve complex problems with efficient, scalable engineering.
 
 ---
 
+### Why Work With Me?
 
-### Why Choose Me?
+- **Healthcare IT Expertise**  
+  With 5+ years in healthcare tech, I’ve worked at scale—from the largest U.S. healthcare clearinghouse to fast-moving startups—navigating legacy systems, EDI workflows, HIPAA, and everything in between.
 
-- **Healthcare IT Focus**: With 5+ years in healthcare IT, I’ve worked with everything from the largest U.S. clearinghouse to 20-person startups, solving technical problems and improving operations.
-- **Cloud & Infrastructure Optimization**: I leverage AWS to help your business work efficiently and cutting costs while improving scalability and security. Let Amazon have the headache of managing servers!
-- **Simplified Process**: From audits to execution, I follow first principle thinking when creating solutions for business problems. This keeps costs low and effort efficient.
+- **Cloud & Infrastructure Optimization**  
+  I use AWS to reduce costs, increase reliability, and simplify infrastructure. Whether it’s a lift-and-shift or full re-architecture, I design systems that scale without stress.
+
+- **Clear, Strategic Process**  
+  I apply first-principles thinking to everything from audits to architecture. That means less fluff, more impact—and solutions that make sense for your business and budget. I hate nothing more than useless meetings and projects.
 
 ---
 
 ### Areas of Expertise
 
-- **Healthcare IT**: Deep understanding of U.S. healthcare standards (X12, HL7, FHIR), including Insurance processes, HIPAA compliance, 508 accessibility, and EDI processes.  
-- **AWS Cloud Solutions**: Cost-optimized infrastructure and scalability solutions tailored to your needs.  
+- **Healthcare Software Development**  
+  - HL7, X12, FHIR integration  
+  - HIPAA compliance & 508 accessibility  
+  - Claims processing, eligibility, authorizations  
+
+- **Cloud Architecture (AWS)**  
+  - Cost optimization & monitoring  
+  - Serverless applications (Lambda, DynamoDB)  
+  - IaC with Terraform, CI/CD pipelines  
+
+- **Full-Stack Development**  
+  - React, TailwindCSS, Node.js, Python  
+  - RESTful APIs & microservices  
+  - Testing-first approach (TDD, unit/integration tests)  
 
 ---
 
 ### Core Offerings
 
-#### **1. Comprehensive Tech Audit**
-- Identify risks, inefficiencies, and opportunities in your IT environment.  
-- Proprietary scoring and risk-based prioritization across 12 critical categories e.g:
-  - Documentation & Processes
-  - Security Posture
-  - Data Model
-  - Scalability
-  - Disaster Recovery
-  - Code Reviews and more.  
+#### 1. **Tech & Cloud Audits**
+- Full-stack review across 12 critical areas:  
+  - Infrastructure, security, disaster recovery  
+  - Code quality, data model, documentation, and more  
+- Includes a prioritized action plan based on risk, ROI, and business goals
 
-#### **2. MVP & POC Development**
-- Build scalable, secure, and modern solutions with **preferred tech stack**:  
-  - **Frontend**: React & TailwindCSS  
+#### 2. **MVP & Proof of Concept Development**
+- Quick-turn builds with production-ready architecture  
+- Clean, scalable code tailored to your goals using my preferred stack:  
+  - **Frontend**: React + TailwindCSS  
   - **Backend**: Node.js or Python  
-  - **Infrastructure**: AWS w/ Terraform  
-  - **TDD**: User stories correlate with tests and functionality
+  - **Infra**: AWS + Terraform  
+  - **Workflow**: Story-driven TDD for clarity and alignment
 
-#### **3. Web Application & Infrastructure Design**
-- Custom full-stack development tailored to healthcare startups and companies.  
-- Specifically to meet certain metrics or standards for scalability, security, and compliance.  
+#### 3. **Custom Web App & Infrastructure Design**
+- End-to-end architecture and development  
+- Designed for compliance, scalability, and performance  
+- Ideal for healthcare startups or any org modernizing legacy platforms
 
 ---
 
-If you need a fresh perspective on your tech stack, a strategic audit, or hands-on development, let’s talk.
-[programtanner@gmail.com](mailto:programtanner@gmail.com)
+Looking for an experienced developer, AWS consultant, or someone who just gets healthcare tech?  
+Let’s talk: [programtanner@gmail.com](mailto:programtanner@gmail.com)

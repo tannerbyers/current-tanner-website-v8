@@ -8,13 +8,11 @@ eleventyNavigation:
 ---
 
 # About Me
-<p align="center">
-<img width="600" src="/img/tanner.jpg"/>
-</p>
-
-<p><b>TLDR:</b>I solve problems, mostly in tech. I've worked with lots of outdated, slow, and expensive to maintain systems and help modernize them, making them scalable and cost-efficient.</p>
-
-<p>I've worked at AWS, Availity, and Glidian, and I’ve consulted for other  companies that needed their tech to actually work for them.
-
-I always love talking shop and figuring out how to make things better. Shoot me an email and we can setup a call! 
- <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a>
+ <p align="center"> 
+ <img width="100%" src="/img/tanner.jpg"/>
+ </p> 
+ <p><b>TL;DR: </b> I solve complex tech problems (mostly with code). I specialize in modernizing outdated, slow, and expensive systems into scalable, cost-efficient solutions.</p> 
+ 
+ <p>Most of my experience is in the healthcare space, where I’ve worked with companies like <b><a target="_blank" rel="noopener noreferrer" href="https://www.availity.com">Availity</a></b> and <b><a target="_blank" rel="noopener noreferrer" href="https://www.glidian.com">Glidian</a></b>. I’ve also consulted for a wide range of businesses during my time at <b><a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/">Amazon Web Services (AWS)</a></b>.</p> 
+ 
+ <p><b>Business inquiries:</b> <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a></p> 
