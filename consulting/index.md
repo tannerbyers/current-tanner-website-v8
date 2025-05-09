@@ -1,71 +1,75 @@
 ---
 layout: layouts/base.njk
-title: Consulting
+title: Tech Services
 templateClass: tmpl-post
 eleventyNavigation:
-  key: Consulting
+  key: Tech Services
   order: 5
 ---
-## Consulting
 
-I help U.S. healthcare and tech companies solve complex problems with efficient, scalable engineering.
+## Tech Services
 
----
+I help healthcare companies and founders solve technical problems with clean, reliable software and efficient infrastructure.
 
-### Why Work With Me?
-
-- **Healthcare IT Expertise**  
-  With 5+ years in healthcare tech, I’ve worked at scale—from the largest U.S. healthcare clearinghouse to fast-moving startups—navigating legacy systems, EDI workflows, HIPAA, and everything in between.
-
-- **Cloud & Infrastructure Optimization**  
-  I use AWS to reduce costs, increase reliability, and simplify infrastructure. Whether it’s a lift-and-shift or full re-architecture, I design systems that scale without stress.
-
-- **Clear, Strategic Process**  
-  I apply first-principles thinking to everything from audits to architecture. That means less fluff, more impact—and solutions that make sense for your business and budget. I hate nothing more than useless meetings and projects.
+I've been building full-stack applications since 2019 and have worked in healthcare IT for over five years. I’ve fixed 100's of legacy systems, launched new products, and rebuilt cloud environments for cost and performance. If you need a developer who can handle complexity without wasting time, I can help.
 
 ---
 
-### Areas of Expertise
+### What I Bring
 
-- **Healthcare Software Development**  
-  - HL7, X12, FHIR integration  
-  - HIPAA compliance & 508 accessibility  
-  - Claims processing, eligibility, authorizations  
-
-- **Cloud Architecture (AWS)**  
-  - Cost optimization & monitoring  
-  - Serverless applications (Lambda, DynamoDB)  
-  - IaC with Terraform, CI/CD pipelines  
+- **Healthcare Experience**  
+  I’ve worked with large healthcare clearinghouses and startups. I understand HL7, FHIR, HIPAA, and legacy systems. I know where the problems are and how to address them without disrupting what already works.
 
 - **Full-Stack Development**  
-  - React, TailwindCSS, Node.js, Python  
-  - RESTful APIs & microservices  
-  - Testing-first approach (TDD, unit/integration tests)  
+  I build applications that are fast, maintainable, and focused on the actual problem. I write clear, well-tested code and structure projects so they’re easy to improve and scale over time.
+
+- **Cloud Architecture and Cost Reduction**  
+  I'm 5x AWS certified. I’ve redesigned infrastructure, improved reliability, and cut monthly costs for teams that outgrew their original setup or never had one that made sense.
 
 ---
 
-### Core Offerings
+### Services
 
-#### 1. **Tech & Cloud Audits**
-- Full-stack review across 12 critical areas:  
-  - Infrastructure, security, disaster recovery  
-  - Code quality, data model, documentation, and more  
-- Includes a prioritized action plan based on risk, ROI, and business goals
+#### Technical and Cloud Audits
+- Review of your codebase and infrastructure across key areas like cost, risk, and scalability
+- Actionable recommendations with clear priorities
 
-#### 2. **MVP & Proof of Concept Development**
-- Quick-turn builds with production-ready architecture  
-- Clean, scalable code tailored to your goals using my preferred stack:  
-  - **Frontend**: React + TailwindCSS  
-  - **Backend**: Node.js or Python  
-  - **Infra**: AWS + Terraform  
-  - **Workflow**: Story-driven TDD for clarity and alignment
+#### Legacy System Refactoring
+- Improve or rebuild internal tools and services without starting from scratch
+- Clean up outdated code, fix common pain points, and modernize what matters
 
-#### 3. **Custom Web App & Infrastructure Design**
-- End-to-end architecture and development  
-- Designed for compliance, scalability, and performance  
-- Ideal for healthcare startups or any org modernizing legacy platforms
+#### MVP and Product Prototypes
+- Get a working product out fast, with a strong foundation
+- I use React, Tailwind, Node.js or Python, AWS, and Terraform
+- Clean code, short feedback cycles, and a clear workflow
+
+#### Custom App and Infrastructure Design
+- Build something new with stability and performance in mind
+- Serverless, CI/CD, Terraform, and monitoring built in from the start
 
 ---
 
-Looking for an experienced developer, AWS consultant, or someone who just gets healthcare tech?  
-Let’s talk: [programtanner@gmail.com](mailto:programtanner@gmail.com)
+### Tools and Technologies
+
+- **Frontend**: React, TailwindCSS  
+- **Backend**: Node.js, Python  
+- **Cloud**: AWS, Terraform  
+- **Dev Workflow**: Test-driven development, Documentation, Weekly status updates  
+
+---
+
+### Projects
+
+- **BassoonAI**: Built an AI-based SaaS prototype in a day  
+- **Healthcare Codeset API**: Public API for standardized codesets  
+- **AWS SaaS Template**: Open source boilerplate for building production-ready cloud applications  
+- **Codutorial**: Turns GitHub commit history into a guided tutorial
+
+---
+
+### Get in Touch
+
+If you need a developer or AWS consultant who can work quickly without cutting corners, send me a message.
+
+📬 [programtanner@gmail.com](mailto:programtanner@gmail.com)  
+Or [use this form](https://forms.monday.com/forms/4768856ebd9a4ed832f0bb7ada647b9f?r=use1)
