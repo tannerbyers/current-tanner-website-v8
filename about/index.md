@@ -7,10 +7,8 @@ eleventyNavigation:
   order: 3
 ---
 
-# About Me
-
 <p align="center"> 
-  <img width="100%" src="/img/tanner.jpg"/>
+  <img width="50%" src="/img/tanner.jpg"/>
 </p> 
 
 I’m Tanner, a software developer and cloud consultant. I’ve been building software professionally since 2019, focusing on creating accessible and efficient web applications and optimizing cloud infrastructure.
