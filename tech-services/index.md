@@ -10,7 +10,30 @@ eleventyNavigation:
 # Tech Services  
 ## Your Dev Team Is Stuck. I Can Fix That in a Week.
 
-If your team is smart but slow  
+<div style="margin-top: 1.5rem; margin-bottom: 2rem;">
+  <p><strong>Prefer video?</strong> Here's a quick walkthrough of who I am and how I work:</p>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.loom.com/embed/59e4a32850aa48cd98b33c8b56e9c0e4?sid=ff0ba1e2-22f3-4182-95be-956abecdf6ab"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    </iframe>
+  </div>
+</div>
+
+### Need something fixed now?
+
+- Codebase and deploy pipeline audit: **$1,500**
+- Feature or bug delivery in 5 days: **$4,800**
+- AWS/Infra cleanup starting at: **$6,000**
+
+Fully async. Fast turnaround. Clean handoff.
+
+[Jump to full services ↓](#what-i-offer)
+
+If your team is smart but needs help with workflows or infra  
 If things keep breaking and no one knows why  
 If your deploys, tests, or infra feel fragile or duct-taped together  
 
@@ -37,7 +60,7 @@ I solve high-leverage problems that free up your team to focus on the product.
 
 ## What I Offer
 
-### 🔎 Dev Audit — $1,500  
+### Dev Audit — $1,500  
 <small>Timeline: 1–2 days</small>
 
 A full async review of your:
@@ -55,9 +78,11 @@ A full async review of your:
 
 Perfect if you’re stuck and not sure why.
 
+<b>If I audit your code and infra and find nothing worth fixing, I’ll refund the full fee.</b>
+
 ---
 
-### ⚙️ 1-Week Sprint — $4,800  
+### 1-Week Sprint — $4,800  
 <small>Timeline: 5 business days</small>
 
 You hand me a feature, bug, or friction point. I handle:
@@ -72,7 +97,7 @@ No meetings. No micromanagement.
 
 ---
 
-### 🔧 Infra Modernization — Starting at $6,000
+### Infra Modernization — Starting at $6,000
 
 Refactor and streamline your cloud setup.  
 I’ll come in, clean it up, and hand it back documented.
@@ -130,10 +155,11 @@ Clean code, tests, and docs included
 
 ---
 
-## Ready to Move?
+## Ready to Fix What’s Slowing You Down?
 
-I only take 2–3 clients at a time.  
-If you're ready to move fast and want the work done right the first time, send me a message.
+I only take 2–3 clients at a time.
 
-**programtanner@gmail.com**  
+If you're ready to move fast and want clean, tested work delivered without drama — reach out.
+
+📬 **programtanner@gmail.com**  
 Or [fill out this form](https://forms.monday.com/forms/4768856ebd9a4ed832f0bb7ada647b9f?r=use1)
