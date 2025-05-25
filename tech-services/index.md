@@ -42,22 +42,6 @@ You need someone who can figure out what’s broken, fix it fast, and get out of
 
 ---
 
-## About Me
-
-**I’m Tanner.**  
-I’ve worked with teams at AWS, healthcare clearinghouses, and early-stage startups.
-
-What I’ve done for them:
-
-- Shipped features faster  
-- Cleaned up painful tech debt  
-- Simplified infra and cut cloud bills  
-- Made deploys and pipelines reliable again
-
-I solve high-leverage problems that free up your team to focus on the product.
-
----
-
 ## What I Offer
 
 ### Dev Audit — $1,500  

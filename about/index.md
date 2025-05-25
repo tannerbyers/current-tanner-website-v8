@@ -13,12 +13,8 @@ eleventyNavigation:
 
 I’m Tanner, a software developer and cloud consultant. I’ve been building software professionally since 2019, focusing on creating accessible and efficient web applications and optimizing cloud infrastructure.
 
-My interest in tech started in high school during an IT class, but I really began learning in 2015 while working as a dishwasher. I’d finish 12-hour shifts and spend my nights building web apps and writing blog posts. That consistency eventually led to a career where I’ve worked with companies like Availity and Glidian, and consulted for clients during my time at Amazon Web Services (AWS).
+My interest in tech started when I built my first PC from goodwill parts (throwback to when Goodwill still sold used PC's in stores) in middle school. I got introduced to coding in my Intro to Information Technology class but I really began learning in 2015 while I was still a dishwasher. I’d finish 12-hour shifts and spend my nights building web apps and writing blog posts. I did this for years until I got my first dev job and that's led to a career where I’ve worked with all kinds of companies from large corporations (Availity) to funded Startups (Glidian), and consulted for many clients during my time at Amazon Web Services (AWS).
 
-I specialize in helping founders (mostly at healthcare companies) modernize outdated systems, reduce cloud costs, and build scalable solutions. My approach is straightforward: write clean, well-tested code that solves real problems.
-
-Outside of work, I’m a husband and father of three. My family is my motivation.
-
-If you’re looking for someone to help with your development needs or cloud infrastructure, feel free to reach out.
+I specialize in modernizing outdated systems, reducing cloud costs, and building scalable solutions. 
 
 **Business inquiries:** [programtanner@gmail.com](mailto:programtanner@gmail.com)
