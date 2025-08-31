@@ -3,21 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or "Home" }}</title>
+    <title>{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}</title>
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico"/>
     <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="keywords" content="{{ metadata.keywords | join(', ') }}">
+    <meta name="author" content="{{ metadata.author.name }}">
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if templateClass == 'tmpl-post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="{{ metadata.url }}/img/tanner.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}">
+    <meta property="twitter:description" content="{{ description or metadata.description }}">
+    <meta property="twitter:image" content="{{ metadata.url }}/img/tanner.jpg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="{{ '/css/index.css' | url }}" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" as="style">
+    
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ metadata.author.name }}",
+      "url": "{{ metadata.url }}",
+      "image": "{{ metadata.url }}/img/tanner.jpg",
+      "jobTitle": "Software Developer & AWS Consultant",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Consultant"
+      },
+      "knowsAbout": ["AWS", "Software Development", "Cloud Infrastructure", "DevOps", "Full-Stack Development"],
+      "email": "{{ metadata.author.email }}",
+      "sameAs": [
+        "{{ metadata.url }}"
+      ]
+    }
+    </script>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB0Y5K6X23"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-HB0Y5K6X23');
     </script>
     
@@ -26,11 +68,28 @@
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item {% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="{{ '/' | url }}" class="nav-link{% if page.url == '/' %} nav-item-active{% endif %}">Home</a></li>
+          <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}">About</a></li>
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Services</button>
+            <ul class="nav-dropdown-menu" aria-label="Services submenu">
+              <li><a href="{{ '/tech-services/' | url }}" class="nav-link">Tech Services</a></li>
+              <li><a href="{{ '/contact-me/' | url }}" class="nav-link">Let's Connect</a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Resources</button>
+            <ul class="nav-dropdown-menu" aria-label="Resources submenu">
+              <li><a href="{{ '/posts/' | url }}" class="nav-link">Blog</a></li>
+              <li><a href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
+              <li><a href="https://tanner-byers.kit.com/24e7903dee/" class="nav-link" rel="noopener" target="_blank">6-Figure Tech Guide ↗</a></li>
+              <li><a href="{{ '/case-studies/' | url }}" class="nav-link">Case Studies</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main {% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -41,6 +100,10 @@
       <div>{{ metadata.title}}</div>
       <div class="footer-text">
         © 2021 {{ metadata.title }}, All rights reserved
+      </div>
+      <div class="footer-links" style="margin-top: 0.5rem; font-size: 0.8rem;">
+        <a href="{{ '/privacy/' | url }}">Privacy Policy</a> |
+        <a href="{{ '/terms/' | url }}">Terms of Service</a>
       </div>                         
     </footer>
 

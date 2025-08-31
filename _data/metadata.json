@@ -2,9 +2,10 @@
   "title": "Tanner Byers",
   "url": "https://tannerbyers.com/",
   "language": "en",
-  "description": "Tanner Byers Blog",
+  "description": "Software developer and AWS consultant specializing in cost optimization, infrastructure modernization, and full-stack development. Fast turnaround, flat pricing, built to last.",
+  "keywords": ["AWS consulting", "software development", "cloud optimization", "infrastructure modernization", "full-stack developer", "DevOps", "tech consulting"],
   "feed": {
-    "subtitle": "Tanner Byers Blog",
+    "subtitle": "Tech insights, AWS tips, and development tutorials from Tanner Byers",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://tannerbyers.com/"
@@ -16,6 +17,6 @@
   "author": {
     "name": "Tanner Byers",
     "email": "programtanner@gmail.com",
-    "url": "https://tannerbyers.com/about-me/"
+    "url": "https://tannerbyers.com/about/"
   }
 }

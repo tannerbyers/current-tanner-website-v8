@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /about/
+Allow: /tech-services/
+Allow: /case-studies/
+Allow: /posts/
+Allow: /newsletter/
+Allow: /contact-me/
+
+# Legal pages
+Allow: /privacy/
+Allow: /terms/
+
+# Block example content
+Disallow: /examples_posts/
+Disallow: /documentation/
+
+# Sitemaps
+Sitemap: https://tannerbyers.com/sitemap.xml

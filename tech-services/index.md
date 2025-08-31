@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Tech Services
+description: Fast, reliable tech consulting services. Dev audits from $1,500, 1-week sprints from $4,800, infrastructure modernization from $6,000. Fully async with clean handoffs.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Tech Services
@@ -8,19 +9,11 @@ eleventyNavigation:
 ---
 
 # Tech Services  
-## Your Dev Team Is Stuck. I Can Fix That in a Week.
+## Your Dev Team Is Stuck. I've Been There—Let's Fix It.
 
-<div style="margin-top: 1.5rem; margin-bottom: 2rem;">
-  <p><strong>Prefer video?</strong> Here's a quick walkthrough of who I am and how I work:</p>
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe src="https://www.loom.com/embed/59e4a32850aa48cd98b33c8b56e9c0e4?sid=ff0ba1e2-22f3-4182-95be-956abecdf6ab"
-            frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    </iframe>
-  </div>
+<p><strong>Prefer video?</strong> Here's a quick walkthrough of who I am and how I work:</p>
+<div class="embed-responsive" style="margin-bottom: 1rem;">
+  <iframe src="https://www.loom.com/embed/59e4a32850aa48cd98b33c8b56e9c0e4?sid=ff0ba1e2-22f3-4182-95be-956abecdf6ab" allowfullscreen></iframe>
 </div>
 
 ### Need something fixed now?
@@ -31,68 +24,44 @@ eleventyNavigation:
 
 Fully async. Fast turnaround. Clean handoff.
 
-[Jump to full services ↓](#what-i-offer)
-
-If your team is smart but needs help with workflows or infra  
-If things keep breaking and no one knows why  
-If your deploys, tests, or infra feel fragile or duct-taped together  
-
-You don’t need another dev.  
-You need someone who can figure out what’s broken, fix it fast, and get out of the way.
+If your team is smart but blocked by brittle deployments, slow tests, or AWS bills that make you wince—you don't need another dev. You need someone who's debugged production systems handling billions of transactions and can get you unstuck fast.
 
 ---
 
 ## What I Offer
 
-### Dev Audit — $1,500  
-<small>Timeline: 1–2 days</small>
-
-A full async review of your:
-
-- Codebase + repo structure  
-- CI/CD pipeline  
-- Infra setup (AWS, Terraform, etc)
-
-**You’ll get:**
-
-- A short video walkthrough  
-- A PDF report with the top 3–5 fixes  
-- A risk score and action plan  
-- Async Q&A access after delivery
-
-Perfect if you’re stuck and not sure why.
-
-<b>If I audit your code and infra and find nothing worth fixing, I’ll refund the full fee.</b>
-
----
-
-### 1-Week Sprint — $4,800  
-<small>Timeline: 5 business days</small>
-
-You hand me a feature, bug, or friction point. I handle:
-
-- Scoping  
-- Testing  
-- Building  
-- Delivery + docs
-
-**You stay focused. I ship the fix.**  
-No meetings. No micromanagement.
-
----
-
-### Infra Modernization — Starting at $6,000
-
-Refactor and streamline your cloud setup.  
-I’ll come in, clean it up, and hand it back documented.
-
-Typical outcomes:
-
-- Faster deploys  
-- Lower AWS bills  
-- Cleaner Terraform  
-- Working alerts and rollback  
-- No more flaky tests or mystery downtime
+<div class="grid-2">
+  <div class="card">
+    <h3>Dev Audit — $1,500</h3>
+    <p><small>Timeline: 1–2 days</small></p>
+    <p>I'll dig through your codebase, CI/CD, and AWS setup with the same eye I used on systems processing 1+ billion transactions monthly.</p>
+    <p><strong>You’ll get:</strong></p>
+    <ul>
+      <li>Video walkthrough of what I found</li>
+      <li>PDF with the top 3–5 fixes that matter most</li>
+      <li>Risk assessment and priority roadmap</li>
+      <li>Follow-up Q&A to make sure it all makes sense</li>
+    </ul>
+    <p><b>If I audit your setup and find nothing worth fixing, I’ll refund every penny.</b></p>
+  </div>
+  <div class="card">
+    <h3>1-Week Sprint — $4,800</h3>
+    <p><small>Timeline: 5 business days</small></p>
+    <p>You hand me a feature, bug, or friction point. I handle scoping, tests, build, and delivery.</p>
+    <p><strong>You stay focused. I ship the fix.</strong></p>
+  </div>
+  <div class="card">
+    <h3>Infra Modernization — from $6,000</h3>
+    <p>Refactor and streamline your cloud setup. Cleaned up, documented, and ready to scale.</p>
+    <ul>
+      <li>Faster deploys</li>
+      <li>Lower AWS bills</li>
+      <li>Cleaner Terraform</li>
+      <li>Working alerts and rollback</li>
+      <li>No more flaky tests or mystery downtime</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -105,29 +74,12 @@ Typical outcomes:
 
 ## Why This Works
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-
-<div>
-<strong>Fast turnaround</strong><br>
-Delivery in days, not months
-</div>
-
-<div>
-<strong>Flat pricing</strong><br>
-No hourly billing or vague estimates
-</div>
-
-<div>
-<strong>Fully async</strong><br>
-You won’t need to schedule anything
-</div>
-
-<div>
-<strong>Built to last</strong><br>
-Clean code, tests, and docs included
-</div>
-
-</div>
+<ul>
+  <li><strong>Fast turnaround</strong> — days, not months</li>
+  <li><strong>Flat pricing</strong> — no hourly billing or vague estimates</li>
+  <li><strong>Fully async</strong> — no scheduling headaches</li>
+  <li><strong>Built to last</strong> — clean code, tests, and docs</li>
+</ul>
 
 ---
 
@@ -141,9 +93,13 @@ Clean code, tests, and docs included
 
 ## Ready to Fix What’s Slowing You Down?
 
-I only take 2–3 clients at a time.
+I only take 2–3 clients at a time. If you're ready to move fast and want clean, tested work delivered without drama — reach out.
 
-If you're ready to move fast and want clean, tested work delivered without drama — reach out.
+📬 **programtanner@gmail.com**
 
-📬 **programtanner@gmail.com**  
-Or [fill out this form](https://forms.monday.com/forms/4768856ebd9a4ed832f0bb7ada647b9f?r=use1)
+Or book a discovery call below:
+
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/decoupledev/discovery-call?primary_color=ff7800" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
