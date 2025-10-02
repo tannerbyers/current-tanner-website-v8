@@ -1,7 +1,6 @@
----
 layout: layouts/base.njk
-title: Let's Connect
-description: Ready to solve your tech problems? Book a discovery call or email programtanner@gmail.com to discuss your AWS optimization, development, or infrastructure needs.
+title: Contact Tanner Byers | Developer & AWS Expert
+description: Get in touch with Tanner Byers for questions, feedback, or collaboration. Email programtanner@gmail.com or use the contact form.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Let's Connect
@@ -27,10 +26,9 @@ eleventyNavigation:
 
 Book a discovery call below to discuss your project:
 
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/decoupledev/discovery-call?primary_color=ff7800" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
+<!-- Bonsai CRM booking widget begin -->
+<iframe src="https://app.hellobonsai.com/s/decouple-dev/discovery-call" style="min-width:320px;width:100%;height:700px;border:none;" allowfullscreen></iframe>
+<!-- Bonsai CRM booking widget end -->
 
 ---
 

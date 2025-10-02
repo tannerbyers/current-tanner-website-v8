@@ -1,7 +1,6 @@
----
 layout: layouts/base.njk
-title: Case Studies
-description: Real client success stories. See how I've helped startups and enterprises reduce AWS costs by 35%, improve deployment times by 80%, and build winning MVPs.
+title: Case Studies | Real-World Tech Solutions by Tanner Byers
+description: Explore case studies of technical solutions, AWS optimizations, and software engineering wins from Tanner Byers. Learn from real-world results.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Case Studies
@@ -93,4 +92,10 @@ These are just a few examples of how targeted expertise can solve complex proble
 
 If you're facing similar technical challenges, let's chat about how I can help.
 
-[**Book a discovery call**](/contact-me/) or email me: **programtanner@gmail.com**
+Explore more:
+- [Blog posts](/posts/)
+- [Newsletter](/newsletter/)
+- [About Tanner](/about/)
+- [Contact](/contact-me/)
+
+Email: **programtanner@gmail.com**

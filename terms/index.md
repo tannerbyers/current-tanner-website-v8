@@ -1,6 +1,6 @@
----
 layout: layouts/base.njk
-title: Terms of Service
+title: Terms of Service | Tanner Byers
+description: Review the terms of service for Tanner Byers' website. Understand your rights and responsibilities as a user.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Terms of Service
@@ -119,6 +119,12 @@ These terms are governed by Florida law. Any disputes will be resolved through a
 ## Contact
 
 Questions about these terms? Email me: **programtanner@gmail.com**
+
+Explore more:
+- [Blog posts](/posts/)
+- [Case studies](/case-studies/)
+- [Newsletter](/newsletter/)
+- [Contact](/contact-me/)
 
 ---
 

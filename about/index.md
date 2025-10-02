@@ -1,7 +1,6 @@
----
 layout: layouts/base.njk
-title: About Tanner Byers
-description: Software developer and AWS consultant with 5+ years experience building scalable web applications and optimizing cloud infrastructure. From dishwasher to developer to consultant.
+title: About Tanner Byers | AWS, DevOps & Software Engineering
+description: Learn about Tanner Byers, AWS expert and software engineer. Discover his experience, technical background, and developer resources.
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
@@ -9,10 +8,10 @@ eleventyNavigation:
 ---
 
 <p align="center"> 
-  <img width="50%" src="/img/tanner.jpg" alt="Tanner Byers - Software Developer and AWS Consultant" loading="lazy"/>
+  <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers, AWS expert and software engineer" loading="lazy"/>
 </p>
 
-I'm Tanner, a full-stack software engineer and AWS consultant with 5 years of professional experience. I've been building things since I was tinkering with Goodwill PC parts in middle school, but the real learning started during those late nights after 12-hour dishwasher shifts.
+I'm Tanner, a full-stack software engineer with 5 years of professional experience. I've been building things since I was tinkering with Goodwill PC parts in middle school, but the real learning started during those late nights after 12-hour dishwasher shifts.
 
 Turns out persistence pays off. I've since worked everywhere from healthcare giants processing billions of transactions (Availity) to scrappy funded startups (Glidian), and spent two years on AWS Professional Services helping customers build better systems.
 
@@ -26,6 +25,6 @@ Turns out persistence pays off. I've since worked everywhere from healthcare gia
 
 I hold 5 AWS certifications including Security and Database Specialty, because sometimes you need the official stamps to prove you know what you're talking about.
 
-Want to see my work? Check out my [case studies](/case-studies/) or learn about my [consulting services](/tech-services/).
+Want to see my work? Check out my [case studies](/case-studies/), read my [blog posts](/posts/), or join the [Tech Tips Newsletter](/newsletter/).
 
 **Business inquiries:** [programtanner@gmail.com](mailto:programtanner@gmail.com)

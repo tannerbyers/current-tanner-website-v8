@@ -1,6 +1,6 @@
----
 layout: layouts/base.njk
-title: Privacy Policy
+title: Privacy Policy | Tanner Byers
+description: Read the privacy policy for Tanner Byers' website. Learn how your data is collected, used, and protected.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Privacy Policy
@@ -75,3 +75,9 @@ I may update this privacy policy occasionally. Significant changes will be poste
 ## Contact
 
 Questions about this privacy policy? Email me: **programtanner@gmail.com**
+
+Explore more:
+- [Blog posts](/posts/)
+- [Case studies](/case-studies/)
+- [Newsletter](/newsletter/)
+- [Contact](/contact-me/)

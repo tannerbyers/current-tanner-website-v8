@@ -1,6 +1,6 @@
----
 layout: layouts/base.njk
-title: Newsletter
+title: Tech Tips Newsletter | Tanner Byers
+description: Subscribe to Tanner Byers' newsletter for practical tech tips, AWS insights, and developer updates. No spam, just value.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Newsletter
@@ -42,3 +42,9 @@ Get practical development tips, AWS insights, and project updates delivered to y
 ---
 
 **Questions about the newsletter?** Email me: [programtanner@gmail.com](mailto:programtanner@gmail.com)
+
+Explore more:
+- [Blog posts](/posts/)
+- [Case studies](/case-studies/)
+- [About Tanner](/about/)
+- [Contact](/contact-me/)
