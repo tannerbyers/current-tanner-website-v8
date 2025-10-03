@@ -1,9 +1,6 @@
 {
   "builds": [
-    { "src": ".eleventy.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/_site/$1" }
+    { "src": "index.njk", "use": "@vercel/static-build", "config": { "distDir": "_site" } }
   ],
   "outputDirectory": "_site"
 }
