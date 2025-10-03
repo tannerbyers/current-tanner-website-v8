@@ -1,6 +1,6 @@
 {
   "builds": [
-    { "src": "index.njk", "use": "@vercel/static-build", "config": { "distDir": "_site" } }
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "outputDirectory": "_site"
 }
