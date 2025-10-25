@@ -75,10 +75,4 @@ I may update this privacy policy occasionally. Significant changes will be poste
 
 ## Contact
 
-Questions about this privacy policy? Email me: **programtanner@gmail.com**
-
-Explore more:
-- [Blog posts](/posts/)
-- [Case studies](/case-studies/)
-- [Newsletter](/newsletter/)
-- [Contact](/contact-me/)
+Questions about this privacy policy? Email **programtanner@gmail.com**

@@ -19,16 +19,15 @@ Here's what I've built and what I learned.
 **Timeline:** 6 weeks  
 **Stack:** React, Node.js, WebSockets, AWS
 
-### What I Built
 Collaborated on a fullstack web application for business collaboration, taking it from concept to working MVP that placed in a competition and got accepted into an accelerator.
 
-**Key Technical Features:**
-- Full-stack web application with JWT authentication
+**Key features:**
+- JWT authentication
 - Real-time collaboration using WebSockets
 - Responsive React UI optimized for desktop and mobile
 - Automated testing and CI/CD pipeline
 
-### What I Learned
+**Lessons:**
 - Balancing rapid development with maintainable architecture
 - Building real-time features that scale
 - The importance of automated testing when moving fast
@@ -41,24 +40,23 @@ Collaborated on a fullstack web application for business collaboration, taking i
 **Timeline:** 4 weeks  
 **Stack:** Terraform, AWS (EC2, RDS, CloudWatch), GitLab CI/CD
 
-### The Challenge
-Manual deployments taking 2+ hours, AWS costs climbing 40% month-over-month, and production deployments that felt like Russian roulette. Time to rebuild the foundation.
+Manual deployments taking 2+ hours, AWS costs climbing 40% month-over-month, and production deployments that felt like Russian roulette.
 
-### What I Built
+**Solution:**
 - Complete Infrastructure as Code setup with Terraform
 - Automated CI/CD pipeline with proper staging environment
 - AWS resource optimization and cost monitoring
 - Centralized logging and alerting with CloudWatch
 
-### The Impact
-- **Deployment time:** 2+ hours → 8 minutes
-- **AWS costs:** Reduced by 35% monthly
-- **Incident response:** Rollbacks in under 2 minutes
-- **Developer confidence:** Team could deploy without anxiety
+**Results:**
+- Deployment time: 2+ hours → 8 minutes
+- AWS costs: Reduced by 35% monthly
+- Incident response: Rollbacks in under 2 minutes
+- Team could deploy without anxiety
 
-### What I Learned
+**Key takeaways:**
 - How to audit and optimize AWS infrastructure systematically
-- The value of staging environments that actually mirror production
+- The value of staging environments that mirror production
 - Cost optimization strategies for startup-scale AWS usage
 - Building deployment pipelines that developers trust
 
@@ -69,22 +67,21 @@ Manual deployments taking 2+ hours, AWS costs climbing 40% month-over-month, and
 **Timeline:** 3 weeks  
 **Stack:** Java, Spring Boot, JUnit, Maven
 
-### The Challenge
 A 5-year-old Spring Boot application with a 45-minute test suite. Developers were afraid to make changes, and "works on my machine" was the unofficial deployment strategy.
 
-### What I Did
+**Changes:**
 - Refactored to clean architecture with proper separation of concerns
 - Optimized test suite (45 minutes → 8 minutes)
 - Set up automated code formatting and linting
 - Created comprehensive documentation and runbooks
 
-### The Impact
-- **Test execution:** 82% faster
-- **Development velocity:** 40% more features shipped per sprint
-- **Bug reports:** Down 60%
-- **Team confidence:** Developers comfortable making significant changes
+**Impact:**
+- Test execution: 82% faster
+- Development velocity: 40% more features shipped per sprint
+- Bug reports: Down 60%
+- Developers comfortable making significant changes
 
-### What I Learned
+**Takeaways:**
 - How to identify and eliminate slow tests systematically
 - Strategies for refactoring legacy code without breaking everything
 - The importance of automated standards for team consistency

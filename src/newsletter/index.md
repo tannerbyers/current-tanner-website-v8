@@ -14,11 +14,11 @@ Get development tips, AWS insights, and project updates delivered to your inbox.
 
 ## What you'll get:
 
-- **Practical dev tips** from real-world projects
-- **AWS cost optimization** strategies that actually work
-- **Behind-the-scenes** updates on what I'm building
-- **Tool recommendations** I actually use
-- **No spam** - just value, typically 1-2 emails per month
+- Practical dev tips from real-world projects
+- AWS cost optimization strategies
+- Behind-the-scenes updates on what I'm building
+- Tool recommendations
+- Typically 1-2 emails per month
 
 <div style="margin: 2rem 0; padding: 2rem; border: 1px solid #e1e5e9; border-radius: 12px; background-color: #f8f9fa; text-align: center;">
   <form action="https://buttondown.email/api/emails/embed-subscribe/decoupledev" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/decoupledev', 'popupwindow')" class="embeddable-buttondown-form" style="max-width: 400px; margin: 0 auto;">

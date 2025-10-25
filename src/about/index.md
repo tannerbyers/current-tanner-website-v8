@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: About Tanner Byers | AWS, DevOps & Software Engineering
-description: Learn about Tanner Byers, AWS expert and software engineer. Discover his experience, technical background, and developer resources.
+description: Tanner Byers is a fullstack software engineer with experience at AWS, healthcare tech, and startups.
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 
 <p align="center"> 
-  <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers, AWS expert and software engineer" loading="lazy"/>
+  <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers" loading="lazy"/>
 </p>
 
 I'm Tanner, a fullstack software engineer sharing what I learn building with AWS and modern web tech.
@@ -22,9 +22,9 @@ I've worked at healthcare giants processing billions of transactions (Availity),
 
 **At AWS** (2022-2024), I developed a React/TypeScript micro-frontend library that saved 100+ developer weeks across 13 teams. Built document repositories that cut search time from 90 seconds to 15 seconds. Designed CloudFormation and IAM policies for AWS JAMs (two of them ranked in the top 10 in 2023).
 
-**In healthcare tech**, debugged processing engines handling 1+ billion transactions monthly, built SOAP API integrations (yes, they still exist), and created accessibility testing tools that saved hundreds of QA hours.
+**In healthcare tech**, debugged processing engines handling 1+ billion transactions monthly, built SOAP API integrations, and created accessibility testing tools that saved hundreds of QA hours.
 
-**The stack**: React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB, all of it), Terraform, and everything else needed to ship reliable software.
+**Stack**: React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform.
 
 ## Certifications
 

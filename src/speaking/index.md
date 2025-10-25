@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Tech Speaker on AWS, AI, and Dev Productivity – Tanner Byers
-description: Tanner Byers helps teams build faster and smarter with AWS, serverless, and AI. Book him for your next tech conference or startup event.
+description: Tanner Byers speaks about AWS, serverless architecture, AI-assisted development, and technical leadership.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Speaking
