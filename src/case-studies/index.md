@@ -10,7 +10,7 @@ eleventyNavigation:
 
 # Projects
 
-Real builds, real code, real lessons. Here's what I've shipped and what I learned along the way.
+Here's what I've built and what I learned.
 
 ---
 

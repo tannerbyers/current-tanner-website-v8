@@ -14,9 +14,9 @@ eleventyNavigation:
 
 I'm Tanner, a fullstack software engineer sharing what I learn building with AWS and modern web tech.
 
-Started tinkering with Goodwill PC parts in middle school. Real learning happened during late nights after 12-hour dishwasher shifts, teaching myself to code. Turns out persistence pays off.
+Started tinkering with Goodwill PC parts in middle school. Taught myself to code during late nights after 12-hour dishwasher shifts.
 
-I've worked everywhere from healthcare giants processing billions of transactions (Availity) to funded startups (Glidian), and spent two years on AWS Professional Services helping teams build better systems.
+I've worked at healthcare giants processing billions of transactions (Availity), funded startups (Glidian), and spent two years at AWS Professional Services helping teams build better systems.
 
 ## What I've Built
 

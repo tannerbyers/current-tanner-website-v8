@@ -8,35 +8,27 @@ eleventyNavigation:
   order: 4
 ---
 
-# Tech Talks That Don't Put Devs to Sleep.
+# Speaking
 
-Full-stack development, AWS, and the future of AI assisted coding. Told by someone who's broken production more than once.
+I speak about AWS, fullstack development, and AI-assisted coding.
 
-<p style="margin: 2rem 0;">
-  <a href="{{ '/contact-me/' | url }}" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #ff7800; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">Book Tanner to Speak →</a>
-</p>
+## Topics
 
-## What I Speak About
+**AI in Development Workflows** - How engineering teams use AI tools while maintaining code quality
 
-### AI in the Dev Workflow (That Actually Works)
-How real engineers use AI tools without losing code quality or their jobs.
+**Serverless Architecture** - Building lean, scalable systems with AWS Lambda, EventBridge, and DynamoDB
 
-### Serverless Gone Wild
-What AWS Lambda, EventBridge, and DynamoDB can teach you about building lean systems that scale.
+**Infrastructure Automation** - Lessons from automating AWS deployments and managing infrastructure as code
 
-### From Scripts to Systems
-Lessons from automating AWS deployments before it was cool (and before it worked).
+**Technical Leadership** - Technical debt, prioritization, and scaling engineering teams
 
-### How to Think Like a CTO Before You Are One
-What startups miss about technical debt, prioritization, and people.
+## Audience
 
-## Who I Speak To
+I speak to engineering teams, founders, and technical leaders.
 
-I speak to founders and engineering teams who want to ship faster without breaking everything. My talks are technical enough for senior devs and clear enough for PMs who pretend to understand YAML.
+## Experience
 
-## Past Talks
-
-I've presented internally at Amazon on tooling, CI/CD, and AWS best practices. Now I share those lessons with startups and engineering teams ready to scale.
+I've presented internally at Amazon on tooling, CI/CD, and AWS best practices. I now share these lessons with startups and engineering teams.
 
 ---
 
