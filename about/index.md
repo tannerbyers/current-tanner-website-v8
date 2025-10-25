@@ -11,20 +11,39 @@ eleventyNavigation:
   <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers, AWS expert and software engineer" loading="lazy"/>
 </p>
 
-I'm Tanner, a full-stack software engineer with 5 years of professional experience. I've been building things since I was tinkering with Goodwill PC parts in middle school, but the real learning started during those late nights after 12-hour dishwasher shifts.
+I'm Tanner, a fullstack software engineer sharing what I learn building with AWS and modern web tech.
 
-Turns out persistence pays off. I've since worked everywhere from healthcare giants processing billions of transactions (Availity) to scrappy funded startups (Glidian), and spent two years on AWS Professional Services helping customers build better systems.
+Started tinkering with Goodwill PC parts in middle school. Real learning happened during late nights after 12-hour dishwasher shifts, teaching myself to code. Turns out persistence pays off.
 
-## What I've Actually Built
+I've worked everywhere from healthcare giants processing billions of transactions (Availity) to funded startups (Glidian), and spent two years on AWS Professional Services helping teams build better systems.
 
-**At AWS** (2022-2024), I developed a React/TypeScript micro-frontend library that saved 100+ developer weeks across 13 teams. I also built document repositories that cut search time from 90 seconds to 15 seconds—because nobody has time to hunt for the right CloudFormation template.
+## What I've Built
 
-**In healthcare tech**, I've debugged processing engines handling 1+ billion transactions monthly, built SOAP API integrations (yes, they still exist), and created accessibility testing tools that saved hundreds of QA hours.
+**At AWS** (2022-2024), I developed a React/TypeScript micro-frontend library that saved 100+ developer weeks across 13 teams. Built document repositories that cut search time from 90 seconds to 15 seconds. Designed CloudFormation and IAM policies for AWS JAMs (two of them ranked in the top 10 in 2023).
 
-**The technical stuff**: React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB, the whole stack), Terraform, and all the other acronyms that make things work reliably.
+**In healthcare tech**, debugged processing engines handling 1+ billion transactions monthly, built SOAP API integrations (yes, they still exist), and created accessibility testing tools that saved hundreds of QA hours.
 
-I hold 5 AWS certifications including Security and Database Specialty, because sometimes you need the official stamps to prove you know what you're talking about.
+**The stack**: React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB, all of it), Terraform, and everything else needed to ship reliable software.
 
-Want to see my work? Check out my [case studies](/case-studies/), read my [blog posts](/posts/), or join the [Tech Tips Newsletter](/newsletter/).
+## Certifications
 
-**Business inquiries:** [programtanner@gmail.com](mailto:programtanner@gmail.com)
+- AWS Certified Security - Specialty
+- AWS Certified Database - Specialty  
+- AWS Certified AI Practitioner
+- AWS Certified Developer - Associate
+- AWS Certified Solutions Architect - Associate
+
+## What I Share
+
+I write about AWS architecture, fullstack development, and the messy reality of building production systems. No fluff, just practical guides from real experience.
+
+- **[Blog](/posts/)** - Technical deep-dives and lessons learned
+- **[Newsletter](/newsletter/)** - Weekly tips on AWS and fullstack development
+- **[Projects](/case-studies/)** - Real builds with architecture breakdowns
+- **[GitHub](https://github.com/tannerbyers)** - Open source work and experiments
+
+## Let's Connect
+
+Questions? Want to collaborate? Just want to chat about tech?
+
+**Email:** [programtanner@gmail.com](mailto:programtanner@gmail.com)

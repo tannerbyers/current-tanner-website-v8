@@ -1,23 +1,23 @@
 ---
 layout: layouts/home.njk
-title: "Tanner Byers Blog & Resources | AWS, DevOps, Tech Guides"
-description: "Practical tech guides, case studies, and developer resources from Tanner Byers. Learn AWS, DevOps, and software engineering best practices."
+title: "Tanner Byers | AWS & Fullstack Development"
+description: "AWS and fullstack development content from Tanner Byers. Practical guides, real projects, and lessons learned from building production systems."
 eleventyNavigation:
   key: Home
   order: 1
 ---
 <div class="hero animated-rainbow-hover">
-  <h1>Welcome to Tanner Byers' Blog & Resources.</h1>
-  <p>Sharing insights from 5 years building systems at AWS, healthcare, and startups. Explore case studies, technical guides, and practical tips for developers.</p>
+  <h1>Building in Public. Teaching AWS & Fullstack Development.</h1>
+  <p>I'm Tanner, an AWS-certified engineer sharing lessons from almost a decade building at AWS, healthcare tech, and startups. Practical guides, real projects, and the messy middle of building software.</p>
   <p>
-    <a href="{{ '/case-studies/' | url }}">See results</a> | 
     <a href="{{ '/posts/' | url }}">Read the blog</a> | 
+    <a href="{{ '/case-studies/' | url }}">See my projects</a> | 
     <a href="{{ '/newsletter/' | url }}">Join the newsletter</a> | 
-    <a href="{{ '/contact-me/' | url }}">Contact</a>
+    <a href="{{ '/contact-me/' | url }}">Connect</a>
   </p>
   <p style="font-size: 0.9em;">
-    <a href="{{ '/newsletter/' | url }}">📧 Weekly tech tips that actually work</a><br/>
-    Or email me directly: <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a>
+    <a href="{{ '/newsletter/' | url }}">📧 Weekly tech tips, AWS insights, and build logs</a><br/>
+    Questions? Email me: <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a>
   </p>
 </div>
 {% set maxPosts = collections.posts.length | min(10) %}

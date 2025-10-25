@@ -1,41 +1,33 @@
 layout: layouts/base.njk
-title: Tech Resources Coming Soon | Tanner Byers
-description: This page will feature new technical resources and guides from Tanner Byers. Check back soon for updates.
+title: Resources | Tanner Byers
+description: Technical resources, guides, and tools from Tanner Byers - AWS and fullstack development content.
 templateClass: tmpl-post
 eleventyNavigation:
-  key: Tech Services
+  key: Resources
   order: 5
 ---
 
-# Tech Services  
-## Your Dev Team Is Stuck. I've Been There—Let's Fix It.
+# Resources
 
-<p><strong>Prefer video?</strong> Here's a quick walkthrough of who I am and how I work:</p>
-<div class="embed-responsive" style="margin-bottom: 1rem;">
-  <iframe src="https://www.loom.com/embed/59e4a32850aa48cd98b33c8b56e9c0e4?sid=ff0ba1e2-22f3-4182-95be-956abecdf6ab" allowfullscreen></iframe>
-</div>
+Tools, guides, and content to help you build better software.
 
-### Need something fixed now?
+## What I'm Working On
 
-- Codebase and deploy pipeline audit: **$1,500**
-- Feature or bug delivery in 5 days: **$4,800**
-- AWS/Infra cleanup starting at: **$6,000**
+I share my journey building fullstack applications and learning AWS in public. Follow along:
 
-Fully async. Fast turnaround. Clean handoff.
+- **[Blog Posts](/posts/)** - Technical guides, AWS deep-dives, and lessons learned
+- **[Newsletter](/newsletter/)** - Weekly tips delivered to your inbox
+- **[Projects](/case-studies/)** - Real builds with code and architecture breakdowns
+- **[GitHub](https://github.com/tannerbyers)** - Open source work and experiments
 
-If your team is smart but blocked by brittle deployments, slow tests, or AWS bills that make you wince—you don't need another dev. You need someone who's debugged production systems handling billions of transactions and can get you unstuck fast.
+## Popular Topics
 
----
+- AWS architecture and best practices
+- React and TypeScript patterns
+- Infrastructure as Code (CDK, Terraform)
+- Healthcare tech integrations
+- Test automation and accessibility
 
-## What I Offer
+## Connect
 
-<div class="grid-2">
-  <div class="card">
-    <h3>Dev Audit — $1,500</h3>
-
-    ---
-
-    # Coming Soon
-
-    This page is being updated. Please check back later for new content.
-      <li>Risk assessment and priority roadmap</li>
+Questions about a post? Want to collaborate on something? [Let's connect](/contact-me/) or email me at **programtanner@gmail.com**.

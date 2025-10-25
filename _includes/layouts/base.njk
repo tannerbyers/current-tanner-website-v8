@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}</title>
+    <title>{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}</title>
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico"/>
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="keywords" content="{{ metadata.keywords | join(', ') }}">
@@ -13,14 +13,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{% if templateClass == 'tmpl-post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta property="og:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}">
     <meta property="og:description" content="{{ description or metadata.description }}">
     <meta property="og:image" content="{{ metadata.url }}/img/tanner.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta property="twitter:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS Consultant & Full-Stack Developer{% endif %}">
+    <meta property="twitter:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}">
     <meta property="twitter:description" content="{{ description or metadata.description }}">
     <meta property="twitter:image" content="{{ metadata.url }}/img/tanner.jpg">
     
@@ -41,10 +41,10 @@
       "name": "{{ metadata.author.name }}",
       "url": "{{ metadata.url }}",
       "image": "{{ metadata.url }}/img/tanner.jpg",
-      "jobTitle": "Software Developer & AWS Consultant",
+      "jobTitle": "Software Engineer & Content Creator",
       "worksFor": {
         "@type": "Organization",
-        "name": "Independent Consultant"
+        "name": "Self"
       },
       "knowsAbout": ["AWS", "Software Development", "Cloud Infrastructure", "DevOps", "Full-Stack Development"],
       "email": "{{ metadata.author.email }}",
@@ -72,20 +72,15 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="{{ '/' | url }}" class="nav-link{% if page.url == '/' %} nav-item-active{% endif %}">Home</a></li>
           <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}">About</a></li>
+<li class="nav-item"><a href="{{ '/posts/' | url }}" class="nav-link{% if page.url and page.url.startsWith('/posts/') %} nav-item-active{% endif %}">Blog</a></li>
+          <li class="nav-item"><a href="{{ '/case-studies/' | url }}" class="nav-link{% if page.url == '/case-studies/' %} nav-item-active{% endif %}">Projects</a></li>
           <li class="nav-item nav-dropdown">
-            <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Services</button>
-            <ul class="nav-dropdown-menu" aria-label="Services submenu">
-              <li><a href="{{ '/tech-services/' | url }}" class="nav-link">Tech Services</a></li>
-              <li><a href="{{ '/contact-me/' | url }}" class="nav-link">Let's Connect</a></li>
-            </ul>
-          </li>
-          <li class="nav-item nav-dropdown">
-            <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Resources</button>
-            <ul class="nav-dropdown-menu" aria-label="Resources submenu">
-              <li><a href="{{ '/posts/' | url }}" class="nav-link">Blog</a></li>
+            <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+            <ul class="nav-dropdown-menu" aria-label="More menu">
               <li><a href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
+              <li><a href="{{ '/tech-services/' | url }}" class="nav-link">Resources</a></li>
               <li><a href="https://tanner-byers.kit.com/24e7903dee/" class="nav-link" rel="noopener" target="_blank">6-Figure Tech Guide ↗</a></li>
-              <li><a href="{{ '/case-studies/' | url }}" class="nav-link">Case Studies</a></li>
+              <li><a href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
             </ul>
           </li>
         </ul>

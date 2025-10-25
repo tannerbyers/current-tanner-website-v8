@@ -2,8 +2,8 @@
   "title": "Tanner Byers",
   "url": "https://tannerbyers.com/",
   "language": "en",
-  "description": "Software developer and AWS consultant specializing in cost optimization, infrastructure modernization, and full-stack development. Fast turnaround, flat pricing, built to last.",
-  "keywords": ["AWS consulting", "software development", "cloud optimization", "infrastructure modernization", "full-stack developer", "DevOps", "tech consulting"],
+  "description": "AWS and fullstack development content from Tanner Byers. Practical guides, real projects, and lessons learned from building production systems at AWS and beyond.",
+  "keywords": ["AWS", "fullstack development", "React", "TypeScript", "cloud architecture", "software engineering", "tech blog", "DevOps", "infrastructure as code"],
   "feed": {
     "subtitle": "Tech insights, AWS tips, and development tutorials from Tanner Byers",
     "filename": "feed.xml",

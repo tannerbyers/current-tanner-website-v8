@@ -15,7 +15,7 @@ Get practical development tips, AWS insights, and project updates delivered to y
 
 - **Practical dev tips** from real-world projects
 - **AWS cost optimization** strategies that actually work
-- **Behind-the-scenes** updates on consulting projects
+- **Behind-the-scenes** updates on what I'm building
 - **Tool recommendations** I actually use
 - **No spam** - just value, typically 1-2 emails per month
 
@@ -45,6 +45,6 @@ Get practical development tips, AWS insights, and project updates delivered to y
 
 Explore more:
 - [Blog posts](/posts/)
-- [Case studies](/case-studies/)
+- [Projects](/case-studies/)
 - [About Tanner](/about/)
-- [Contact](/contact-me/)
+- [Connect](/contact-me/)

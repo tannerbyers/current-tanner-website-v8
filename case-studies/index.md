@@ -1,101 +1,102 @@
 layout: layouts/base.njk
-title: Case Studies | Real-World Tech Solutions by Tanner Byers
-description: Explore case studies of technical solutions, AWS optimizations, and software engineering wins from Tanner Byers. Learn from real-world results.
+title: Projects | Tanner Byers Portfolio
+description: Real projects and technical builds from Tanner Byers. AWS architectures, fullstack applications, and lessons learned from production systems.
 templateClass: tmpl-post
 eleventyNavigation:
-  key: Case Studies
+  key: Projects
   order: 8
 ---
 
-# Case Studies
+# Projects
 
-Real projects, real results. Here's how I've helped teams get unstuck and ship faster.
+Real builds, real code, real lessons. Here's what I've shipped and what I learned along the way.
 
 ---
 
-## MogulPlex: From Idea to Competition Winner
+## MogulPlex: Building a Collaborative Platform from Scratch
 
-**Client:** Patrick M., Founder  
 **Timeline:** 6 weeks  
-**Challenge:** Turn a business concept into a working MVP for a competition
-
-### The Problem
-Patrick had a solid business idea but needed a technical co-founder to build the product. With a tight deadline for a business competition, he needed someone who could move fast and deliver quality.
+**Stack:** React, Node.js, WebSockets, AWS
 
 ### What I Built
-- Full-stack web application with user authentication
-- Real-time collaboration features
-- Responsive design optimized for both desktop and mobile
-- Automated testing and deployment pipeline
+Collaborated on a fullstack web application for business collaboration, taking it from concept to working MVP that placed in a competition and got accepted into an accelerator.
 
-### Results
-> "Tanner helped me go from idea to MVP that won third place in a business competition and got us into an accelerator. I showed up with an idea. He built a product people could use."  
-> — **Patrick M., Founder, MogulPlex**
+**Key Technical Features:**
+- Full-stack web application with JWT authentication
+- Real-time collaboration using WebSockets
+- Responsive React UI optimized for desktop and mobile
+- Automated testing and CI/CD pipeline
 
-**Outcome:** Third place in competition, accepted into accelerator program
+### What I Learned
+- Balancing rapid development with maintainable architecture
+- Building real-time features that scale
+- The importance of automated testing when moving fast
+- How to scope an MVP that delivers value quickly
 
 ---
 
-## Healthcare Startup: From Manual Deploys to One-Click Operations
+## Healthcare Platform: Infrastructure as Code Migration
 
-**Client:** Healthcare Web App Startup  
 **Timeline:** 4 weeks  
-**Challenge:** Stop the deployment horror show and tame runaway AWS costs
+**Stack:** Terraform, AWS (EC2, RDS, CloudWatch), GitLab CI/CD
 
-### The Problem
-Their "deployment process" was a 2-hour ritual involving SSH, prayers, and crossing fingers. AWS bills were climbing 40% month-over-month with no clear reason why. Every deployment was Russian roulette with production.
+### The Challenge
+Manual deployments taking 2+ hours, AWS costs climbing 40% month-over-month, and production deployments that felt like Russian roulette. Time to rebuild the foundation.
 
-### What I Fixed
-- Built proper Infrastructure as Code with Terraform (goodbye, snowflake servers)
-- Set up automated CI/CD with staging that actually mirrors production
-- Right-sized AWS resources and eliminated the mystery charges
-- Added monitoring that actually tells you what's broken
+### What I Built
+- Complete Infrastructure as Code setup with Terraform
+- Automated CI/CD pipeline with proper staging environment
+- AWS resource optimization and cost monitoring
+- Centralized logging and alerting with CloudWatch
 
-### Results
-- **Deployment time:** 2+ hours of chaos → 8 minutes of calm
-- **AWS costs:** Cut by 35% monthly (that's real money back in their pocket)
-- **Production fires:** 90% fewer "oh shit" moments
-- **Recovery time:** Rollbacks in under 2 minutes instead of all-hands panic
+### The Impact
+- **Deployment time:** 2+ hours → 8 minutes
+- **AWS costs:** Reduced by 35% monthly
+- **Incident response:** Rollbacks in under 2 minutes
+- **Developer confidence:** Team could deploy without anxiety
+
+### What I Learned
+- How to audit and optimize AWS infrastructure systematically
+- The value of staging environments that actually mirror production
+- Cost optimization strategies for startup-scale AWS usage
+- Building deployment pipelines that developers trust
 
 ---
 
-## Enterprise Java Resurrection: When Your Test Suite Takes a Coffee Break
+## Enterprise Spring Boot Modernization
 
-**Client:** Mid-size Software Company  
 **Timeline:** 3 weeks  
-**Challenge:** Revive a 5-year-old Spring Boot app that everyone was afraid to touch
+**Stack:** Java, Spring Boot, JUnit, Maven
 
-### The Problem
-Their test suite took 45+ minutes to run. Developers would literally go get coffee and hope nothing was broken when they got back. The codebase was a minefield of "works on my machine" and "don't touch that, it might break everything."
+### The Challenge
+A 5-year-old Spring Boot application with a 45-minute test suite. Developers were afraid to make changes, and "works on my machine" was the unofficial deployment strategy.
 
-### What I Delivered
-- Untangled the spaghetti with proper clean architecture
-- Made tests actually fast (45 minutes → 8 minutes of sanity)
-- Set up automated code standards so everyone writes code the same way
-- Documented everything so the next person doesn't have to reverse-engineer it
+### What I Did
+- Refactored to clean architecture with proper separation of concerns
+- Optimized test suite (45 minutes → 8 minutes)
+- Set up automated code formatting and linting
+- Created comprehensive documentation and runbooks
 
-### Results
-- **Test execution:** 82% faster (developers can actually run them now)
-- **Development speed:** 40% more features shipped per sprint
-- **Bug reports:** Down 60% because the code actually does what it says
-- **Developer happiness:** Team finally comfortable making real changes
+### The Impact
+- **Test execution:** 82% faster
+- **Development velocity:** 40% more features shipped per sprint
+- **Bug reports:** Down 60%
+- **Team confidence:** Developers comfortable making significant changes
+
+### What I Learned
+- How to identify and eliminate slow tests systematically
+- Strategies for refactoring legacy code without breaking everything
+- The importance of automated standards for team consistency
+- Documentation that actually helps the next developer
 
 ---
 
-## Ready to Get Similar Results?
+## More Projects Coming Soon
 
-These are just a few examples of how targeted expertise can solve complex problems quickly. Each client had different challenges, but the approach was the same:
+I'm constantly building and learning. Follow along:
 
-1. **Quick audit** to identify the core issues
-2. **Focused execution** on highest-impact fixes
-3. **Clean handoff** with documentation and knowledge transfer
+- **[Blog](/posts/)** - Deep dives into these projects and more
+- **[Newsletter](/newsletter/)** - Weekly updates on what I'm building
+- **[GitHub](https://github.com/tannerbyers)** - Code and experiments
 
-If you're facing similar technical challenges, let's chat about how I can help.
-
-Explore more:
-- [Blog posts](/posts/)
-- [Newsletter](/newsletter/)
-- [About Tanner](/about/)
-- [Contact](/contact-me/)
-
-Email: **programtanner@gmail.com**
+Questions about any of these projects? [Let's chat](/contact-me/) or email **programtanner@gmail.com**
