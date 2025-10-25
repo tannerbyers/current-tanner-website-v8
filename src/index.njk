@@ -28,18 +28,3 @@ eleventyNavigation:
 {% include "layouts/postslist.njk" %}
 
 <p>More articles can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
-
-<div style="margin-top: 2rem; padding: 1.5rem; border: 1px solid #e1e5e9; border-radius: 8px; background-color: #f8f9fa;">
-  <h3 style="margin-top: 0;">📧 Get Tech Tips & Updates</h3>
-  <p>Join my newsletter for practical dev tips, AWS insights, and project updates. No spam, just value.</p>
-  <form action="https://buttondown.email/api/emails/embed-subscribe/decoupledev" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/decoupledev', 'popupwindow')" class="embeddable-buttondown-form">
-    <div style="display: flex; gap: 0.5rem; align-items: end;">
-      <div style="flex: 1;">
-        <label for="bd-email" style="display: block; margin-bottom: 0.25rem; font-weight: 500;">Email</label>
-        <input type="email" name="email" id="bd-email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
-      </div>
-      <input type="submit" value="Subscribe" style="padding: 0.5rem 1rem; background-color: #ff7800; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
-    </div>
-    <input type="hidden" value="1" name="embed">
-  </form>
-</div>

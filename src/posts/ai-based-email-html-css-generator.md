@@ -10,7 +10,7 @@ layout: layouts/post.njk
 # Why I Built This
 
 
-I've always been fascinated by the intersection of automation and design. Email templates are notoriously tricky—responsive layouts, client quirks, accessibility, and the endless battle with HTML/CSS. I wanted to see if I could use AI to make this easier for myself and others. Honestly, I just needed a better way to run my own email campaigns and couldn't find a good service, so I built my own.
+I've always been fascinated by the intersection of automation and design. Email templates are notoriously tricky. Responsive layouts, client quirks, accessibility, and the endless battle with HTML/CSS. I wanted to see if I could use AI to make this easier for myself and others. Honestly, I just needed a better way to run my own email campaigns and couldn't find a good service, so I built my own.
 
 
 
@@ -39,7 +39,7 @@ I wanted to:
 
 I started with a static site generator ([hugo](https://gohugo.io/)) and a nice template ([hugoplate](https://github.com/zeon-studio/hugoplate)). Netlify made deployment easy and free. I wanted to spend my time on the actual AI/code, not infrastructure.
 
-I used Google Analytics and Formspree for basic metrics and feedback. Most of my time went into wiring up the chat interface and code preview. For my terminal, I used Warp—it's fast and makes my workflow smoother.
+I used Google Analytics and Formspree for basic metrics and feedback. Most of my time went into wiring up the chat interface and code preview. For my terminal, I used Warp. It's fast and makes my workflow smoother.
 
 ## Let's get configuring
 
@@ -86,7 +86,7 @@ I used ChatGPT to help brainstorm and generate code for the MVP. My prompt focus
 
 I tracked basic metrics (visitors, feedback, bounce rate) just to see if anyone cared. Most of my learning came from building and iterating, not from chasing signups.
 
-If I were to do it again, I'd focus even more on the technical side and less on the "MVP validation" stuff. The most fun was hacking on the code and seeing the AI generate templates. Learn where AI works and where it doesn't—find the balance between cost and usefulness.
+If I were to do it again, I'd focus even more on the technical side and less on the "MVP validation" stuff. The most fun was hacking on the code and seeing the AI generate templates. Learn where AI works and where it doesn't. Find the balance between cost and usefulness.
 
 
 ## Lessons Learned
@@ -100,4 +100,4 @@ If I were to do it again, I'd focus even more on the technical side and less on 
 ## Final Thoughts
 
 
-This project was a blast. It's not production-ready, but it works, and I learned a ton. Looking for more insights on [building scalable web applications](/posts/building-modern-healthcare-web-app/) or need help with your [tech consulting site](/posts/building-consulting-site/)? Check out my other posts or reach out!
+This project was a blast. It's not production-ready, but it works, and I learned a ton. Looking for more insights on [building scalable web applications](/posts/building-modern-healthcare-web-app/) or need help with your [tech consulting site](/posts/building-consulting-site/)? Want to learn more about [AI in developer workflows](/speaking/)? Check out my other posts or reach out!

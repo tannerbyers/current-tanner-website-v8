@@ -25,7 +25,7 @@ Gathering insights early is key. We aim to fix the problem as effectively and ef
 Start by identifying existing options, especially open-source solutions. Leveraging previous work saves time and resources, letting us focus on innovating where it matters.
 
 ### Matching Solutions to Scale  
-Solutions must fit the customer’s size and needs. For example, if you’re a team of fewer than five, a shared Google Sheet might work better than a costly custom CRM. Scale thoughtfully—don’t burn capital where efficiency can thrive.
+Solutions must fit the customer's size and needs. For example, if you're a team of fewer than five, a shared Google Sheet might work better than a costly custom CRM. Scale thoughtfully. Don't burn capital where efficiency can thrive.
 
 **Key questions to answer:**  
 - How many users/active connections at one time?  
@@ -50,8 +50,9 @@ Build from starter templates or similar implementations. A monolithic architectu
 **Example:**  
 *For a custom patient coordinator CRM, I’d use React.js (frontend) and Node.js (backend) with AWS for HIPAA compliance.*  
 
-Break features into manageable chunks—no more than 4 hours per task:  
-- *E.g., “Users can log in to access their dashboard and view daily patient schedules in one place.”*
+Break features into manageable chunks. Keep each task under 4 hours.  
+
+*E.g., "Users can log in to access their dashboard and view daily patient schedules in one place."*
 
 ---
 
@@ -91,13 +92,14 @@ AWS remains a top choice for healthcare applications due to its reliability and 
 
 ## Final Touches  
 
-- **Styling:** Stick with accessible libraries like `react-508-components` to maintain 508 compliance.  
-- **Linting & Formatting:** Consistency matters more than the tool—just enforce standards.
+**Styling:** Stick with accessible libraries like `react-508-components` to maintain 508 compliance.  
+
+**Linting & Formatting:** Consistency matters more than the tool. Just enforce standards.
 
 ---
 
 ## Related Resources
 
-Looking to apply these principles? Check out my posts on [building a consulting site from scratch](/posts/building-consulting-site/) or [learning Java for enterprise development](/posts/learn-corporate-java/). Need help with your next project? [Let's talk](/contact-me/).
+Looking to apply these principles? Check out my posts on [building a consulting site from scratch](/posts/building-consulting-site/) or [learning Java for enterprise development](/posts/learn-corporate-java/). Interested in [speaking engagements about AWS and serverless architecture](/speaking/)? Need help with your next project? [Let's talk](/contact-me/).
 
 That's the process in a nutshell. What'd I miss?

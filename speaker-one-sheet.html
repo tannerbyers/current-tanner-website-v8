@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanner Byers - Speaker One-Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: #ffffff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #ff7800;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .header .tagline {
+            font-size: 1.3em;
+            color: #ff7800;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-bar {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            font-size: 0.95em;
+        }
+        
+        .contact-bar a {
+            color: #ff7800;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            font-size: 1.8em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff7800;
+            padding-left: 15px;
+        }
+        
+        .section h3 {
+            font-size: 1.3em;
+            color: #1a1a1a;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .section p, .section li {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .talk-topics .talk {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .talk h3 {
+            color: #ff7800;
+            margin-bottom: 8px;
+        }
+        
+        .credentials {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .credentials ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .credentials li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .credentials li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff7800;
+            font-weight: bold;
+        }
+        
+        .bio {
+            line-height: 1.8;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e1e5e9;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                padding: 30px 40px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tanner Byers</h1>
+        <div class="tagline">Tech Speaker | AWS & AI in Developer Workflows</div>
+        <div class="subtitle">Professional talks on full-stack development, AWS, and AI assisted coding. Told by someone who's broken production more than once.</div>
+    </div>
+    
+    <div class="contact-bar">
+        <strong>Email:</strong> <a href="mailto:programtanner@gmail.com">programtanner@gmail.com</a> | 
+        <strong>Website:</strong> <a href="https://tannerbyers.com">tannerbyers.com</a> | 
+        <strong>Speaking:</strong> <a href="https://tannerbyers.com/speaking">tannerbyers.com/speaking</a>
+    </div>
+    
+    <div class="section bio">
+        <h2>About Tanner</h2>
+        <p>Tanner Byers is a full-stack software engineer and AWS expert who helps teams build faster and smarter. With nearly a decade of experience building at AWS, healthcare tech, and startups, Tanner brings practical insights from the trenches of production systems.</p>
+        
+        <p>At AWS Professional Services (2022-2024), Tanner developed a React/TypeScript micro-frontend library that saved 100+ developer weeks across 13 teams, built document repositories that cut search time from 90 seconds to 15 seconds, and designed CloudFormation and IAM policies for AWS JAMs.</p>
+        
+        <p>His talks are technical enough for senior developers and clear enough for PMs who pretend to understand YAML.</p>
+    </div>
+    
+    <div class="section talk-topics">
+        <h2>Talk Topics</h2>
+        
+        <div class="talk">
+            <h3>AI in the Dev Workflow (That Actually Works)</h3>
+            <p>How real engineers use AI tools without losing code quality or their jobs. This talk covers practical integration of AI assistants into developer workflows, addressing quality concerns, productivity gains, and where AI helps (and where it doesn't).</p>
+        </div>
+        
+        <div class="talk">
+            <h3>Serverless Gone Wild</h3>
+            <p>What AWS Lambda, EventBridge, and DynamoDB can teach you about building lean systems that scale. Learn architectural patterns, cost optimization strategies, and lessons from production serverless deployments.</p>
+        </div>
+        
+        <div class="talk">
+            <h3>From Scripts to Systems</h3>
+            <p>Lessons from automating AWS deployments before it was cool (and before it worked). This talk covers the evolution from manual processes to infrastructure-as-code, CI/CD pipelines, and building reliable automation.</p>
+        </div>
+        
+        <div class="talk">
+            <h3>How to Think Like a CTO Before You Are One</h3>
+            <p>What startups miss about technical debt, prioritization, and people. Practical advice for engineers who want to level up their strategic thinking around architecture, team dynamics, and shipping products.</p>
+        </div>
+    </div>
+    
+    <div class="section credentials">
+        <h2>Credentials & Experience</h2>
+        <ul>
+            <li><strong>AWS Certified Security - Specialty</strong></li>
+            <li><strong>AWS Certified Database - Specialty</strong></li>
+            <li><strong>AWS Certified AI Practitioner</strong></li>
+            <li><strong>AWS Certified Developer - Associate</strong></li>
+            <li><strong>AWS Certified Solutions Architect - Associate</strong></li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>Past Speaking:</strong> Internal presentations at Amazon on tooling, CI/CD, and AWS best practices</p>
+        <p><strong>Tech Stack:</strong> React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB, EventBridge), Terraform</p>
+    </div>
+    
+    <div class="section">
+        <h2>Who I Speak To</h2>
+        <p>Tanner speaks to founders and engineering teams who want to ship faster without breaking everything. His audience includes:</p>
+        <ul style="padding-left: 30px; margin-top: 10px;">
+            <li>Senior developers and engineering managers</li>
+            <li>Startup founders and CTOs</li>
+            <li>DevOps and cloud infrastructure teams</li>
+            <li>Product managers working with technical teams</li>
+            <li>Tech conferences and developer meetups</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Booking Information</h2>
+        <p>Available for:</p>
+        <ul style="padding-left: 30px; margin-top: 10px;">
+            <li>Tech conferences and developer events</li>
+            <li>Corporate training and workshops</li>
+            <li>Startup and engineering team talks</li>
+            <li>Podcast and panel discussions</li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>To book Tanner for your event:</strong> Email <a href="mailto:programtanner@gmail.com?subject=Speaking%20Inquiry">programtanner@gmail.com</a> or visit <a href="https://tannerbyers.com/speaking">tannerbyers.com/speaking</a></p>
+    </div>
+    
+    <div class="footer">
+        <p>Tanner Byers | Tech Speaker on AWS, AI, and Developer Productivity</p>
+        <p>programtanner@gmail.com | tannerbyers.com</p>
+    </div>
+</body>
+</html>
