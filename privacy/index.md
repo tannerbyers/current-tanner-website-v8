@@ -1,3 +1,4 @@
+---
 layout: layouts/base.njk
 title: Privacy Policy | Tanner Byers
 description: Read the privacy policy for Tanner Byers' website. Learn how your data is collected, used, and protected.

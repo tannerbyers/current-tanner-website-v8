@@ -1,3 +1,4 @@
+---
 title: "Building an AI-Powered Email HTML/CSS Generator: My Process & Lessons"
 description: My personal journey building an AI-powered email template generator. Reflections, technical notes, and lessons learned.
 date: 2021-08-06

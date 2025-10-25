@@ -1,3 +1,4 @@
+---
 layout: layouts/base.njk
 title: About Tanner Byers | AWS, DevOps & Software Engineering
 description: Learn about Tanner Byers, AWS expert and software engineer. Discover his experience, technical background, and developer resources.

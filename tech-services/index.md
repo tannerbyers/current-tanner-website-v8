@@ -1,3 +1,4 @@
+---
 layout: layouts/base.njk
 title: Resources | Tanner Byers
 description: Technical resources, guides, and tools from Tanner Byers - AWS and fullstack development content.
