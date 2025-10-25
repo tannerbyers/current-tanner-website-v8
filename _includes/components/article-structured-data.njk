@@ -1,0 +1,32 @@
+{%- if templateClass == 'tmpl-post' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.url }}"
+  },
+  "datePublished": "{{ page.date | htmlDateString }}",
+  "dateModified": "{{ page.date | htmlDateString }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ metadata.url }}{{ page.url }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ metadata.url }}/img/tanner.jpg"
+    }
+  },
+  "image": "{{ metadata.url }}/img/tanner.jpg",
+  "keywords": "{{ (tags | default([])) | join(', ') }}",
+  "articleSection": "{{ tags[0] if tags else 'Technology' }}"
+}
+</script>
+{%- endif -%}

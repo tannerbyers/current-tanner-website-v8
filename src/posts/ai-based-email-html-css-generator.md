@@ -1,6 +1,6 @@
 ---
 title: "Building an AI-Powered Email HTML/CSS Generator: My Process & Lessons"
-description: My personal journey building an AI-powered email template generator. Reflections, technical notes, and lessons learned.
+description: Learn how I built an AI email template generator from scratch. Get practical insights on using AI for web development, choosing the right tech stack, and iterating on SaaS MVPs.
 date: 2021-08-06
 tags: [SaaS, AI, Business]
 layout: layouts/post.njk
@@ -45,8 +45,8 @@ I used Google Analytics and Formspree for basic metrics and feedback. Most of my
 
 Alright we've got our template, let's configure the base services. here's the ones I use:
 
-- [Google analytics](analytics.google.com)
-- [Formspree.io](www.formspree.io)
+- [Google analytics](https://analytics.google.com)
+- [Formspree.io](https://www.formspree.io)
 
 
 ## Iterating on Content
@@ -100,4 +100,4 @@ If I were to do it again, I'd focus even more on the technical side and less on 
 ## Final Thoughts
 
 
-This project was a blast. It’s not production-ready, but it works, and I learned a ton. If you want to see more experiments or have questions, reach out!
+This project was a blast. It's not production-ready, but it works, and I learned a ton. Looking for more insights on [building scalable web applications](/posts/building-modern-healthcare-web-app/) or need help with your [tech consulting site](/posts/building-consulting-site/)? Check out my other posts or reach out!

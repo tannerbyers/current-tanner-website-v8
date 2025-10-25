@@ -1,6 +1,6 @@
 ---
 title: Learning Java for a Corporate Career
-description: A step-by-step guide to mastering Java for your professional journey.
+description: Complete roadmap for learning Java for enterprise development. Covers Spring Boot, Maven, Gradle, and best practices for corporate Java careers. Start building production-ready apps today.
 date: 2024-04-24
 tags: [java, learning]
 layout: layouts/post.njk
@@ -78,3 +78,9 @@ Remember, learning to code is best done through practical application. Instead o
 #### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
 
 By following these steps, you'll be somewhat prepared to use Java at work!
+
+---
+
+## Next Steps
+
+Once you're comfortable with Java, explore [building scalable web applications](/posts/building-modern-healthcare-web-app/) or check out my thoughts on [setting up consulting sites](/posts/building-consulting-site/). Need mentorship or consulting help? [Get in touch](/contact-me/)!

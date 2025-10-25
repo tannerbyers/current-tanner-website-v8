@@ -1,6 +1,6 @@
 ---
 title: Building my consulting site
-description: A documented thought process behind how I build websites.
+description: Step-by-step guide to building a fast, scalable consulting website with AWS, Gatsby, and Terraform. Learn the tech stack decisions that prioritize performance, accessibility, and cost-effectiveness.
 date: 2024-04-24
 tags: [learning, consulting]
 layout: layouts/post.njk
@@ -58,4 +58,4 @@ Will add architecture diagrams soon
 ## Conclusion
 A thoughtfully designed tech stack and deployment strategy are critical for any project, especially for a business landing page. This approach ensures scalability, performance, and maintainability, aligning with the needs of a growing consulting business.
 
-If you're looking for a similar setup or need help modernizing your tech stack, feel free to reach out!
+Want to dive deeper into [building scalable solutions](/posts/building-modern-healthcare-web-app/) or explore how [AI can accelerate your development](/posts/ai-based-email-html-css-generator/)? Check out my related posts or [reach out for consulting services](/contact-me/)!

@@ -1,6 +1,6 @@
 ---
 title: Solving Problems with Scalable Solutions
-description: A post on the thought process when designing, planning, and building scalable web applications & sites.
+description: Master the process of building HIPAA-compliant healthcare web apps. From customer research to production deployment, learn how to design scalable solutions that meet regulatory requirements.
 date: 2024-12-28
 tags: [learning, solution, consulting, process]
 layout: layouts/post.njk
@@ -96,4 +96,8 @@ AWS remains a top choice for healthcare applications due to its reliability and 
 
 ---
 
-That’s the process in a nutshell. What’d I miss?
+## Related Resources
+
+Looking to apply these principles? Check out my posts on [building a consulting site from scratch](/posts/building-consulting-site/) or [learning Java for enterprise development](/posts/learn-corporate-java/). Need help with your next project? [Let's talk](/contact-me/).
+
+That's the process in a nutshell. What'd I miss?
