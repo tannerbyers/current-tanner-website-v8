@@ -40,12 +40,6 @@ I've presented internally at Amazon on tooling, CI/CD, and AWS best practices. N
 
 ---
 
-## Need a speaker who can explain AI workflows without buzzwords?
-
-<p style="margin: 2rem 0;">
-  <a href="{{ '/contact-me/' | url }}" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #ff7800; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">Invite Tanner to Speak →</a>
-</p>
-
 **Email:** [programtanner@gmail.com](mailto:programtanner@gmail.com?subject=Speaking%20Inquiry)
 
 **Download:** [Speaker One-Sheet (PDF)](/img/speaking/tanner-byers-speaker-one-sheet.pdf)

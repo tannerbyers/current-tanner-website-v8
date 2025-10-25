@@ -92,12 +92,4 @@ A 5-year-old Spring Boot application with a 45-minute test suite. Developers wer
 
 ---
 
-## More Projects Coming Soon
-
-I'm constantly building and learning. Follow along:
-
-- **[Blog](/posts/)** - Deep dives into these projects and more
-- **[Newsletter](/newsletter/)** - Weekly updates on what I'm building
-- **[GitHub](https://github.com/tannerbyers)** - Code and experiments
-
-Questions about any of these projects? [Let's chat](/contact-me/) or email **programtanner@gmail.com**
+Questions about any of these projects? Email **programtanner@gmail.com**

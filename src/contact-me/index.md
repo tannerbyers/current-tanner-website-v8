@@ -18,12 +18,6 @@ I love talking about AWS, fullstack development, and the messy reality of buildi
 
 I respond to most emails within 24-48 hours. Don't be shy. If you're stuck on something I've written about or have ideas to share, hit me up.
 
-## Find Me Online
-
-- **[GitHub](https://github.com/tannerbyers)** - Where I build in public
-- **[Newsletter](/newsletter/)** - Weekly tips and build logs
-- **[Blog](/posts/)** - Technical guides and lessons learned
-
 ## What I Love Talking About
 
 - AWS architecture and optimization

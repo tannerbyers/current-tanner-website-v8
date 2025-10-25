@@ -42,10 +42,4 @@ Get practical development tips, AWS insights, and project updates delivered to y
 
 ---
 
-**Questions about the newsletter?** Email me: [programtanner@gmail.com](mailto:programtanner@gmail.com)
-
-Explore more:
-- [Blog posts](/posts/)
-- [Projects](/case-studies/)
-- [About Tanner](/about/)
-- [Connect](/contact-me/)
+**Questions about the newsletter?** Email [programtanner@gmail.com](mailto:programtanner@gmail.com)

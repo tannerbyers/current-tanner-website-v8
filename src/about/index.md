@@ -34,17 +34,6 @@ I've worked everywhere from healthcare giants processing billions of transaction
 - AWS Certified Developer - Associate
 - AWS Certified Solutions Architect - Associate
 
-## What I Share
-
-I write about AWS architecture, fullstack development, and the messy reality of building production systems. No fluff, just practical guides from real experience.
-
-- **[Blog](/posts/)** - Technical deep-dives and lessons learned
-- **[Newsletter](/newsletter/)** - Weekly tips on AWS and fullstack development
-- **[Projects](/case-studies/)** - Real builds with architecture breakdowns
-- **[GitHub](https://github.com/tannerbyers)** - Open source work and experiments
-
 ## Let's Connect
-
-Questions? Want to collaborate? Just want to chat about tech?
 
 **Email:** [programtanner@gmail.com](mailto:programtanner@gmail.com)
