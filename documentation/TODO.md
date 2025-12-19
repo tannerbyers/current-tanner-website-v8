@@ -13,7 +13,7 @@
 
 ## Suggested small improvements (next)
 - Add keyboard handling and focus management to the dropdown menu (Close on Esc, toggle on Enter/Space) (done)
-- Add `rel="noopener noreferrer"` and `target="_blank"` to external links where appropriate
+- Add `rel="noopener noreferrer"` and `target="_blank"` to external links where appropriate (done via runtime script `src/js/external-links.js`)
 - Consider adding client-side search (Lunr.js or Algolia) for quick post lookup
 - Add copy-to-clipboard buttons for code blocks
 - Consider an assets index/page for shared downloadable resources
