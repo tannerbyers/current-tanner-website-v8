@@ -245,6 +245,33 @@ blockquote {
   transform: translateY(0);
 }
 
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--yellowgreen);
+  color: var(--almostblack);
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+/* Focus visible styles for nav links */
+.nav-link:focus {
+  outline: 2px solid var(--yellowgreen);
+  outline-offset: 2px;
+}
+
 .logo-nav {
   margin-right: 5px;
 }

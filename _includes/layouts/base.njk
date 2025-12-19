@@ -69,14 +69,15 @@
   <body>
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      <a class="skip-link" href="#content">Skip to content</a>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="{{ '/' | url }}" class="nav-link{% if page.url == '/' %} nav-item-active{% endif %}">Home</a></li>
-          <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}">About</a></li>
-<li class="nav-item"><a href="{{ '/posts/' | url }}" class="nav-link{% if page.url and page.url.startsWith('/posts/') %} nav-item-active{% endif %}">Blog</a></li>
-          <li class="nav-item"><a href="{{ '/case-studies/' | url }}" class="nav-link{% if page.url == '/case-studies/' %} nav-item-active{% endif %}">Projects</a></li>
-          <li class="nav-item"><a href="{{ '/speaking/' | url }}" class="nav-link{% if page.url == '/speaking/' %} nav-item-active{% endif %}">Speaking</a></li>
+          <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+          <li class="nav-item"><a href="{{ '/posts/' | url }}" class="nav-link{% if page.url and page.url.startsWith('/posts/') %} nav-item-active{% endif %}" {% if page.url and page.url.startsWith('/posts/') %}aria-current="page"{% endif %}>Blog</a></li>
+          <li class="nav-item"><a href="{{ '/case-studies/' | url }}" class="nav-link{% if page.url == '/case-studies/' %} nav-item-active{% endif %}" {% if page.url == '/case-studies/' %}aria-current="page"{% endif %}>Projects</a></li>
+          <li class="nav-item"><a href="{{ '/speaking/' | url }}" class="nav-link{% if page.url == '/speaking/' %} nav-item-active{% endif %}" {% if page.url == '/speaking/' %}aria-current="page"{% endif %}>Speaking</a></li>
+          <li class="nav-item"><a href="{{ metadata.feed.path | url }}" class="nav-link" title="RSS feed">RSS</a></li>
           <li class="nav-item nav-dropdown">
             <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">More</button>
             <ul class="nav-dropdown-menu" aria-label="More menu">
@@ -88,7 +89,7 @@
       </nav>
     </header>
 
-    <main {% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main id="content" {% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
 
