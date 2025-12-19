@@ -12,7 +12,7 @@
 - Add focus outlines for keyboard navigation on nav links (done)
 
 ## Suggested small improvements (next)
-- Add keyboard handling and focus management to the dropdown menu (Close on Esc, toggle on Enter/Space)
+- Add keyboard handling and focus management to the dropdown menu (Close on Esc, toggle on Enter/Space) (done)
 - Add `rel="noopener noreferrer"` and `target="_blank"` to external links where appropriate
 - Consider adding client-side search (Lunr.js or Algolia) for quick post lookup
 - Add copy-to-clipboard buttons for code blocks

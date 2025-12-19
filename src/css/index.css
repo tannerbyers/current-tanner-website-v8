@@ -232,11 +232,25 @@ blockquote {
   display: block;
   padding: 0.5rem 0.75rem;
 }
-.nav-dropdown:hover .nav-dropdown-menu,
+..nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* Show dropdown when opened by JS */
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Ensure the dropdown trigger shows a state when focused */
+.nav-dropdown .nav-dropdown-trigger:focus {
+  outline: 2px solid var(--yellowgreen);
+  outline-offset: 2px;
 }
 /* Keep dropdown open when hovering over the menu itself */
 .nav-dropdown-menu:hover {

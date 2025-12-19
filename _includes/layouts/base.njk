@@ -80,9 +80,9 @@
           <li class="nav-item"><a href="{{ metadata.feed.path | url }}" class="nav-link" title="RSS feed">RSS</a></li>
           <li class="nav-item nav-dropdown">
             <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">More</button>
-            <ul class="nav-dropdown-menu" aria-label="More menu">
-              <li><a href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
-              <li><a href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
+            <ul class="nav-dropdown-menu" aria-label="More menu" role="menu" aria-hidden="true">
+              <li role="none"><a role="menuitem" href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
             </ul>
           </li>
         </ul>
@@ -104,5 +104,6 @@
       </div>                         
     </footer>
 
+    <script src="{{ '/js/nav-dropdown.js' | url }}" defer></script>
   </body>
 </html>
