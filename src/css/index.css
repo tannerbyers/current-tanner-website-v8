@@ -168,6 +168,8 @@ blockquote {
   padding: 0;
   margin: 0;
   font-size: 1em;
+  position: relative;
+  z-index: 1100;
   /* font-family: "Montserrat", sans-serif; */
 }
 .home :link {
@@ -177,7 +179,10 @@ blockquote {
 /* Nav */
 .nav {
   margin: 0;
+  position: relative;
+  z-index: 1000;
 }
+
 .nav-list {
   margin: 0;
   padding: 0;
