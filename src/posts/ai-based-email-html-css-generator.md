@@ -58,11 +58,11 @@ Here are some before/after shots:
 
 <div style="display: flex">
 <div>
-<h4>Before</h4>
+<h3>Before</h3>
 <img src="/img/ai-based-email-html-css-generator/hugo-plate-template.png" alt="Hugo Plate template screenshot" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
 </div>
 <div>
-<h4>After</h4>
+<h3>After</h3>
 <img src="/img/ai-based-email-html-css-generator/bassoon-ai-content-rewrite.png" alt="Bassoon AI content rewrite screenshot" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
 </div>
 </div>

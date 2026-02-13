@@ -21,3 +21,6 @@ layout: layouts/post.njk
 7. Anime recommender based on past watched show and vibes. 
  
 8. A search engine thats made for humans and connects the small web with usable results. 
+---
+
+Have a similar project idea? Feel free to [reach out](/contact-me/). Or check out my [other posts on building real-world systems](/posts/).

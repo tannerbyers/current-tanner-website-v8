@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -75,7 +76,6 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
           <li class="nav-item"><a href="{{ '/posts/' | url }}" class="nav-link{% if page.url and page.url.startsWith('/posts/') %} nav-item-active{% endif %}" {% if page.url and page.url.startsWith('/posts/') %}aria-current="page"{% endif %}>Blog</a></li>
-          <li class="nav-item"><a href="{{ '/case-studies/' | url }}" class="nav-link{% if page.url == '/case-studies/' %} nav-item-active{% endif %}" {% if page.url == '/case-studies/' %}aria-current="page"{% endif %}>Projects</a></li>
           <li class="nav-item"><a href="{{ '/speaking/' | url }}" class="nav-link{% if page.url == '/speaking/' %} nav-item-active{% endif %}" {% if page.url == '/speaking/' %}aria-current="page"{% endif %}>Speaking</a></li>
           <li class="nav-item"><a href="{{ metadata.feed.path | url }}" class="nav-link" title="RSS feed">RSS</a></li>
           <li class="nav-item nav-dropdown">
@@ -84,13 +84,20 @@
               <li role="none"><a role="menuitem" href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
               <li role="none"><a role="menuitem" href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
             </ul>
-          </li>
         </ul>
       </nav>
     </header>
 
     <main id="content" {% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+      <div class="page-wrapper">
+        <div class="page-side page-side-left" id="lava-left"></div>
+        
+        <div class="page-content">
+          {{ content | safe }}
+        </div>
+        
+        <div class="page-side page-side-right" id="lava-right"></div>
+      </div>
     </main>
 
     <footer>
@@ -106,5 +113,146 @@
 
     <script src="{{ '/js/nav-dropdown.js' | url }}" defer></script>
     <script src="{{ '/js/external-links.js' | url }}" defer></script>
+    <script>
+      // Lava Lamp Toggle Functionality - Initialize early to ensure button is found
+      function setupLavaToggle() {
+        const toggle = document.getElementById('lava-toggle');
+        const html = document.documentElement;
+        
+        if (!toggle) {
+          console.warn('Lava toggle button not found');
+          return;
+        }
+        
+        // Check saved preference and apply on page load
+        const savedPreference = localStorage.getItem('lava-lamps-enabled');
+        const isEnabled = savedPreference !== 'false';
+        
+        if (!isEnabled) {
+          html.classList.add('lava-off');
+          toggle.classList.add('toggle-off');
+        }
+        
+        // Add click handler
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isCurrentlyOff = html.classList.contains('lava-off');
+          
+          if (isCurrentlyOff) {
+            // Turn on
+            html.classList.remove('lava-off');
+            toggle.classList.remove('toggle-off');
+            localStorage.setItem('lava-lamps-enabled', 'true');
+          } else {
+            // Turn off
+            html.classList.add('lava-off');
+            toggle.classList.add('toggle-off');
+            localStorage.setItem('lava-lamps-enabled', 'false');
+          }
+        });
+      }
+      
+      // Run as soon as DOM allows
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupLavaToggle);
+      } else {
+        setupLavaToggle();
+      }
+    </script>
+    <script>
+      const colors = [
+        {
+          gradient: 'linear-gradient(135deg, rgb(0, 225, 255), var(--yellowgreen), rgb(0, 225, 255))',
+          glow: 'rgba(0, 225, 255, 0.4)'
+        },
+        {
+          gradient: 'linear-gradient(45deg, #FF9900, #FFC300, #FFB700)',
+          glow: 'rgba(255, 153, 0, 0.35)'
+        },
+        {
+          gradient: 'linear-gradient(135deg, #9333ea, #a855f7, #c084fc)',
+          glow: 'rgba(147, 51, 234, 0.4)'
+        },
+        {
+          gradient: 'linear-gradient(45deg, #0080ff, #00d4ff, #0099ff)',
+          glow: 'rgba(0, 152, 255, 0.35)'
+        }
+      ];
+
+      const animationStyles = [
+        'lava-float-1 15s ease-in-out infinite, lava-morph-1 8s ease-in-out infinite, pulse-glow 6s ease-in-out infinite',
+        'lava-float-2 18s ease-in-out infinite 2s, lava-morph-2 9s ease-in-out infinite 1s, pulse-glow-orange 7s ease-in-out infinite',
+        'lava-float-3 16s ease-in-out infinite 1s, lava-morph-1 9s ease-in-out infinite 2s, pulse-glow-purple 6.5s ease-in-out infinite 1s',
+        'lava-float-4 17s ease-in-out infinite 3s, lava-morph-2 8.5s ease-in-out infinite 1.5s, pulse-glow-blue 7.5s ease-in-out infinite 0.5s'
+      ];
+
+      function createLavaLamps() {
+        const leftContainer = document.getElementById('lava-left');
+        const rightContainer = document.getElementById('lava-right');
+        
+        if (!leftContainer || !rightContainer) return;
+
+        // Random number of blobs per side (3-5)
+        const leftCount = Math.floor(Math.random() * 3) + 3;
+        const rightCount = Math.floor(Math.random() * 3) + 3;
+
+        // Create left side blobs
+        for (let i = 0; i < leftCount; i++) {
+          const blob = createBlob(i, 'left');
+          leftContainer.appendChild(blob);
+        }
+
+        // Create right side blobs
+        for (let i = 0; i < rightCount; i++) {
+          const blob = createBlob(i, 'right');
+          rightContainer.appendChild(blob);
+        }
+      }
+
+      function createBlob(index, side) {
+        const blob = document.createElement('div');
+        blob.className = 'floating-shape';
+        
+        const colorIndex = index % colors.length;
+        const color = colors[colorIndex];
+        const animation = animationStyles[colorIndex];
+        
+        const sizes = [240, 260, 280];
+        const size = sizes[Math.floor(Math.random() * sizes.length)];
+        
+        // Full page height randomization
+        const viewportHeight = window.innerHeight + 400;
+        const topPosition = Math.random() * viewportHeight - 100;
+        
+        const leftOffset = -180 + Math.random() * 100;
+        const rightOffset = -160 + Math.random() * 100;
+        
+        const opacity = 0.18 + Math.random() * 0.08;
+        
+        blob.style.width = size + 'px';
+        blob.style.height = size + 'px';
+        blob.style.background = color.gradient;
+        blob.style.backgroundSize = '200% 200%';
+        blob.style.animation = animation;
+        blob.style.opacity = opacity;
+        blob.style.boxShadow = `0 0 ${40 + Math.random() * 30}px ${color.glow}`;
+        
+        if (side === 'left') {
+          blob.style.top = topPosition + 'px';
+          blob.style.left = leftOffset + 'px';
+        } else {
+          blob.style.top = topPosition + 'px';
+          blob.style.right = rightOffset + 'px';
+        }
+        
+        return blob;
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', createLavaLamps);
+      createLavaLamps();
+    </script>
   </body>
 </html>

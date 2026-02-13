@@ -12,28 +12,89 @@ eleventyNavigation:
   <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers" loading="lazy"/>
 </p>
 
-I'm Tanner, a fullstack software engineer sharing what I learn building with AWS and modern web tech.
+## Where I started 
 
-Started tinkering with Goodwill PC parts in middle school. Taught myself to code during late nights after 12-hour dishwasher shifts.
+My technical journey started with me taking apart Goodwill PC parts in middle school (throw back to when Goodwill sold PCs!) and reading random coding books and blogs. I started to learn to code when I was 17 and from there, I built over 20+ random and usually fun projects during my nights after work.
 
-I've worked at healthcare giants processing billions of transactions (Availity), funded startups (Glidian), and spent two years at AWS Professional Services helping teams build better systems.
+Eventually I landed a corporate dev job where i worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the pay). Did that for a little and then got a job at AWS building solutions for their customers. I built up my experience building real world applications for many different sized companies from billions of transactions and millions of users to prototyping and onboarding a founder's first beta users. I share these lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
 
-## What I've Built
+## Where I've worked
 
-**At AWS** (2022-2024), I developed a React/TypeScript micro-frontend library that saved 100+ developer weeks across 13 teams. Built document repositories that cut search time from 90 seconds to 15 seconds. Designed CloudFormation and IAM policies for AWS JAMs (two of them ranked in the top 10 in 2023).
+I've built tons of full stack projects either for companies or founders across these organizations (2018-Current). Here's a list of the ones I remember: Document repository, serverless file processor, AI Agent, syncing middleware, automated claim processor, accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, static site generator.
 
-**In healthcare tech**, debugged processing engines handling 1+ billion transactions monthly, built SOAP API integrations, and created accessibility testing tools that saved hundreds of QA hours.
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #FF9900, #FFC300); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">AWS</div>
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #1e5a8e, #2a7cb5); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Availity</div>
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #0066cc, #0052a3); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Glidian</div>
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b35, #ff8c42); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">PayForTime</div>
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #9333ea, #a855f7); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Mogulplex</div>
+</div>
 
-**Stack**: React, TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform.
+## What I've worked with
+
+**Stack**: TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform, SQL/NoSQL, Node.js, React, Angular, X12.
+
+<div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin: 2rem 0; justify-content: center;">
+  <div style="text-align: center;">
+    <i class="fab fa-react" style="font-size: 3.5rem; color: #61DAFB; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">React</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fab fa-js-square" style="font-size: 3.5rem; color: #3178C6; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">TypeScript</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fab fa-python" style="font-size: 3.5rem; color: #366994; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">Python</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fab fa-java" style="font-size: 3.5rem; color: #007396; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">Java</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fab fa-node-js" style="font-size: 3.5rem; color: #339933; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">Node.js</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fab fa-aws" style="font-size: 3.5rem; color: #FF9900; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">AWS</p>
+  </div>
+  <div style="text-align: center;">
+    <i class="fas fa-layer-group" style="font-size: 3.5rem; color: #7B42BC; margin-bottom: 0.5rem; display: block;"></i>
+    <p style="margin: 0; font-size: 0.9rem;">Terraform</p>
+  </div>
+</div>
 
 ## Certifications
 
-- AWS Certified Security - Specialty
-- AWS Certified Database - Specialty  
-- AWS Certified AI Practitioner
-- AWS Certified Developer - Associate
-- AWS Certified Solutions Architect - Associate
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+  <div style="background: linear-gradient(135deg, #FF9900, #FFC300); padding: 1rem 1.5rem; border-radius: 8px; color: white; font-weight: 500; font-size: 0.9rem; text-align: center; flex: 1; min-width: 180px;">
+    <div style="font-size: 0.75rem; opacity: 0.9; margin-bottom: 0.25rem;">AWS Certified</div>
+    <div style="font-size: 1rem; font-weight: 600;">Security - Specialty</div>
+  </div>
+  <div style="background: linear-gradient(135deg, #FF9900, #FFC300); padding: 1rem 1.5rem; border-radius: 8px; color: white; font-weight: 500; font-size: 0.9rem; text-align: center; flex: 1; min-width: 180px;">
+    <div style="font-size: 0.75rem; opacity: 0.9; margin-bottom: 0.25rem;">AWS Certified</div>
+    <div style="font-size: 1rem; font-weight: 600;">Database - Specialty</div>
+  </div>
+  <div style="background: linear-gradient(135deg, #FF9900, #FFC300); padding: 1rem 1.5rem; border-radius: 8px; color: white; font-weight: 500; font-size: 0.9rem; text-align: center; flex: 1; min-width: 180px;">
+    <div style="font-size: 0.75rem; opacity: 0.9; margin-bottom: 0.25rem;">AWS Certified</div>
+    <div style="font-size: 1rem; font-weight: 600;">AI Practitioner</div>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+  <div style="background: linear-gradient(135deg, #232f3e, #37475a); padding: 1rem 1.5rem; border-radius: 8px; color: #ffffff; font-weight: 500; font-size: 0.9rem; text-align: center; flex: 1; min-width: 180px;">
+    <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.25rem; color: #FF9900;">AWS Certified</div>
+    <div style="font-size: 1rem; font-weight: 600;">Developer - Associate</div>
+  </div>
+  <div style="background: linear-gradient(135deg, #232f3e, #37475a); padding: 1rem 1.5rem; border-radius: 8px; color: #ffffff; font-weight: 500; font-size: 0.9rem; text-align: center; flex: 1; min-width: 180px;">
+    <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.25rem; color: #FF9900;">AWS Certified</div>
+    <div style="font-size: 1rem; font-weight: 600;">Solutions Architect - Associate</div>
+  </div>
+</div> 
 
 ## Let's Connect
+
+Want to stay updated? [Subscribe to my newsletter](/newsletter/) for practical tech tips and AWS insights.
 
 **Email:** [programtanner@gmail.com](mailto:programtanner@gmail.com)

@@ -36,6 +36,7 @@ h5,
 h6,
 header {
   font-family: "Roboto Slab", serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 p:last-child {
@@ -49,9 +50,11 @@ img {
 p,
 .tmpl-post li {
   line-height: 1.45;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 a[href] {
   color: var(--white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 a[href]:hover {
@@ -232,7 +235,7 @@ blockquote {
   display: block;
   padding: 0.5rem 0.75rem;
 }
-..nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -573,4 +576,275 @@ footer {
   -z-animation: rainbow 16s ease infinite;
   -o-animation: rainbow 16s ease infinite;
   animation: rainbow 16s ease infinite;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 50em) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+}
+
+.page-content {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+  background: rgba(27, 27, 27, 0.6);
+  border-radius: 8px;
+  padding: 0 1rem;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+.page-side {
+  display: none;
+  position: relative;
+  min-height: 900px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Show side decorations on larger screens */
+@media (min-width: 1400px) {
+  .page-side {
+    display: block;
+  }
+}
+
+/* Lava Lamp Blob Animations */
+@keyframes lava-float-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) translateX(-10px);
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-80px) translateX(15px);
+  }
+  50% {
+    transform: translateY(-120px) translateX(-20px);
+  }
+  75% {
+    transform: translateY(-60px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-10px);
+  }
+}
+
+@keyframes lava-float-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) translateX(20px);
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-50px) translateX(-15px);
+  }
+  50% {
+    transform: translateY(-100px) translateX(25px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(40px) translateX(20px);
+  }
+}
+
+@keyframes lava-float-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) translateX(5px);
+  }
+  8% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-90px) translateX(-25px);
+  }
+  60% {
+    transform: translateY(-70px) translateX(20px);
+  }
+  100% {
+    transform: translateY(20px) translateX(5px);
+  }
+}
+
+@keyframes lava-float-4 {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) translateX(-15px);
+  }
+  8% {
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-110px) translateX(10px);
+  }
+  65% {
+    transform: translateY(-50px) translateX(-20px);
+  }
+  100% {
+    transform: translateY(-30px) translateX(-15px);
+  }
+}
+
+@keyframes lava-morph-1 {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 70% 30% 40% 60% / 30% 70% 60% 40%;
+  }
+  75% {
+    border-radius: 40% 70% 60% 30% / 70% 40% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes lava-morph-2 {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  25% {
+    border-radius: 70% 30% 40% 60% / 60% 40% 60% 40%;
+  }
+  50% {
+    border-radius: 30% 70% 60% 40% / 40% 60% 50% 60%;
+  }
+  75% {
+    border-radius: 60% 40% 30% 70% / 50% 40% 70% 30%;
+  }
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(0, 225, 255, 0.4), inset 0 0 30px rgba(0, 225, 255, 0.15);
+    filter: blur(0.5px) brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(0, 225, 255, 0.6), inset 0 0 40px rgba(0, 225, 255, 0.25);
+    filter: blur(0px) brightness(1.1);
+  }
+}
+
+@keyframes pulse-glow-orange {
+  0%, 100% {
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.35), inset 0 0 40px rgba(255, 153, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 70px rgba(255, 153, 0, 0.5), inset 0 0 50px rgba(255, 153, 0, 0.2);
+  }
+}
+
+@keyframes pulse-glow-purple {
+  0%, 100% {
+    box-shadow: 0 0 45px rgba(147, 51, 234, 0.4), inset 0 0 35px rgba(147, 51, 234, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 65px rgba(147, 51, 234, 0.55), inset 0 0 45px rgba(147, 51, 234, 0.22);
+  }
+}
+
+@keyframes pulse-glow-blue {
+  0%, 100% {
+    box-shadow: 0 0 50px rgba(0, 152, 255, 0.35), inset 0 0 40px rgba(0, 152, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 70px rgba(0, 152, 255, 0.5), inset 0 0 50px rgba(0, 152, 255, 0.18);
+  }
+}
+
+.floating-shape {
+  position: absolute;
+  filter: blur(0.5px);
+  will-change: transform, border-radius, opacity;
+  pointer-events: none;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Toggle Button Styling */
+.lava-toggle-btn {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.lava-toggle-btn:hover {
+  color: var(--yellowgreen) !important;
+}
+
+.lava-toggle-btn.toggle-off .toggle-icon::before {
+  content: '✗';
+  position: absolute;
+}
+
+/* Hide lava lamps when toggled off */
+html.lava-off .page-side,
+html.lava-off #lava-left,
+html.lava-off #lava-right {
+  display: none !important;
+}
+
+/* Do NOT remove background or border-radius from .page-content when lava is off. Only hide blobs. */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .page-side {
+    display: none !important;
+  }
+  
+  .page-content {
+    backdrop-filter: none;
+    background: transparent;
+    border-radius: 0;
+    padding: 0 1rem;
+  }
+  
+  html.lava-off .page-content {
+    padding: 0 1rem;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .nav-list {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2em;
+  }
 }

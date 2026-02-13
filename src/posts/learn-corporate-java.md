@@ -75,9 +75,13 @@ Remember, learning to code is best done through practical application. Instead o
    I've got [a running list of application ideas here](/posts/coding-ideas/) but I recommend you build whatever you're interested in!
 
 
-#### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
+### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
 
 By following these steps, you'll be somewhat prepared to use Java at work!
+
+---
+
+Looking for more learning resources? Check out how I approach [building scalable solutions](/posts/building-modern-healthcare-web-app/) or explore my guide on [creating a consulting site](/posts/building-consulting-site/). Want to discuss career growth in tech? [Let's connect](/contact-me/).
 
 ---
 
