@@ -8,5 +8,74 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: "github",
+          repo: "tannerbyers/current-tanner-website-v8",
+          branch: "main",
+          base_url: "https://tannerbyers.com",
+          auth_endpoint: "api/auth"
+        },
+        publish_mode: "editorial_workflow",
+        media_folder: "src/img",
+        public_folder: "/img",
+        collections: [
+          {
+            name: "posts",
+            label: "Blog Posts",
+            folder: "src/posts",
+            create: true,
+            slug: "{{slug}}",
+            extension: "md",
+            fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "text", hint: "SEO meta description. Keep under 160 chars." },
+              { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+              { label: "Tags", name: "tags", widget: "list", hint: "Comma-separated. e.g. AI, learning, AWS" },
+              { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional OG/Twitter card image." },
+              { label: "Last Modified", name: "lastModified", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false },
+              { label: "Draft", name: "draft", widget: "boolean", default: false, required: false },
+              { label: "Body", name: "body", widget: "markdown" }
+            ]
+          },
+          {
+            name: "pages",
+            label: "Pages",
+            files: [
+              {
+                label: "About", name: "about", file: "src/about/index.md",
+                fields: [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                  { label: "Body", name: "body", widget: "markdown" }
+                ]
+              },
+              {
+                label: "Speaking", name: "speaking", file: "src/speaking/index.md",
+                fields: [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                  { label: "Body", name: "body", widget: "markdown" }
+                ]
+              },
+              {
+                label: "Newsletter", name: "newsletter", file: "src/newsletter/index.md",
+                fields: [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                  { label: "Body", name: "body", widget: "markdown" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
