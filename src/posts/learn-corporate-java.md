@@ -3,7 +3,6 @@ title: Learning Java for a Corporate Career
 description: Complete roadmap for learning Java for enterprise development. Covers Spring Boot, Maven, Gradle, and best practices for corporate Java careers. Start building production-ready apps today.
 date: 2024-04-24
 tags: [java, learning]
-layout: layouts/post.njk
 ---
 
 # How to Learn Java for a Corporate Career

@@ -33,7 +33,7 @@ Get development tips, AWS insights, and project updates delivered to your inbox.
 </div>
 
 <div style="margin: 2rem 0; padding: 2rem; border: 1px solid #444; border-radius: 12px; background-color: #222; text-align: center;">
-  <form action="https://buttondown.email/api/emails/embed-subscribe/decoupledev" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/decoupledev', 'popupwindow')" class="embeddable-buttondown-form" style="max-width: 400px; margin: 0 auto;">
+  <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="embeddable-buttondown-form" style="max-width: 400px; margin: 0 auto;">
     <div style="margin-bottom: 1rem;">
       <label for="bd-email-newsletter" style="display: block; margin-bottom: 0.5rem; font-weight: 500; text-align: left; color: #ffffff;">Email Address</label>
       <input type="email" name="email" id="bd-email-newsletter" required style="width: 100%; padding: 0.75rem; border: 1px solid #555; border-radius: 6px; font-size: 1rem; background-color: #1a1a1a; color: #ffffff;">

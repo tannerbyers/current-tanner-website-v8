@@ -1,8 +1,11 @@
 const { DateTime } = require("luxon");
 const fs = require("fs");
+const crypto = require("crypto");
+const { execSync } = require("child_process");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -54,6 +57,81 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
 
+  // Reading time estimate
+  eleventyConfig.addFilter("readingTime", (content) => {
+    if (!content) return "1 min read";
+    const words = content.replace(/<[^>]*>/g, "").split(/\s+/).length;
+    const minutes = Math.ceil(words / 225);
+    return `${minutes} min read`;
+  });
+
+  // Current year shortcode for copyright
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Table of contents filter — extracts h2/h3 from rendered HTML
+  eleventyConfig.addFilter("toc", (content) => {
+    if (!content) return "";
+    const headings = [];
+    const regex = /<h([23])[^>]*id="([^"]+)"[^>]*>(.*?)<\/h[23]>/gi;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const level = parseInt(match[1]);
+      const id = match[2];
+      const text = match[3].replace(/<[^>]*>/g, "").trim();
+      if (text) headings.push({ level, id, text });
+    }
+    if (headings.length < 2) return "";
+    let html = '<nav class="toc" aria-label="Table of contents"><h2 class="toc-title">Contents</h2><ol>';
+    for (const h of headings) {
+      html += `<li class="toc-l${h.level}"><a href="#${h.id}">${h.text}</a></li>`;
+    }
+    html += "</ol></nav>";
+    return html;
+  });
+
+  // Related posts filter — finds posts sharing the most tags
+  eleventyConfig.addFilter("relatedPosts", (collection, currentPage, tags, limit = 3) => {
+    if (!collection || !tags) return [];
+    const currentTags = filterTagList(tags);
+    if (currentTags.length === 0) return [];
+    return collection
+      .filter(post => post.url !== currentPage.url)
+      .map(post => {
+        const postTags = filterTagList(post.data.tags || []);
+        const shared = currentTags.filter(t => postTags.includes(t)).length;
+        return { post, shared };
+      })
+      .filter(r => r.shared > 0)
+      .sort((a, b) => b.shared - a.shared || b.post.date - a.post.date)
+      .slice(0, limit)
+      .map(r => r.post);
+  });
+
+  // Cache-busting filter — appends content hash to asset URLs
+  eleventyConfig.addFilter("cacheBust", (url) => {
+    try {
+      const filePath = `src${url}`;
+      if (fs.existsSync(filePath)) {
+        const content = fs.readFileSync(filePath);
+        const hash = crypto.createHash("md5").update(content).digest("hex").slice(0, 8);
+        return `${url}?v=${hash}`;
+      }
+    } catch (e) { /* ignore */ }
+    return url;
+  });
+
+  // Git last modified date for content files
+  eleventyConfig.addFilter("gitLastModified", (inputPath) => {
+    try {
+      const result = execSync(`git log -1 --format="%ai" -- "${inputPath}"`, {
+        encoding: "utf-8",
+        cwd: process.cwd(),
+      }).trim();
+      if (result) return new Date(result);
+    } catch (e) { /* ignore */ }
+    return null;
+  });
+
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -64,9 +142,17 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // Excerpt support: use --- as separator in post content
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- excerpt -->",
+  });
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
@@ -82,7 +168,32 @@ module.exports = function (eleventyConfig) {
     }),
     slugify: eleventyConfig.getFilter("slug"),
   });
+
+  // Lazy loading for markdown images
+  const defaultImageRender = markdownLibrary.renderer.rules.image || function (tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+  markdownLibrary.renderer.rules.image = function (tokens, idx, options, env, self) {
+    tokens[idx].attrSet("loading", "lazy");
+    tokens[idx].attrSet("decoding", "async");
+    return defaultImageRender(tokens, idx, options, env, self);
+  };
+
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  // HTML minification for production builds
+  eleventyConfig.addTransform("htmlmin", function (content) {
+    if ((this.outputPath || "").endsWith(".html")) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: true,
+        minifyCSS: true,
+      });
+    }
+    return content;
+  });
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({

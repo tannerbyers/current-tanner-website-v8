@@ -3,7 +3,6 @@ title: Fun Tech Projects (that I dont have time to build)
 description: Ongoing list of tech projects I think would be fun or interesting to build.
 date: 2025-02-07
 tags: [project, AI]
-layout: layouts/post.njk
 ---
 
 1. On-demand game server (using something like Fargate w/ docker and load minecraft or valheim)

@@ -3,7 +3,6 @@ title: Building my consulting site
 description: Step-by-step guide to building a fast, scalable consulting website with AWS, Gatsby, and Terraform. Learn the tech stack decisions that prioritize performance, accessibility, and cost-effectiveness.
 date: 2024-04-24
 tags: [learning, consulting]
-layout: layouts/post.njk
 ---
 
 ## Introduction

@@ -10,26 +10,42 @@
     <meta name="author" content="{{ metadata.author.name }}">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
     
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{% if templateClass == 'tmpl-post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}">
     <meta property="og:description" content="{{ description or metadata.description }}">
-    <meta property="og:image" content="{{ metadata.url }}/img/tanner.jpg">
+    <meta property="og:image" content="{{ metadata.url }}{{ image or '/img/tanner.jpg' }}">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
+    <meta property="twitter:card" content="{% if image %}summary_large_image{% else %}summary{% endif %}">
     <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="twitter:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}">
     <meta property="twitter:description" content="{{ description or metadata.description }}">
-    <meta property="twitter:image" content="{{ metadata.url }}/img/tanner.jpg">
+    <meta property="twitter:image" content="{{ metadata.url }}{{ image or '/img/tanner.jpg' }}">
+    
+    {%- if templateClass == 'tmpl-post' %}
+    <!-- Article-specific OG tags -->
+    <meta property="article:published_time" content="{{ page.date | htmlDateString }}">
+    <meta property="article:modified_time" content="{{ (lastModified or page.date) | htmlDateString }}">
+    <meta property="article:author" content="{{ metadata.author.name }}">
+    {%- for tag in tags | filterTagList %}
+    <meta property="article:tag" content="{{ tag }}">
+    {%- endfor %}
+    {%- endif %}
     
     <!-- Preload critical resources -->
     <link rel="preload" href="{{ '/css/index.css' | url }}" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" as="style">
     
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | cacheBust }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | cacheBust }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -50,12 +66,44 @@
       "knowsAbout": ["AWS", "Software Development", "Cloud Infrastructure", "DevOps", "Full-Stack Development"],
       "email": "{{ metadata.author.email }}",
       "sameAs": [
-        "{{ metadata.url }}"
+        "{{ metadata.url }}",
+        "{{ metadata.socialLinks.github }}",
+        "{{ metadata.socialLinks.linkedin }}"
       ]
     }
     </script>
     
     {% include "components/article-structured-data.njk" %}
+    
+    <!-- WebSite structured data for sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ metadata.title }}",
+      "url": "{{ metadata.url }}",
+      "description": "{{ metadata.description }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ metadata.author.name }}"
+      }
+    }
+    </script>
+    
+    {%- if templateClass == 'tmpl-post' %}
+    <!-- BreadcrumbList structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ metadata.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ metadata.url }}/posts/" },
+        { "@type": "ListItem", "position": 3, "name": "{{ title }}" }
+      ]
+    }
+    </script>
+    {%- endif %}
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB0Y5K6X23"></script>
@@ -68,6 +116,9 @@
     
   </head>
   <body>
+    {%- if templateClass == 'tmpl-post' %}
+    <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+    {%- endif %}
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
       <a class="skip-link" href="#content">Skip to content</a>
@@ -101,9 +152,19 @@
     </main>
 
     <footer>
+      <div class="footer-subscribe">
+        <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="footer-subscribe-form">
+          <label for="bd-email-footer">Dev tips & AWS insights:</label>
+          <div class="footer-subscribe-inputs">
+            <input type="email" name="email" id="bd-email-footer" placeholder="your@email.com" required aria-label="Email address">
+            <input type="submit" value="Subscribe">
+          </div>
+          <input type="hidden" value="1" name="embed">
+        </form>
+      </div>
       <div>{{ metadata.title}}</div>
       <div class="footer-text">
-        © 2025 {{ metadata.title }}, All rights reserved
+        © {% year %} {{ metadata.title }}, All rights reserved
       </div>
       <div class="footer-links" style="margin-top: 0.5rem; font-size: 0.8rem;">
         <a href="{{ '/privacy/' | url }}">Privacy Policy</a> |
@@ -111,8 +172,34 @@
       </div>                         
     </footer>
 
-    <script src="{{ '/js/nav-dropdown.js' | url }}" defer></script>
-    <script src="{{ '/js/external-links.js' | url }}" defer></script>
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</a>
+
+    <script src="{{ '/js/nav-dropdown.js' | cacheBust }}" defer></script>
+    <script src="{{ '/js/external-links.js' | cacheBust }}" defer></script>
+    <script>
+      // Reading progress bar
+      (function() {
+        var bar = document.getElementById('progress-bar');
+        if (!bar) return;
+        window.addEventListener('scroll', function() {
+          var h = document.documentElement;
+          var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+          bar.style.width = Math.min(pct, 100) + '%';
+        }, { passive: true });
+      })();
+      // Back to top
+      (function() {
+        var btn = document.getElementById('back-to-top');
+        if (!btn) return;
+        window.addEventListener('scroll', function() {
+          btn.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })();
+    </script>
     <script>
       // Lava Lamp Toggle Functionality - Initialize early to ensure button is found
       function setupLavaToggle() {

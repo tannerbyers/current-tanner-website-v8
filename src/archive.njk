@@ -1,9 +1,43 @@
 ---
 layout: layouts/home.njk
-permalink: /posts/
+title: Blog Archive | Tanner Byers
+description: Browse all blog posts by Tanner Byers on AWS, fullstack development, and tech.
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: pagedPosts
+permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}
 ---
 
 <h1>Archive</h1>
 
-{% set postslist = collections.posts %}
-{% include "layouts/postslist.njk" %}
+<ol reversed class="postlist" style="counter-reset: start-from {{ pagination.firstPageItem + pagedPosts.length + 1 }}">
+{% for post in pagedPosts %}
+  <li class="postlist-item">
+    <div>
+      <a href="{{ post.url | url }}" class="postlist-link animated-rainbow-hover">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    </div>
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    {% for tag in post.data.tags | filterTagList %}
+      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag animated-rainbow-hover">{{ tag }}</a>
+    {% endfor %}
+    <div>
+      {{ post.data.description }}
+    </div>
+  </li>
+{% endfor %}
+</ol>
+
+{% if pagination.pages.length > 1 %}
+<nav class="pagination" aria-label="Blog archive pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous | url }}" class="animated-rainbow-hover">&laquo; Newer</a>
+  {% endif %}
+  <span>Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next | url }}" class="animated-rainbow-hover">Older &raquo;</a>
+  {% endif %}
+</nav>
+{% endif %}

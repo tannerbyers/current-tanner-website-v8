@@ -3,7 +3,6 @@ title: Solving Problems with Scalable Solutions
 description: Master the process of building HIPAA-compliant healthcare web apps. From customer research to production deployment, learn how to design scalable solutions that meet regulatory requirements.
 date: 2024-12-28
 tags: [learning, solution, consulting, process]
-layout: layouts/post.njk
 ---
 
 Every solution starts with a problem and a customer experiencing it so we'll start with the customer.
