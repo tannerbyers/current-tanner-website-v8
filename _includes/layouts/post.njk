@@ -5,12 +5,38 @@ templateClass: tmpl-post
 <h1>{{ title }}</h1>
 
 <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<span class="reading-time">{{ content | readingTime }}</span>
 {%- for tag in tags | filterTagList -%}
 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
 <a href="{{ tagUrl | url }}" class="post-tag animated-rainbow-hover">{{ tag }}</a>
 {%- endfor %}
 
+{{ content | toc | safe }}
+
 {{ content | safe }}
+
+{%- set related = collections.posts | relatedPosts(page, tags) -%}
+{%- if related.length > 0 %}
+<div class="related-posts">
+  <h2>Related Posts</h2>
+  <ul>
+  {%- for rp in related %}
+    <li><a href="{{ rp.url | url }}" class="animated-rainbow-hover">{{ rp.data.title }}</a></li>
+  {%- endfor %}
+  </ul>
+</div>
+{%- endif %}
+
+<div class="subscribe-cta">
+  <h3>Enjoy this post?</h3>
+  <p>Get dev tips, AWS insights, and project updates straight to your inbox.</p>
+  <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="subscribe-cta-form">
+    <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+    <input type="submit" value="Subscribe">
+    <input type="hidden" value="1" name="embed">
+  </form>
+  <p class="subscribe-cta-note">No spam. Unsubscribe anytime.</p>
+</div>
 
 {%- if collections.posts %}
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}

@@ -3,7 +3,6 @@ title: "Building an AI-Powered Email HTML/CSS Generator: My Process & Lessons"
 description: Learn how I built an AI email template generator from scratch. Get practical insights on using AI for web development, choosing the right tech stack, and iterating on SaaS MVPs.
 date: 2021-08-06
 tags: [SaaS, AI, Business]
-layout: layouts/post.njk
 ---
 
 

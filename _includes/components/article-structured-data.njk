@@ -11,7 +11,7 @@
     "url": "{{ metadata.url }}"
   },
   "datePublished": "{{ page.date | htmlDateString }}",
-  "dateModified": "{{ page.date | htmlDateString }}",
+  "dateModified": "{{ (lastModified or page.date) | htmlDateString }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ metadata.url }}{{ page.url }}"

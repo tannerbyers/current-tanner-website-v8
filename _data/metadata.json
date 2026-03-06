@@ -18,5 +18,9 @@
     "name": "Tanner Byers",
     "email": "programtanner@gmail.com",
     "url": "https://tannerbyers.com/about/"
+  },
+  "socialLinks": {
+    "github": "https://github.com/tannerbyers",
+    "linkedin": "https://www.linkedin.com/in/tannerbyers"
   }
 }
