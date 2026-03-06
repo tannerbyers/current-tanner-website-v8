@@ -50,23 +50,23 @@ module.exports = async (req, res) => {
       return res.status(500).send("Failed to get access token from GitHub");
     }
 
-    // Decap CMS expects the token via postMessage from this page
+    // Decap CMS expects the token via postMessage from this popup
+    const content = JSON.stringify({ token, provider: "github" });
     const html = `
 <!doctype html>
 <html>
 <body>
+<p>Completing authentication...</p>
 <script>
 (function() {
-  function receiveMessage(e) {
-    console.log("receiveMessage %o", e);
-    window.opener.postMessage(
-      'authorization:github:success:${JSON.stringify({ token, provider: "github" })}',
-      e.origin
-    );
-    window.removeEventListener("message", receiveMessage, false);
+  var msg = 'authorization:github:success:${content}';
+  if (window.opener) {
+    window.opener.postMessage(msg, "*");
+    document.body.innerHTML = "<p>Login successful! This window will close.</p>";
+    setTimeout(function() { window.close(); }, 1000);
+  } else {
+    document.body.innerHTML = "<p>Error: Lost reference to the CMS window. Please close this tab and try again.</p>";
   }
-  window.addEventListener("message", receiveMessage, false);
-  window.opener.postMessage("authorizing:github", "*");
 })();
 </script>
 </body>
