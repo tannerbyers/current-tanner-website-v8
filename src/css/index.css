@@ -820,10 +820,16 @@ footer {
   position: relative;
   z-index: 2;
   backdrop-filter: blur(2px);
-  background: rgba(27, 27, 27, 0.6);
+  background: rgba(27, 27, 27, 0.45);
   border-radius: 8px;
   padding: 0 1rem;
   transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+/* Blog posts: near-opaque for readability */
+.tmpl-post .page-content {
+  backdrop-filter: blur(6px);
+  background: rgba(20, 20, 20, 0.92);
 }
 
 .page-side {
