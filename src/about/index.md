@@ -1,22 +1,22 @@
 ---
-layout: layouts/base.njk
 title: About Tanner Byers | AWS, DevOps & Software Engineering
-description: Tanner Byers is a fullstack software engineer with experience at AWS, healthcare tech, and startups.
+description: Tanner Byers is a fullstack software engineer with experience at
+  AWS, healthcare tech, and startups.
+layout: layouts/base.njk
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
   order: 3
 ---
-
 <p align="center"> 
   <img width="50%" src="/img/tanner.jpg" alt="Portrait of Tanner Byers" loading="lazy"/>
 </p>
 
-## Where I started 
+## Where I started
 
-My technical journey started with me taking apart Goodwill PC parts in middle school (throw back to when Goodwill sold PCs!) and reading random coding books and blogs. I started to learn to code when I was 17 and from there, I built over 20+ random and usually fun projects during my nights after work.
+My technical journey started with me taking apart Goodwill PC parts in middle school, throw back to when Goodwill sold PCs. I started to learn to code when I was around 15 and from there, I built over 20+ projects during my nights after work.
 
-Eventually I landed a corporate dev job where i worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the pay). Did that for a little and then got a job at AWS building solutions for their customers. I built up my experience building real world applications for many different sized companies from billions of transactions and millions of users to prototyping and onboarding a founder's first beta users. I share these lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
+Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then got a job at AWS building cloud solutions for their customers. I built up my experience building real world applications at large companies with billions of transactions and millions of monthly users to small startups where I built prototypes and onboarding their first found beta users. I share these lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
 
 ## Where I've worked
 
