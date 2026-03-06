@@ -10,75 +10,141 @@
   <script>window.CMS_MANUAL_INIT = true;</script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    CMS.init({
-      config: {
-        load_config_file: false,
-        backend: {
-          name: "github",
-          repo: "tannerbyers/current-tanner-website-v8",
-          branch: "main",
-          site_domain: "www.tannerbyers.com",
-          base_url: "https://www.tannerbyers.com",
-          auth_endpoint: "api/auth"
+    var isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+    var cmsConfig = {
+      load_config_file: false,
+      local_backend: isLocal,
+      backend: {
+        name: "github",
+        repo: "tannerbyers/current-tanner-website-v8",
+        branch: "main",
+        site_domain: "www.tannerbyers.com",
+        base_url: "https://www.tannerbyers.com",
+        auth_endpoint: "api/auth"
+      },
+      media_folder: "src/img",
+      public_folder: "/img",
+      collections: [
+        {
+          name: "posts",
+          label: "Blog Posts",
+          folder: "src/posts",
+          create: true,
+          slug: "{{slug}}",
+          extension: "md",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Description", name: "description", widget: "text", hint: "SEO meta description. Keep under 160 chars." },
+            { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+            { label: "Tags", name: "tags", widget: "list", hint: "Comma-separated. e.g. AI, learning, AWS" },
+            { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional OG/Twitter card image." },
+            { label: "Last Modified", name: "lastModified", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false },
+            { label: "Draft", name: "draft", widget: "boolean", default: false, required: false },
+            { label: "Body", name: "body", widget: "markdown" }
+          ]
         },
-        publish_mode: "editorial_workflow",
-        media_folder: "src/img",
-        public_folder: "/img",
-        collections: [
-          {
-            name: "posts",
-            label: "Blog Posts",
-            folder: "src/posts",
-            create: true,
-            slug: "{{slug}}",
-            extension: "md",
-            fields: [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Description", name: "description", widget: "text", hint: "SEO meta description. Keep under 160 chars." },
-              { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
-              { label: "Tags", name: "tags", widget: "list", hint: "Comma-separated. e.g. AI, learning, AWS" },
-              { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional OG/Twitter card image." },
-              { label: "Last Modified", name: "lastModified", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false },
-              { label: "Draft", name: "draft", widget: "boolean", default: false, required: false },
-              { label: "Body", name: "body", widget: "markdown" }
-            ]
-          },
-          {
-            name: "pages",
-            label: "Pages",
-            files: [
-              {
-                label: "About", name: "about", file: "src/about/index.md",
-                fields: [
-                  { label: "Title", name: "title", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
-                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
-                  { label: "Body", name: "body", widget: "markdown" }
-                ]
-              },
-              {
-                label: "Speaking", name: "speaking", file: "src/speaking/index.md",
-                fields: [
-                  { label: "Title", name: "title", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
-                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
-                  { label: "Body", name: "body", widget: "markdown" }
-                ]
-              },
-              {
-                label: "Newsletter", name: "newsletter", file: "src/newsletter/index.md",
-                fields: [
-                  { label: "Title", name: "title", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
-                  { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
-                  { label: "Body", name: "body", widget: "markdown" }
-                ]
-              }
-            ]
-          }
-        ]
+        {
+          name: "pages",
+          label: "Pages",
+          files: [
+            {
+              label: "About", name: "about", file: "src/about/index.md",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Description", name: "description", widget: "text" },
+                { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            },
+            {
+              label: "Speaking", name: "speaking", file: "src/speaking/index.md",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Description", name: "description", widget: "text" },
+                { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            },
+            {
+              label: "Newsletter", name: "newsletter", file: "src/newsletter/index.md",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Description", name: "description", widget: "text" },
+                { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    // editorial_workflow is not supported with local_backend
+    if (!isLocal) {
+      cmsConfig.publish_mode = 'editorial_workflow';
+    }
+
+    CMS.init({ config: cmsConfig });
+
+    // Load site styles in the preview pane
+    CMS.registerPreviewStyle('/css/index.css');
+    CMS.registerPreviewStyle('/css/prism-base16-monokai.dark.css');
+
+    // Post preview template — matches the blog's actual rendering
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || '';
+        var date = entry.getIn(['data', 'date']);
+        var image = entry.getIn(['data', 'image']);
+        var tags = entry.getIn(['data', 'tags']);
+        var description = entry.getIn(['data', 'description']) || '';
+
+        var dateStr = '';
+        if (date) {
+          try {
+            dateStr = new Date(date).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' });
+          } catch (e) { dateStr = ''; }
+        }
+
+        var tagEls = [];
+        if (tags && tags.toJS) {
+          tagEls = tags.toJS().map(function(tag) {
+            return h('a', { key: tag, className: 'post-tag animated-rainbow-hover', href: '#' }, tag);
+          });
+        }
+
+        return h('div', { className: 'tmpl-post', style: { maxWidth: '50em', margin: '0 auto', padding: '1rem' } },
+          h('h1', {}, title),
+          dateStr ? h('time', { style: { fontSize: '0.8125em', color: '#c0c0c0' } }, dateStr) : null,
+          tagEls.length > 0 ? h('div', { style: { margin: '0.5rem 0' } }, tagEls) : null,
+          description ? h('p', { style: { color: '#c0c0c0', fontStyle: 'italic' } }, description) : null,
+          image ? h('img', {
+            src: image,
+            alt: title,
+            style: { maxWidth: '100%', maxHeight: '400px', objectFit: 'cover', borderRadius: '8px', margin: '1rem 0', display: 'block' }
+          }) : null,
+          h('div', {}, this.props.widgetFor('body'))
+        );
       }
     });
+
+    CMS.registerPreviewTemplate('posts', PostPreview);
+
+    // Page preview template — simple body rendering with site styles
+    var PagePreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || '';
+        return h('div', { style: { maxWidth: '50em', margin: '0 auto', padding: '1rem' } },
+          h('h1', {}, title),
+          h('div', {}, this.props.widgetFor('body'))
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate('pages', PagePreview);
   </script>
 </body>
 </html>
