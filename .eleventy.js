@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
     while ((match = regex.exec(content)) !== null) {
       const level = parseInt(match[1]);
       const id = match[2];
-      const text = match[3].replace(/<[^>]*>/g, "").trim();
+      const text = match[3].replace(/<a[^>]*class="direct-link"[^>]*>.*?<\/a>/gi, "").replace(/<[^>]*>/g, "").trim();
       if (text) headings.push({ level, id, text });
     }
     if (headings.length < 2) return "";
