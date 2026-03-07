@@ -11,7 +11,7 @@ image: /img/blog_tech_employment.png
 lastModified: 2026-03-02
 draft: false
 ---
-I saw an interesting graph on Hacker News today suggesting demand for tech jobs has continue to decrease over the last 4 years. I was curious what the overall health of the tech market looked like for these sectors, so I pulled some data to look at the broader trend.
+I saw the above graph on [Hacker News](https://news.ycombinator.com/item?id=47278426) today saying *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. That sounded extremely exagerrated so my curious got the best of me and I dove into more of the numbers. I was curious what the overall health of the tech market looked like for these sectors, so I pulled some public data to look at the broader trend.
 
 ## Findings
 
@@ -22,8 +22,6 @@ Using Bureau of Labor Statistics employment data across similar tech industries,
 +951,100 jobs compared to January 2016 (+34.8%)
 
 In other words, tech employment hasn’t collapsed. **It grew aggressively for years, overshot during the 2021–2022 hiring surge, and is now sitting on a plateau** slightly below the peak. The market  shows that plateau are likely what people are reacting to where companies are hiring fewer entry-level devs and “pure architecture” roles while still needing experienced roles across the board. 
-
-
 
 ## **The takeaway**
 
