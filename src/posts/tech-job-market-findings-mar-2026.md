@@ -1,13 +1,14 @@
 ---
-title: "Tech Job Market Findings - Mar 2026 "
+title: "Tech Job Market Findings - Jan 2026 "
 description: My researching using Bureau of Labor Statistics public data showed
   that the tech job market is still strongggg.
-date: 2026-03-06
+date: 2026-03-01
 tags:
   - Tech
   - jobs
   - research
 image: /img/blog_tech_employment.png
+lastModified: 2026-03-02
 draft: false
 ---
 I saw an interesting graph on Hacker News today suggesting demand for tech jobs has continue to decrease over the last 4 years. I was curious what the overall health of the tech market looked like for these sectors, so I pulled some data to look at the broader trend.
