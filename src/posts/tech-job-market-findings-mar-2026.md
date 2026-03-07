@@ -21,7 +21,7 @@ Using Bureau of Labor Statistics employment data across similar tech industries,
 
 +951,100 jobs compared to January 2016 (+34.8%)
 
-In other words, tech employment hasn’t collapsed. **It grew aggressively for years, overshot during the 2021–2022 hiring surge, and is now sitting on a plateau** slightly below the peak. The market  shows that plateau are likely what people are reacting to where companies are hiring fewer entry-level devs and “pure architecture” roles while still needing experienced roles across the board. 
+In other words, tech employment hasn’t collapsed. **It grew aggressively for years, overshot during the 2021–2022 hiring surge, and is now sitting on a plateau** slightly below the peak. The market  shows that plateau are likely what people are reacting to where companies are hiring fewer entry-level devs and “pure architecture” roles while still needing experienced roles across the board.
 
 ## **The takeaway**
 
