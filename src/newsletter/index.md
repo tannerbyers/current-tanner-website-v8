@@ -1,16 +1,16 @@
 ---
-layout: layouts/base.njk
 title: Tech Tips Newsletter | Tanner Byers
-description: Subscribe to Tanner Byers' newsletter for practical tech tips, AWS insights, and developer updates. No spam, just value.
+description: Subscribe to Tanner Byers' newsletter for practical tech tips, AWS
+  insights, and developer updates. No spam, just value.
+layout: layouts/base.njk
 templateClass: tmpl-post
 eleventyNavigation:
   key: Newsletter
   order: 7
 ---
-
 # Newsletter
 
-Get development tips, AWS insights, and project updates delivered to your inbox. Want to explore deeper? Check out my [detailed blog posts](/posts/) on AWS architecture, React patterns, and infrastructure automation.
+Get development tips, AWS insights, and project updates delivered to your inbox. 
 
 ## What you'll get:
 
@@ -28,7 +28,7 @@ Get development tips, AWS insights, and project updates delivered to your inbox.
     <strong>Tool recommendations</strong> that save time
   </div>
   <div style="padding: 1rem 1.5rem; background: rgba(255, 152, 0, 0.1); border-radius: 6px; border-left: 3px solid #FF9900;">
-    Sent <strong>1-2 times per month</strong>
+    Sent <strong>whenever I can per month</strong>
   </div>
 </div>
 
@@ -44,7 +44,7 @@ Get development tips, AWS insights, and project updates delivered to your inbox.
   <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">No spam. Unsubscribe at any time.</p>
 </div>
 
----
+- - -
 
 **Questions about the newsletter?** Email [programtanner@gmail.com](mailto:programtanner@gmail.com)
 

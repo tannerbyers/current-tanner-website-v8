@@ -16,11 +16,9 @@ eleventyNavigation:
 
 My technical journey started with me taking apart Goodwill PC parts in middle school, throw back to when Goodwill sold PCs. I started to learn to code when I was around 15 and from there, I built over 20+ projects during my nights after work.
 
-Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then got a job at AWS building cloud solutions for their customers. I built up my experience building real world applications at large companies with billions of transactions and millions of monthly users to small startups where I built prototypes and onboarding their first found beta users. I share these lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
+Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then got a job at AWS building cloud solutions for their customers. I built up my experience building real world applications at large companies with billions of transactions and millions of monthly users to small startups where I built prototypes and onboarding their first beta users. I share my experiences and lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
 
 ## Where I've worked
-
-I've built tons of full stack projects either for companies or founders across these organizations (2018-Current). Here's a list of the ones I remember: Document repository, serverless file processor, AI Agent, syncing middleware, automated claim processor, accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, static site generator.
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
   <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #FF9900, #FFC300); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">AWS</div>
@@ -30,7 +28,12 @@ I've built tons of full stack projects either for companies or founders across t
   <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #9333ea, #a855f7); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Mogulplex</div>
 </div>
 
-## What I've worked with
+
+
+## What I've worked on and with
+
+I've built tons of full stack projects either for companies and founders. 
+Here's a list of the ones I remember: Document repository, serverless file processor, AI Agent, syncing middleware, automated claim processor, accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, static site generator.
 
 **Stack**: TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform, SQL/NoSQL, Node.js, React, Angular, X12.
 
