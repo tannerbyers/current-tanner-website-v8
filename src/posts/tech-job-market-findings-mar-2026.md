@@ -7,11 +7,13 @@ tags:
   - Tech
   - jobs
   - research
-image: /img/blog_tech_employment.png
+image: /img/hcu0mg9beaadzym.png
 lastModified: 2026-03-02
 draft: false
 ---
 I saw the above graph on [Hacker News](https://news.ycombinator.com/item?id=47278426) today saying *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. That sounded exagerrated so I wasted an hour of my Friday to dive into the numbers. I was curious what the overall health of the tech market looked like for these sectors (not just the change over time), so I pulled some public data to look at the broader trend.
+
+![](/img/blog_tech_employment.png)
 
 ## Findings
 
