@@ -10,7 +10,7 @@ tags:
 image: /img/hcu0mg9beaadzym.png
 draft: false
 ---
-I saw the above graph on [Hacker News](https://news.ycombinator.com/item?id=47278426) today showing the demand for tech jobs has continued to decrease over the last 4 years. I was curious what the overall health of the tech market looked like for these sectors, so I pulled some data to look at the broader trend.
+I saw the above graph on [Hacker News](https://news.ycombinator.com/item?id=47278426) today showing the demand for tech jobs has continued to decrease over the last 4 years. I was curious what the overall health of the tech market looked like for these sectors, so I pulled some data to look at the broader trend and made the graph below
 
 ## My Findings
 

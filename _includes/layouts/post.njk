@@ -11,6 +11,10 @@ templateClass: tmpl-post
 <a href="{{ tagUrl | url }}" class="post-tag animated-rainbow-hover">{{ tag }}</a>
 {%- endfor %}
 
+{%- if image %}
+<img src="{{ image }}" alt="{{ title }}" class="featured-image" loading="lazy" decoding="async">
+{%- endif %}
+
 {{ content | toc | safe }}
 
 {{ content | safe }}

@@ -531,6 +531,15 @@ a[href].post-tag:visited {
   background: #FFB700;
 }
 
+/* Featured image */
+.featured-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1.5rem 0 1rem;
+}
+
 /* Reading time */
 .reading-time {
   display: inline-block;
