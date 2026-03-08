@@ -1,6 +1,6 @@
 ---
 title: "Tech Job Market Findings - Jan 2026 "
-description: My researching using Bureau of Labor Statistics public data showed
+description: My research using Bureau of Labor Statistics public data showed
   that the tech job market is still strongggg.
 date: 2026-03-01
 tags:
