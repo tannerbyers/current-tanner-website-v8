@@ -2,24 +2,22 @@
 title: Fun Tech Projects (that I dont have time to build)
 description: Ongoing list of tech projects I think would be fun or interesting to build.
 date: 2025-02-07
-tags: [project, AI]
+tags:
+  - project
+  - AI
 ---
-
 1. On-demand game server (using something like Fargate w/ docker and load minecraft or valheim)
-
 2. A github action that triggers on a PR and generates a code reviewer, a test writer, and auditor (ooh A.I)
-
 3. A web app that has popular regulatory standards loaded and answers questions for X {healthcare, government, education} industry. 
-
 4. AI CRUD project generator for starting most applications (Dynamodb, Lambda, api gateway openapi spec created from dynamodb schema or maybe graphql)
-
 5. EDI Datalake Storage for auditing and analysis 
-
 6. An app that connects with AI and makes it easy to purchase products (like from amazon)
-
 7. Anime recommender based on past watched show and vibes. 
- 
-8. A search engine thats made for humans and connects the small web with usable results. 
----
+8. A search engine thats made for humans and connects the small web with usable results.
+9. A declassifying pipeline for all traffic in non prod envs.
+10. An AI chat bot that made ordering products online easy and within spending limits.
+11. An anime recommender based on vibes (good AI use case here).   
+
+- - -
 
 Have a similar project idea? Feel free to [reach out](/contact-me/). Or check out my [other posts on building real-world systems](/posts/).
