@@ -2,10 +2,10 @@
   "title": "Tanner Byers",
   "url": "https://tannerbyers.com/",
   "language": "en",
-  "description": "AWS and fullstack development content from Tanner Byers. Practical guides, real projects, and lessons learned from building production systems at AWS and beyond.",
+  "description": "Cloud and fullstack development content from Tanner Byers. Practical guides, real projects, and lessons learned from building large-scale production systems.",
   "keywords": ["AWS", "fullstack development", "React", "TypeScript", "cloud architecture", "software engineering", "tech blog", "DevOps", "infrastructure as code"],
   "feed": {
-    "subtitle": "Tech insights, AWS tips, and development tutorials from Tanner Byers",
+    "subtitle": "Tech insights, cloud tips, and development tutorials from Tanner Byers",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://tannerbyers.com/"

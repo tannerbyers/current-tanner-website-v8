@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Resources | Tanner Byers
-description: Technical resources, guides, and tools from Tanner Byers - AWS and fullstack development content.
+description: Technical resources, guides, and tools from Tanner Byers - cloud and fullstack development content.
 templateClass: tmpl-post
 eleventyNavigation:
   key: Resources
@@ -15,7 +15,7 @@ Tools, guides, and content to help you build better software. Learn more about [
 ## Popular Topics
 
 <div style="display: grid; gap: 0.75rem; margin: 1.5rem 0;">
-  <div style="padding: 0.75rem 1rem; background: rgba(255, 152, 0, 0.1); border-radius: 4px;">AWS architecture and best practices</div>
+  <div style="padding: 0.75rem 1rem; background: rgba(255, 152, 0, 0.1); border-radius: 4px;">Cloud architecture and best practices</div>
   <div style="padding: 0.75rem 1rem; background: rgba(255, 152, 0, 0.1); border-radius: 4px;">React and TypeScript patterns</div>
   <div style="padding: 0.75rem 1rem; background: rgba(255, 152, 0, 0.1); border-radius: 4px;">Infrastructure as Code (CDK, Terraform)</div>
   <div style="padding: 0.75rem 1rem; background: rgba(255, 152, 0, 0.1); border-radius: 4px;">Healthcare tech integrations</div>

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Connect with Tanner | AWS & Fullstack Development
+title: Connect with Tanner | Cloud & Fullstack Development
 description: Get in touch with Tanner Byers - questions about posts, collaboration ideas, or just to chat tech.
 templateClass: tmpl-post
 eleventyNavigation:
@@ -17,7 +17,7 @@ I respond to most emails within 24-48 hours. Before reaching out, you might find
 ## Topics I Write About
 
 <div style="display: grid; gap: 0.75rem; margin: 1.5rem 0;">
-  <div style="padding: 0.75rem 1rem; background: rgba(97, 218, 251, 0.1); border-radius: 4px;">AWS architecture and optimization</div>
+  <div style="padding: 0.75rem 1rem; background: rgba(97, 218, 251, 0.1); border-radius: 4px;">Cloud architecture and optimization</div>
   <div style="padding: 0.75rem 1rem; background: rgba(97, 218, 251, 0.1); border-radius: 4px;">React and TypeScript patterns</div>
   <div style="padding: 0.75rem 1rem; background: rgba(97, 218, 251, 0.1); border-radius: 4px;">Infrastructure as Code (CDK, Terraform)</div>
   <div style="padding: 0.75rem 1rem; background: rgba(97, 218, 251, 0.1); border-radius: 4px;">Building accessible web experiences</div>

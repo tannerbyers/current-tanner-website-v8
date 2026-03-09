@@ -1,7 +1,7 @@
 ---
-title: About Tanner Byers | AWS, DevOps & Software Engineering
+title: About Tanner Byers | Cloud, DevOps & Software Engineering
 description: Tanner Byers is a fullstack software engineer with experience at
-  AWS, healthcare tech, and startups.
+  enterprise cloud teams, healthcare tech, and startups.
 layout: layouts/base.njk
 templateClass: tmpl-post
 eleventyNavigation:
@@ -16,12 +16,12 @@ eleventyNavigation:
 
 My technical journey started with me taking apart Goodwill PC parts in middle school, throw back to when Goodwill sold PCs. I started to learn to code when I was around 15 and from there, I built over 20+ projects during my nights after work.
 
-Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then got a job at AWS building cloud solutions for their customers. I built up my experience building real world applications at large companies with billions of transactions and millions of monthly users to small startups where I built prototypes and onboarding their first beta users. I share my experiences and lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
+Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then joined a large cloud consultancy building solutions for enterprise customers. I built up my experience building real-world applications across large-scale production systems serving enterprise teams down to small startups where I built prototypes and onboarded their first beta users. I share my experiences and lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
 
 ## Where I've worked
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
-  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #FF9900, #FFC300); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">AWS</div>
+  <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #FF9900, #FFC300); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Large Cloud Consultancy</div>
   <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #1e5a8e, #2a7cb5); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Availity</div>
   <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #0066cc, #0052a3); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Glidian</div>
   <div style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b35, #ff8c42); color: white; border-radius: 6px; font-weight: 600; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">PayForTime</div>
@@ -98,6 +98,6 @@ Here's a list of the ones I remember: Document repository, serverless file proce
 
 ## Let's Connect
 
-Want to stay updated? [Subscribe to my newsletter](/newsletter/) for practical tech tips and AWS insights.
+Want to stay updated? [Subscribe to my newsletter](/newsletter/) for practical tech tips and cloud dev insights.
 
 **Email:** [programtanner@gmail.com](mailto:programtanner@gmail.com)

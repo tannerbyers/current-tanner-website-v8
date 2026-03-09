@@ -113,6 +113,6 @@ AWS remains a top choice for healthcare applications due to its reliability and 
 
 ## Related Resources
 
-Looking to apply these principles? Check out my posts on [building a consulting site from scratch](/posts/building-consulting-site/) or [learning Java for enterprise development](/posts/learn-corporate-java/). Interested in [speaking engagements about AWS and serverless architecture](/speaking/)? Need help with your next project? [Let's talk](/contact-me/).
+Looking to apply these principles? Check out my posts on [building a consulting site from scratch](/posts/building-consulting-site/) or [learning Java for enterprise development](/posts/learn-corporate-java/). Interested in [speaking engagements about cloud architecture and serverless systems](/speaking/)? Need help with your next project? [Let's talk](/contact-me/).
 
 That's the process in a nutshell. What'd I miss?

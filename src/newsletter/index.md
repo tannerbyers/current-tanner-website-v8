@@ -1,7 +1,7 @@
 ---
 title: Tech Tips Newsletter | Tanner Byers
-description: Subscribe to Tanner Byers' newsletter for practical tech tips, AWS
-  insights, and developer updates. No spam, just value.
+description: Subscribe to Tanner Byers' newsletter for practical tech tips, cloud
+  and dev insights, and developer updates. No spam, just value.
 layout: layouts/base.njk
 templateClass: tmpl-post
 eleventyNavigation:
@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 # Newsletter
 
-Get development tips, AWS insights, and project updates delivered to your inbox. 
+Get development tips, cloud architecture insights, and project updates delivered to your inbox.
 
 ## What you'll get:
 
@@ -19,7 +19,7 @@ Get development tips, AWS insights, and project updates delivered to your inbox.
     <strong>Practical dev tips</strong> from real-world projects
   </div>
   <div style="padding: 1rem 1.5rem; background: rgba(255, 152, 0, 0.1); border-radius: 6px; border-left: 3px solid #FF9900;">
-    <strong>AWS cost optimization</strong> strategies
+    <strong>Cloud cost optimization</strong> strategies
   </div>
   <div style="padding: 1rem 1.5rem; background: rgba(255, 152, 0, 0.1); border-radius: 6px; border-left: 3px solid #FF9900;">
     <strong>Behind-the-scenes updates</strong> on what I'm building
