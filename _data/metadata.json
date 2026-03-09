@@ -1,6 +1,6 @@
 {
   "title": "Tanner Byers",
-  "url": "https://tannerbyers.com/",
+  "url": "https://tannerbyers.com",
   "language": "en",
   "description": "Cloud and fullstack development content from Tanner Byers. Practical guides, real projects, and lessons learned from building large-scale production systems.",
   "keywords": ["AWS", "fullstack development", "React", "TypeScript", "cloud architecture", "software engineering", "tech blog", "DevOps", "infrastructure as code"],
@@ -21,7 +21,6 @@
   },
   "socialLinks": {
     "github": "https://github.com/tannerbyers",
-    "linkedin": "https://www.linkedin.com/in/tannerbyers",
-    "twitter": "YOUR_HANDLE"
+    "linkedin": "https://www.linkedin.com/in/tannerbyers"
   }
 }
