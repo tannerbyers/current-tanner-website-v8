@@ -4,7 +4,7 @@ description: Ongoing list of tech projects I think would be fun or interesting t
 date: 2025-02-07
 tags:
   - project
-  - AI
+  - ai
 ---
 1. On-demand game server (using something like Fargate w/ docker and load minecraft or valheim)
 2. A github action that triggers on a PR and generates a code reviewer, a test writer, and auditor (ooh A.I)
@@ -16,7 +16,6 @@ tags:
 8. A search engine thats made for humans and connects the small web with usable results.
 9. A declassifying pipeline for all traffic in non prod envs.
 10. An AI chat bot that made ordering products online easy and within spending limits.
-11. An anime recommender based on vibes (good AI use case here).   
 
 - - -
 

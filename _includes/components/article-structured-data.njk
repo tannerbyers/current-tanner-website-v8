@@ -24,7 +24,7 @@
       "url": "{{ metadata.url }}/img/tanner.jpg"
     }
   },
-  "image": "{{ metadata.url }}/img/tanner.jpg",
+  "image": "{{ metadata.url }}{{ image or '/img/tanner.jpg' }}",
   "keywords": "{{ (tags | default([])) | join(', ') }}",
   "articleSection": "{{ tags[0] if tags else 'Technology' }}"
 }

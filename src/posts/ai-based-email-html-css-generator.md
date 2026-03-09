@@ -5,9 +5,9 @@ description: Learn how I built an AI email template generator from scratch. Get
   stack, and iterating on SaaS MVPs.
 date: 2021-08-06
 tags:
-  - SaaS
-  - AI
-  - Business
+  - saas
+  - ai
+  - business
 ---
 ## The Problem
 

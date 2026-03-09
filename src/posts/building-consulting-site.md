@@ -45,8 +45,6 @@ Before choosing the tech stack, I outlined the primary requirements:
 - Audit log and live monitoring for all interactions with infrastructure and exceeding performance, error & cost thresholds.
 
 ---
-Will add architecture diagrams soon
----
 
 ### Analytics Integration
 - Posthog looks really cool so I'll be trying it for monitoring performance and user traits. 

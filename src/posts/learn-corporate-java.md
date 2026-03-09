@@ -71,7 +71,7 @@ Remember, learning to code is best done through practical application. Instead o
    
    Apply your knowledge by working on practical projects. Start with small-scale applications and don't worry if you don't finish them. 
    We're building these to learn, not to deliver code complete projects. 
-   I've got [a running list of application ideas here](/posts/coding-ideas/) but I recommend you build whatever you're interested in!
+   I've got [a running list of application ideas here](/posts/fun-tech-projects/) but I recommend you build whatever you're interested in!
 
 
 ### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
