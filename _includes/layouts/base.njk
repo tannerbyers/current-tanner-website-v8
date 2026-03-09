@@ -141,6 +141,7 @@
               <li role="none"><a role="menuitem" href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
               <li role="none"><a role="menuitem" href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
             </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -216,10 +217,7 @@
         const toggle = document.getElementById('lava-toggle');
         const html = document.documentElement;
         
-        if (!toggle) {
-          console.warn('Lava toggle button not found');
-          return;
-        }
+        if (!toggle) return;
         
         // Check saved preference and apply on page load
         const savedPreference = localStorage.getItem('lava-lamps-enabled');
@@ -348,7 +346,6 @@
       }
 
       // Initialize on page load
-      document.addEventListener('DOMContentLoaded', createLavaLamps);
       createLavaLamps();
     </script>
   </body>
