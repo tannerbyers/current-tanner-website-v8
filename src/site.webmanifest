@@ -1,0 +1,16 @@
+{
+  "name": "Tanner Byers",
+  "short_name": "Tanner Byers",
+  "description": "Cloud and fullstack development content from Tanner Byers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1b1b",
+  "theme_color": "#1b1b1b",
+  "icons": [
+    {
+      "src": "/img/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

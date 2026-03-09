@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}</title>
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico"/>
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1b1b1b">
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="keywords" content="{{ metadata.keywords | join(', ') }}">
     <meta name="author" content="{{ metadata.author.name }}">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
     
     <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
@@ -29,6 +29,10 @@
     <meta property="twitter:title" content="{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - AWS & Fullstack Development{% endif %}">
     <meta property="twitter:description" content="{{ description or metadata.description }}">
     <meta property="twitter:image" content="{{ metadata.url }}{{ image or '/img/tanner.jpg' }}">
+    {%- if metadata.socialLinks.twitter %}
+    <meta name="twitter:site" content="@{{ metadata.socialLinks.twitter }}">
+    <meta name="twitter:creator" content="@{{ metadata.socialLinks.twitter }}">
+    {%- endif %}
     
     {%- if templateClass == 'tmpl-post' %}
     <!-- Article-specific OG tags -->
@@ -42,7 +46,7 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="{{ '/css/index.css' | url }}" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" as="style">
+    <link rel="preload" href="/fonts/roboto-slab-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
     <link rel="stylesheet" href="{{ '/css/index.css' | cacheBust }}">
@@ -133,6 +137,7 @@
           <li class="nav-item nav-dropdown">
             <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">More</button>
             <ul class="nav-dropdown-menu" aria-label="More menu" role="menu" aria-hidden="true">
+              <li role="none"><a role="menuitem" href="{{ '/search/' | url }}" class="nav-link">Search</a></li>
               <li role="none"><a role="menuitem" href="{{ '/newsletter/' | url }}" class="nav-link">Newsletter</a></li>
               <li role="none"><a role="menuitem" href="{{ '/contact-me/' | url }}" class="nav-link">Connect</a></li>
             </ul>

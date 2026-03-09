@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Search
+description: Search blog posts and pages on tannerbyers.com
+eleventyExcludeFromCollections: true
+permalink: /search/
+---
+
+<h1>Search</h1>
+<div id="search"></div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      showImages: false
+    });
+  });
+</script>
+
+<style>
+  /* Override Pagefind UI to match dark theme */
+  :root {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: #aaff00;
+    --pagefind-ui-text: #fff;
+    --pagefind-ui-background: #1b1b1b;
+    --pagefind-ui-border: #333;
+    --pagefind-ui-tag: #333;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 5px;
+    --pagefind-ui-font: -apple-system, system-ui, sans-serif;
+  }
+</style>
