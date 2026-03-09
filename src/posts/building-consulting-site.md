@@ -17,7 +17,7 @@ Before choosing the tech stack, I outlined the primary requirements:
 - **Scalability**: Handle traffic growth with minimal adjustments. Big on the minimal adjustments. I dont want to mess with any UI's other than allowing certain charge thresholds to be allowed, which shouldn't happen with only 1000's of site visitors on a static site (ty caching).
 - **Mobile-First Design**: Optimized for all screen sizes. This is a must for any public facing site.
 - **Cost-Effectiveness**: Affordable yet robust solutions. No brainer for landing page site. 
-- **Integration**: Compatibility with analytics and marketing tools. Although I highly value priacy, a website without analytics is a personal site. If you're running a business, you must know your customers, BUT only as much as they reasonably woud like to share. I like to track # of visits, locale of visitor, duration on page, & CTA clicked. 
+- **Integration**: Compatibility with analytics and marketing tools. Although I highly value privacy, a website without analytics is a personal site. If you're running a business, you must know your customers, BUT only as much as they reasonably would like to share. I like to track # of visits, locale of visitor, duration on page, & CTA clicked. 
 - **Enjoyable Development Feedback**: I wanted development be simple and the time from deploy to updated content to be fast and update cache
 
 ---
@@ -32,7 +32,7 @@ Before choosing the tech stack, I outlined the primary requirements:
 ### Frontend
 - **Decision**: Gatsby. 
 - **Reasoning**:
-  - Usually would pick HTML for landing page but I have a lot of accessibility and integrations I would like to use and not a lot of time so I decided to go with Gatsby due to it's huge plugin support.
+  - Usually would pick HTML for landing page but I have a lot of accessibility and integrations I would like to use and not a lot of time so I decided to go with Gatsby due to its huge plugin support.
 
 ### Hosting
 - **Decision**: AWS S3 + CloudFront

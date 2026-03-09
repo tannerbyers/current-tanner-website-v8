@@ -15,7 +15,6 @@ tags:
 7. Anime recommender based on past watched show and vibes. 
 8. A search engine thats made for humans and connects the small web with usable results.
 9. A declassifying pipeline for all traffic in non prod envs.
-10. An AI chat bot that made ordering products online easy and within spending limits.
 
 - - -
 

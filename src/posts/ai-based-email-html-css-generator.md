@@ -59,7 +59,7 @@ Shout out to the creators of [hugoplate](https://github.com/zeon-studio/hugoplat
 
 ### Using AI to Build
 
-I used ChatGPT to help brainstorm and generate intial prompts and code for the MVP. My prompt focused on simplicity and client-side tech. The AI was surprisingly good at suggesting features and code structure. One thing I learned: configs and rules for the agents are extremely important. Even if you tell them to do something they sometimes dont listen so you neeed to have checks and balances for each stage of development. No model can do it in one pass currently. Also make sure to handle branching across multiple agents/tabs. 
+I used ChatGPT to help brainstorm and generate initial prompts and code for the MVP. My prompt focused on simplicity and client-side tech. The AI was surprisingly good at suggesting features and code structure. One thing I learned: configs and rules for the agents are extremely important. Even if you tell them to do something they sometimes don't listen so you need to have checks and balances for each stage of development. No model can do it in one pass currently. Also make sure to handle branching across multiple agents/tabs. 
 
 - - -
 
@@ -78,4 +78,4 @@ If I were to do it again, I'd focus even more on the technical side and less on 
 
 ## Final Thoughts
 
-This project was fun project. It's not production-ready, but it works, and I found my enjoyment in creating projects again with AI.
+This project was a fun project. It's not production-ready, but it works, and I found my enjoyment in creating projects again with AI.

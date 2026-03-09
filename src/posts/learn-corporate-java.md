@@ -50,7 +50,7 @@ Remember, learning to code is best done through practical application. Instead o
     #### Spring and Spring Boot
     Spring is a powerful framework for building enterprise-level Java applications. Begin by understanding the core concepts of Spring, such as dependency injection, Spring MVC, Spring Data, and Spring Security. These form the backbone of most Java-based corporate projects.
 
-    **Advice**: Dive deep into the official Spring documentation to grasp the fundamental principles. While the documentation is desnse, focus on understanding how Spring simplifies development tasks and promotes best practices. 
+    **Advice**: Dive deep into the official Spring documentation to grasp the fundamental principles. While the documentation is dense, focus on understanding how Spring simplifies development tasks and promotes best practices. 
 
     Once comfortable with Spring, transition to Spring Boot. Spring Boot streamlines the process of setting up and deploying Spring applications by providing auto-configurations. Saves you a lot of boilerplate. 
     
