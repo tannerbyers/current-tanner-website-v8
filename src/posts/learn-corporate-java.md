@@ -1,8 +1,8 @@
 ---
 title: Learning Java for a Corporate Career
-description: Complete roadmap for learning Java for enterprise development.
+description: My Complete roadmap for learning Java for enterprise development.
   Covers Spring Boot, Maven, Gradle, and best practices for corporate Java
-  careers. Start building production-ready apps today.
+  careers.
 date: 2024-04-24
 tags:
   - java
@@ -10,12 +10,16 @@ tags:
 ---
 # How to Learn Java for a Corporate Career
 
-A friend of mine from work reached out for advice on learning Java.   
+A friend of mine from a corporate work env reached out for advice on learning Java.   
 
-I think there's at least one other person who is interested in this so I decided to make this post.
+I think there's at least one other person who could use this so I decided to make a post of my answer.
 
 First thing I will say is, Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding.
-These are great for corporate implementations (large teams, ownership transfer, verbose code leads to self documented code). I recommend python or javascript for first languages. 
+These are great for corporate implementations (large teams, ownership transfer, verbose code leads to self documented code). 
+
+![Funny meme about java not being good first language to learn](/img/start-learning-java-meme.webp)
+
+I want to point out that I did not make this meme so this is obviously a correct opinion. I also recommend python or javascript for first languages if you wanna make fun stuff really quickly. 
 
 ## Focus on Building
 
