@@ -37,22 +37,23 @@ Remember, learning to code is best done through practical application. Instead o
    Here's a comprehensive guide to setting up your Java development environment: [How to Set Up a Java Development Environment](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/)
 
    **Bookmark Essential Resources**
-   Keep handy references like the **Java® Language Specification (JLS)** for your chosen Java version. Bookmark resources like the [Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html) and the JLS documentation ([Java SE 8 JLS](https://docs.oracle.com/javase/specs/jls/se8/html/index.html)) for deeper understanding.
+   Keep handy references like the **Java® Language Specification (JLS)** for your chosen Java version. Bookmark resources like the [Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html) and the JLS documentation ([Java SE 8 JLS](https://docs.oracle.com/javase/specs/jls/se8/html/index.html)) for deeper understanding.\
+   If this sounds like gibberish, thats okay. Just save these in a resources folder in your browser and if you get stuck trying to do something, start searching on these and then stack overflow, and then google. 
 2. **Studying (dont spend more than a month here)**
 
    Start by watching introductory videos like [Learn Java in 14 Minutes on YouTube](https://www.youtube.com/watch?v=RRubcjpTkks&t=16s&ab_channel=AlexLee). 
-   Then, delve into free resources such as:
+   Then, leverage free resources on:
 
    * [Java Tutorial on Udemy](https://www.udemy.com/course/java-tutorial/)
    * [Java Programming MOOC](https://java-programming.mooc.fi/)
    * [Oracle's Getting Started with Java Development](https://learn.oracle.com/ols/course/getting-started-with-java-development/55593/65768)
 
-   Focus on understanding (not remembering) Java fundamentals, syntax, variables, and control statements.
+   Focus on understanding, not remembering. It's impossible to remembering everything you learn. Just use then and repeat exposure till it sticks! Java fundamentals, syntax, variables, and control statements. Start there and try building something with the frameworks and toos below.
 3. **Explore Frameworks and Tools**
 
    Increase your Java productivity with tooling and frameworks like Spring, Spring Boot, Maven, and Gradle. 
 
-   #### Spring and Spring Boot
+   ###### Spring and Spring Boot
 
    Spring is a powerful framework for building enterprise-level Java applications. Begin by understanding the core concepts of Spring, such as dependency injection, Spring MVC, Spring Data, and Spring Security. These are used in a lot of professional Java-based corporate projects.
 
@@ -75,7 +76,7 @@ Remember, learning to code is best done through practical application. Instead o
    **Tip**: Practice creating custom build scripts and plugins in Gradle to tailor the build process to specific project requirements.
 4. **Undertake Projects**
 
-   Apply your knowledge by working on practical projects. Start with small-scale applications and don't worry if you don't finish them. 
+   Apply your knowledge by working on practical projects. Start with small applications and don't worry if you don't finish them. 
    We're building these to learn, not to deliver code complete projects. 
    I've got [a running list of application ideas here](/posts/fun-tech-projects/) but I recommend you build whatever you're interested in! I have over 50+ dead projects just floating in Github
 
@@ -83,7 +84,7 @@ Remember, learning to code is best done through practical application. Instead o
 
 ### Remember to have fun along the way! Take your time, you're not getting paid to learn this (YET).
 
-By following these steps, you'll be somewhat prepared to use Java at work!
+By following these steps, you'll be somewhat prepared to use Java at work! 
 
 - - -
 
