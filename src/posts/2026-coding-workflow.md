@@ -61,4 +61,4 @@ With this confidence and the MANDATORY AI training I've received over the years 
 
 Another way I've been lucky is **my wife** and one of my niche interests is developer workflow automation. I like working less with code. With AI exploding popularity of automations across many areas of professional development, I've gotten to try tons of tools and found lots of ways to reduce my workload and increase my output. Another caveat is I've also spent a lot of money to try all these tools. God I wish they were free. Be careful out there and try to use AI where it makes financial sense. 
 
-![](/img/usage.jpeg)
+![AI usage getting higher and higher meme](/img/usage.jpeg)
