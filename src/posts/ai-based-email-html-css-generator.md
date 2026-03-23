@@ -1,7 +1,7 @@
 ---
-title: "Building an AI-Powered Email HTML/CSS Generator: My Process & Lessons"
+title: Building an AI-Powered Email HTML/CSS Generator in 2021
 description: Learn how I built an AI email template generator from scratch. Get
-  practical insights on using AI for web development, choosing the right tech
+  historical insights on using AI for web development, choosing the right tech
   stack, and iterating on SaaS MVPs.
 date: 2021-08-06
 tags:
@@ -32,9 +32,8 @@ I wanted to:
 
 I started with a static site generator ([hugo](https://gohugo.io/)) and a nice template ([hugoplate](https://github.com/zeon-studio/hugoplate)). Netlify made deployment easy and free. I wanted to spend my time on the actual prompt & code, not infrastructure.
 
-I used Google Analytics and Formspree for basic metrics and feedback. Most of my time went into wiring up the chat interface and code preview. For my terminal, I used Warp. It's fast and makes my workflow smoother. I'm looking into multi tree agentic development with an orchestrator and way to pass artifacts between agent roles.
-
-
+I used Google Analytics and Formspree for basic metrics and feedback. Most of my time went into wiring up the chat interface and code preview. For my terminal, I used Warp. It's fast and makes my workflow smoother. I'm looking into multi tree agentic development with an orchestrator and way to pass artifacts between agent roles. \
+**I'm back from the future. I spend over $1k on the warp tool. It's nice but still usage based.** 
 
 ## Iterating on Content
 
