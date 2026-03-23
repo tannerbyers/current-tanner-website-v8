@@ -227,7 +227,8 @@ module.exports = function (eleventyConfig) {
   });
 
   const shouldHide = ({ date, draft }) => {
-    if (process.env.BUILD_DRAFTS) {
+    // Always show drafts in CMS context or when BUILD_DRAFTS is set
+    if (process.env.BUILD_DRAFTS || process.env.NETLIFY_CMS || process.env.DECAP_CMS) {
       return false
     }
     const isDraft = draft
@@ -266,6 +267,11 @@ module.exports = function (eleventyConfig) {
     // Set the environment variable
     if (runMode === "serve" || runMode === "watch") {
       process.env.BUILD_DRAFTS = true
+    }
+  
+    // Check if we're in a CMS context
+    if (process.env.CONTEXT === 'deploy-preview' || process.env.CMS_ENVIRONMENT) {
+      process.env.DECAP_CMS = true
     }
   })  
 
