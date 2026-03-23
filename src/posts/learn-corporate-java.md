@@ -14,7 +14,13 @@ A friend of mine from a corporate work env reached out for advice on learning Ja
 
 I think there's at least one other person who could use this so I decided to make a post of my answer.
 
-First thing I will say is, Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding.
+First thing I have say is, learning is about absorption and repetition. Don't stress the details while learning. You will fill them in as you create things and need to understand. It's way harder to read and reread the same information line by line (at least for me). 
+
+![learning to code is all about repetition.](/img/practice.png)
+
+\
+\
+The second thing I need to say is Java is not the first language I would recommend learning. This is because it requires a lot of boilerplate, abstractions, and focus on OOP, which are all great for when they're needed but they're a lot to learn on top of practical coding.
 These are great for corporate implementations (large teams, ownership transfer, verbose code leads to self documented code). 
 
 ![Funny meme about java not being good first language to learn](/img/start-learning-java-meme.webp)
