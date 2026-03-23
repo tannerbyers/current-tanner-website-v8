@@ -1,5 +1,5 @@
 ---
-title: "2026 Coding Workflow "
+title: "2026 Coding Workflow"
 description: >
   I've used a lot of different coding tools over the years, some by choice, most
   forced by companies to improve my productivity. I've used Kiro, Github
@@ -11,7 +11,7 @@ tags:
   - development
   - ai
 lastModified: 2026-03-21
-draft: true
+draft: false
 ---
 ## What I look for in AI Development tools.
 
