@@ -1,11 +1,10 @@
 ---
-title: "2026 Coding Workflow"
+title: 2026 Coding Workflow
 description: >
-  I've used a lot of different coding tools over the years, some by choice, most
-  forced by companies to improve my productivity. I've used Kiro, Github
-  Copilot, Warp, Aider, and am preparing to try out Open Code. This post is a
-  collection of my thoughts and what I look for to improve my dev experience (my
-  highest priority) 
+  I've used a lot of different coding tools over the years ( Kiro, Github
+  Copilot, Warp, Aider, and more), some by choice, most forced by companies to
+  improve my productivity. This post is a collection of my thoughts and what I
+  look for to improve my dev experience.
 date: 2026-03-21
 tags:
   - development
