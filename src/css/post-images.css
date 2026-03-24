@@ -1,0 +1,25 @@
+/* 
+ * Post Image Standardization Styles
+ * Makes all post images consistent in size and centered
+ */
+
+.post-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.post-image-container img {
+  width: 70%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;         /* Maintain aspect ratio without stretching */
+}
+
+/* Make images responsive on smaller screens */
+@media (max-width: 768px) {
+  .post-image-container img {
+    width: 100%;
+  }
+}

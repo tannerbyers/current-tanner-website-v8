@@ -27,11 +27,13 @@
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "fs-extra": "^11.3.4",
     "html-minifier": "^4.0.0",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
-    "pagefind": "^1.4.0"
+    "pagefind": "^1.4.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "axe-core": "^4.11.1",

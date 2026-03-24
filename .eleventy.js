@@ -8,6 +8,8 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const imageOptimizer = require("./lib/image-optimizer");
+const path = require("path");
 
 module.exports = function (eleventyConfig) {
   // Add plugins
@@ -209,7 +211,11 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    return defaultImageRender(tokens, idx, options, env, self);
+    // Render the image with the default renderer
+    const renderedImage = defaultImageRender(tokens, idx, options, env, self);
+    
+    // Wrap the image in a div with a class for styling
+    return `<div class="post-image-container">${renderedImage}</div>`;
   };
 
   eleventyConfig.setLibrary("md", markdownLibrary);
@@ -316,6 +322,8 @@ module.exports = function (eleventyConfig) {
       process.env.DECAP_CMS = true
     }
   })  
+
+  // TODO: Integrate image optimizer into build pipeline here
 
   return {
     // Control which files Eleventy will process
