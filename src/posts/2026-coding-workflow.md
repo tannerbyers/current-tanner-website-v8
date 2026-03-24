@@ -12,7 +12,9 @@ tags:
 lastModified: 2026-03-21
 draft: false
 ---
-## What I look for in AI Development tools.
+## How I use AI as a Dev
+
+![Meme about AI and experienced devs not needing it, just using it.](/img/fullstackdev-real.jpeg)
 
 ### Separation of Concerns for Agent/Model Selection
 
