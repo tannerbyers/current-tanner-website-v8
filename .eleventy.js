@@ -172,13 +172,43 @@ module.exports = function (eleventyConfig) {
     slugify: eleventyConfig.getFilter("slug"),
   });
 
-  // Lazy loading for markdown images
+  // Lazy loading for markdown images with cache busting
   const defaultImageRender = markdownLibrary.renderer.rules.image || function (tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
   };
   markdownLibrary.renderer.rules.image = function (tokens, idx, options, env, self) {
     tokens[idx].attrSet("loading", "lazy");
     tokens[idx].attrSet("decoding", "async");
+
+    // Add cache busting query param to src attribute if it exists and is a local asset
+    const srcIndex = tokens[idx].attrIndex("src");
+    if (srcIndex >= 0) {
+      let src = tokens[idx].attrs[srcIndex][1];
+      if (src && src.startsWith("/") && !src.startsWith("//")) {
+        try {
+          const fs = require("fs");
+          const crypto = require("crypto");
+          const filePath = `src${src}`;
+          if (fs.existsSync(filePath)) {
+            const content = fs.readFileSync(filePath);
+            const hash = crypto.createHash("md5").update(content).digest("hex").slice(0, 8);
+            // Append or replace existing query string with cache bust param
+            if (src.includes("?")) {
+              src = src.replace(/\?v=[a-f0-9]{8}/, `?v=${hash}`);
+              if (!src.includes(`?v=${hash}`)) {
+                src += `&v=${hash}`;
+              }
+            } else {
+              src += `?v=${hash}`;
+            }
+            tokens[idx].attrs[srcIndex][1] = src;
+          }
+        } catch (e) {
+          // ignore errors
+        }
+      }
+    }
+
     return defaultImageRender(tokens, idx, options, env, self);
   };
 
@@ -204,11 +234,23 @@ module.exports = function (eleventyConfig) {
       ready: function (err, browserSync) {
         const content_404 = fs.readFileSync("_site/404.html");
 
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
-          res.write(content_404);
-          res.end();
+        browserSync.addMiddleware("*", (req, res, next) => {
+          // Add no-cache headers for preview mode
+          if (req.url.includes('preview=true')) {
+            res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+            res.setHeader('Pragma', 'no-cache');
+            res.setHeader('Expires', '0');
+          }
+          
+          // Provides the 404 content without redirect for non-existent pages
+          if (!fs.existsSync(`_site${req.url.split('?')[0]}`)) {
+            res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+            res.write(content_404);
+            res.end();
+            return;
+          }
+          
+          next();
         });
       },
     },

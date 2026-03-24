@@ -1,0 +1,21 @@
+name: Deploy and Purge Cache
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/posts/**'
+      - 'src/img/**'
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel deployment
+        run: sleep 60
+        
+      - name: Purge Vercel CDN Cache
+        run: |
+          curl -X POST "https://api.vercel.com/v9/projects/${{ secrets.VERCEL_PROJECT_ID }}/caches" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"scope":"production"}'
