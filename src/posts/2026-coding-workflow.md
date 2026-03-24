@@ -17,10 +17,12 @@ draft: false
 
 ### Separation of Concerns for Agent/Model Selection
 
-When tools handle multiple task types in the development process with one agent, you get expensive token usage and subpar coding output. This is a result of bad coding practice. The context fills up quickly and this causes the subsequent code changes to become worse and worse (introducing more bugs).\
-\
- It's much better to keep **code edit agents** small, dumb, and cheap where possible. They should only edit file contents that you provide and should not need lots of context for things like git history, docs or project structure. \
-The **architect or chat agent** should use a more expensive and smarter model to determine acceptances criteria, identify gaps and break down tasks. This is what you will use to get your idea or ticket into a workable requirement for your coding agent to execute. It also will need access to the most resources like docs, read access to API's, code, project structure, and more as needed.\
+When tools handle multiple task types in the development process with one agent, you get expensive token usage and subpar coding output. This is a result of bad coding practice. The context fills up quickly and this causes the subsequent code changes to become worse and worse (introducing more bugs).
+
+It's much better to keep **code edit agents** small, dumb, and cheap where possible. They should only edit file contents that you provide and should not need lots of context for things like git history, docs or project structure.
+
+The **architect or chat agent** should use a more expensive and smarter model to determine acceptances criteria, identify gaps and break down tasks. This is what you will use to get your idea or ticket into a workable requirement for your coding agent to execute. It also will need access to the most resources like docs, read access to API's, code, project structure, and more as needed.
+
 This one is more of a personal preference but I like to have an **agent specifically for creating red/green tests** **AND executing and troubleshooting said tests**. Their prompt is very specific to not change functionality tests just because results failed but to instead flag me for review. This allows me to enforce higher code quality and not let agents hallucinate changes into the code base.
 
 ### Model Usage and Performance Tracking
@@ -52,9 +54,8 @@ I was lucky in many ways across my career as a professional developer. Firstly, 
 
 ![Meme of Sam Altman saying he's close to AGI just $20,000,000](/img/agi.jpeg)
 
-\
-This gave me the luxury to get vague requirements (or usually random questions) about a system that no one documented or knows much about and having to get an answer or resolution ASAP. After years of doing this, I now have the confidence that I can get dropped in any system and be able to figure out whats going on. eventually (ask me how long it takes a dev to be productive and efficient).\
-\
+This gave me the luxury to get vague requirements (or usually random questions) about a system that no one documented or knows much about and having to get an answer or resolution ASAP. After years of doing this, I now have the confidence that I can get dropped in any system and be able to figure out what's going on eventually (ask me how long it takes a dev to be productive and efficient).
+
 With this confidence and the MANDATORY AI training I've received over the years as a professional dev, I feel AI is a force multiplier on the scale o**f 2-4x in pure productive output**. This spans across many areas of professional development, not just designing systems and writing code. AI is amazing at SOP generation, quick scripts for automating web pages, email summarizing, and a lot more. One caveat is, I try to be careful not to use AI where a human should. Think business decisions, deletion of resources, or worse of all, personal messages. Have I done these? Of course, I'm not Buddha. 
 
 ![Buddha saying you should believe memes and fight strangers on the internet lol](/img/images.jpeg)
