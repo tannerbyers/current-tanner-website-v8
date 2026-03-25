@@ -8,7 +8,7 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
-    "dev": "concurrently \"eleventy --serve\" \"npx decap-server\"",
+    "dev": "rm -rf .cache && rm -rf _site/img/optimized && concurrently \"eleventy --serve\" \"npx decap-server --port 8083 --proxy-url http://localhost:8080\"",
     "debug": "DEBUG=* eleventy",
     "new-post": "bash scripts/new-post.sh"
   },

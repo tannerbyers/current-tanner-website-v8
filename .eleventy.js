@@ -10,6 +10,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const imageOptimizer = require("./lib/image-optimizer");
 const path = require("path");
+const imageConfig = require("./_data/imageConfig");
 
 module.exports = function (eleventyConfig) {
   // Add plugins
@@ -174,51 +175,113 @@ module.exports = function (eleventyConfig) {
     slugify: eleventyConfig.getFilter("slug"),
   });
 
-  // Lazy loading for markdown images with cache busting
+  // Override markdown image renderer to use optimizedImage shortcode for local images
   const defaultImageRender = markdownLibrary.renderer.rules.image || function (tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
   };
+
   markdownLibrary.renderer.rules.image = function (tokens, idx, options, env, self) {
+    // Add lazy loading and async decoding for all images
     tokens[idx].attrSet("loading", "lazy");
     tokens[idx].attrSet("decoding", "async");
 
-    // Add cache busting query param to src attribute if it exists and is a local asset
-    const srcIndex = tokens[idx].attrIndex("src");
-    if (srcIndex >= 0) {
-      let src = tokens[idx].attrs[srcIndex][1];
-      if (src && src.startsWith("/") && !src.startsWith("//")) {
-        try {
-          const fs = require("fs");
-          const crypto = require("crypto");
-          const filePath = `src${src}`;
-          if (fs.existsSync(filePath)) {
-            const content = fs.readFileSync(filePath);
-            const hash = crypto.createHash("md5").update(content).digest("hex").slice(0, 8);
-            // Append or replace existing query string with cache bust param
-            if (src.includes("?")) {
-              src = src.replace(/\?v=[a-f0-9]{8}/, `?v=${hash}`);
-              if (!src.includes(`?v=${hash}`)) {
-                src += `&v=${hash}`;
-              }
-            } else {
-              src += `?v=${hash}`;
-            }
-            tokens[idx].attrs[srcIndex][1] = src;
-          }
-        } catch (e) {
-          // ignore errors
-        }
+    const srcIndex = tokens[idx].attrIndex('src');
+    const src = srcIndex >= 0 ? tokens[idx].attrs[srcIndex][1] : '';
+    const altIndex = tokens[idx].attrIndex('alt');
+    const alt = altIndex >= 0 ? tokens[idx].attrs[altIndex][1] : '';
+
+    // Only process local images (not external URLs)
+    if (src && !src.startsWith('http') && !src.startsWith('//')) {
+      // Check if we're in a post context
+      const isPost = env.page && env.page.inputPath && 
+                    (env.page.inputPath.includes('/posts/') || 
+                     (env.page.url && env.page.url.includes('/posts/')));
+      
+      if (isPost) {
+        // For posts, use a placeholder that will be replaced with optimized post image
+        return `<post-image src="${src}" alt="${alt}"></post-image>`;
+      } else {
+        // For other content, use the regular image optimization
+        return `<img-optimize src="${src}" alt="${alt}" sizes="100vw"></img-optimize>`;
       }
     }
 
-    // Render the image with the default renderer
+    // For external images, render with default renderer
     const renderedImage = defaultImageRender(tokens, idx, options, env, self);
     
-    // Wrap the image in a div with a class for styling
-    return `<div class="post-image-container">${renderedImage}</div>`;
+    // If in a post, wrap external images in the container too
+    const isPost = env.page && env.page.inputPath && 
+                  (env.page.inputPath.includes('/posts/') || 
+                   (env.page.url && env.page.url.includes('/posts/')));
+    
+    if (isPost) {
+      return `<div class="post-image-container">${renderedImage}</div>`;
+    }
+    
+    return renderedImage;
   };
 
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  // Process image optimization placeholders
+  eleventyConfig.addTransform("optimizeImages", async function(content) {
+    if ((this.outputPath || "").endsWith(".html")) {
+      const regex = /<img-optimize\s+src="([^"]+)"\s+alt="([^"]*)"\s+sizes="([^"]+)"><\/img-optimize>/g;
+      
+      // Find all image placeholders
+      const matches = content.matchAll(regex);
+      let newContent = content;
+      
+      for (const match of matches) {
+        const [fullMatch, src, alt, sizes] = match;
+        
+        // Process the image
+        let imagePath;
+        if (src.startsWith('/')) {
+          // Absolute path from project root
+          imagePath = path.join(process.cwd(), 'src', src.substring(1));
+        } else {
+          // Relative path from current file
+          const pageDir = path.dirname(this.inputPath);
+          imagePath = path.join(pageDir, src);
+        }
+        
+        // Ensure output directory exists
+        const outputDir = path.join(process.cwd(), '_site/img/optimized');
+        await fs.ensureDir(outputDir);
+        
+        // Get optimized image data
+        const imageData = await imageOptimizer.optimize(imagePath, outputDir);
+        
+        let replacement;
+        if (!imageData) {
+          console.warn(`Could not optimize image: ${src}`);
+          replacement = `<img src="${src}" alt="${alt || ''}" loading="lazy" decoding="async">`;
+        } else {
+          // Generate responsive image HTML
+          replacement = `<picture>
+            ${imageData.sources.map(source => 
+              `<source type="${source.type}" srcset="${source.srcset}" sizes="${sizes}">`
+            ).join('\n            ')}
+            <img 
+              src="${imageData.fallback.url}" 
+              width="${imageData.fallback.width}"
+              height="${imageData.fallback.height}"
+              alt="${alt || ''}"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>`;
+        }
+        
+        // Replace the placeholder with the actual image HTML
+        newContent = newContent.replace(fullMatch, replacement);
+      }
+      
+      return newContent;
+    }
+    return content;
+  });
 
   // HTML minification for production builds
   eleventyConfig.addTransform("htmlmin", function (content) {
@@ -323,7 +386,173 @@ module.exports = function (eleventyConfig) {
     }
   })  
 
-  // TODO: Integrate image optimizer into build pipeline here
+  // Image optimizer integration
+  const imageOptimizer = require("./lib/image-optimizer");
+  const fs = require("fs-extra");
+
+  // Add shortcode for optimized images (for direct use in templates)
+  eleventyConfig.addAsyncShortcode("optimizedImage", async function(src, alt, sizes = null, className = "") {
+    // Use default sizes from config if not specified
+    sizes = sizes || imageConfig.defaultSizes;
+    // Handle both relative and absolute paths
+    let imagePath;
+    if (src.startsWith('/')) {
+      // Absolute path from project root
+      imagePath = path.join(process.cwd(), 'src', src.substring(1));
+    } else {
+      // Relative path from current file
+      const pageDir = path.dirname(this.page.inputPath);
+      imagePath = path.join(pageDir, src);
+    }
+    
+    // Ensure output directory exists
+    const outputDir = path.join(process.cwd(), '_site/img/optimized');
+    await fs.ensureDir(outputDir);
+    
+    // Get optimized image data
+    const imageData = await imageOptimizer.optimize(imagePath, outputDir);
+    
+    if (!imageData) {
+      console.warn(`Could not optimize image: ${src}`);
+      return `<img src="${src}" alt="${alt || ''}" ${className ? `class="${className}"` : ''}>`;
+    }
+    
+    // Return a placeholder that will be processed by the transform
+    return `<img-optimize src="${src}" alt="${alt}" sizes="${sizes}" ${className ? `class="${className}"` : ''}></img-optimize>`;
+  });
+
+
+  // Ensure optimized images directory exists and is passed through
+  eleventyConfig.addPassthroughCopy("_site/img/optimized");
+
+  eleventyConfig.on("beforeBuild", () => {
+    fs.ensureDirSync("_site/img/optimized");
+  });
+
+  // Add a postImage shortcode for consistent post image sizing
+  eleventyConfig.addAsyncShortcode("postImage", async function(src, alt, caption = "") {
+    if (!src) return '';
+    
+    // Handle both relative and absolute paths
+    let imagePath;
+    if (src.startsWith('/')) {
+      // Absolute path from project root
+      imagePath = path.join(process.cwd(), 'src', src.substring(1));
+    } else {
+      // Relative path from current file
+      const pageDir = path.dirname(this.page.inputPath);
+      imagePath = path.join(pageDir, src);
+    }
+    
+    // Ensure output directory exists
+    const outputDir = path.join(process.cwd(), '_site/img/optimized');
+    await fs.ensureDir(outputDir);
+    
+    // Use the optimizePostImage function for consistent sizing
+    const imageData = await imageOptimizer.optimizePostImage(imagePath, outputDir);
+    
+    if (!imageData) {
+      console.warn(`Could not optimize post image: ${src}`);
+      return `<figure class="post-image-container">
+        <img src="${src}" alt="${alt || ''}" loading="lazy" decoding="async">
+        ${caption ? `<figcaption>${caption}</figcaption>` : ''}
+      </figure>`;
+    }
+    
+    // Generate responsive image HTML with consistent sizing
+    const isTextHeavy = imageData.fallback.width > 800;
+    const containerClass = isTextHeavy ? 'post-image-container text-heavy' : 'post-image-container';
+
+    const pictureHtml = `<picture>
+      ${imageData.sources.map(source => 
+        `<source type="${source.type}" srcset="${source.srcset}" sizes="(min-width: 1024px) ${isTextHeavy ? '1200px' : '800px'}, 100vw">`
+      ).join('\n      ')}
+      <img 
+        src="${imageData.fallback.url}" 
+        width="${imageData.fallback.width}"
+        height="${imageData.fallback.height}"
+        alt="${alt || ''}"
+        loading="lazy"
+        decoding="async"
+        class="post-image"
+      >
+    </picture>`;
+    
+    return `<figure class="${containerClass}">
+      ${pictureHtml}
+      ${caption ? `<figcaption>${caption}</figcaption>` : ''}
+    </figure>`;
+  });
+
+  // Add transform to process post image placeholders
+  eleventyConfig.addTransform("optimizePostImages", async function(content) {
+    if ((this.outputPath || "").endsWith(".html")) {
+      const regex = /<post-image\s+src="([^"]+)"\s+alt="([^"]*)"><\/post-image>/g;
+      
+      // Find all post image placeholders
+      const matches = content.matchAll(regex);
+      let newContent = content;
+      
+      for (const match of matches) {
+        const [fullMatch, src, alt] = match;
+        
+        // Process the image
+        let imagePath;
+        if (src.startsWith('/')) {
+          // Absolute path from project root
+          imagePath = path.join(process.cwd(), 'src', src.substring(1));
+        } else {
+          // Relative path from current file
+          const pageDir = path.dirname(this.inputPath);
+          imagePath = path.join(pageDir, src);
+        }
+        
+        // Ensure output directory exists
+        const outputDir = path.join(process.cwd(), '_site/img/optimized');
+        await fs.ensureDir(outputDir);
+        
+        // Get optimized image data specifically for posts
+        const imageData = await imageOptimizer.optimizePostImage(imagePath, outputDir);
+        
+        let replacement;
+        if (!imageData) {
+          console.warn(`Could not optimize post image: ${src}`);
+          replacement = `<figure class="post-image-container">
+            <img src="${src}" alt="${alt || ''}" loading="lazy" decoding="async">
+          </figure>`;
+        } else {
+          // Check if this is a text-heavy image (width > 800)
+          const isTextHeavy = imageData.fallback.width > 800;
+          const containerClass = isTextHeavy ? 'post-image-container text-heavy' : 'post-image-container';
+          
+          // Generate responsive image HTML with consistent sizing
+          replacement = `<figure class="${containerClass}">
+            <picture>
+              ${imageData.sources.map(source => 
+                `<source type="${source.type}" srcset="${source.srcset}" sizes="(min-width: 1024px) 1200px, 100vw">`
+              ).join('\n            ')}
+              <img 
+                src="${imageData.fallback.url}" 
+                width="${imageData.fallback.width}"
+                height="${imageData.fallback.height}"
+                alt="${alt || ''}"
+                loading="lazy"
+                decoding="async"
+                class="post-image"
+              >
+            </picture>
+            ${alt ? `<figcaption>${alt}</figcaption>` : ''}
+          </figure>`;
+        }
+        
+        // Replace the placeholder with the actual image HTML
+        newContent = newContent.replace(fullMatch, replacement);
+      }
+      
+      return newContent;
+    }
+    return content;
+  });
 
   return {
     // Control which files Eleventy will process
