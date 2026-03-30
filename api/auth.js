@@ -10,13 +10,6 @@ export default async function handler(req, res) {
       return;
     }
 
-    res.statusCode = 200;
-    res.end(JSON.stringify({ 
-      step: 'code received',
-      code: code.substring(0, 10)
-    }));
-    return;
-
     const clientId = process.env.GITHUB_CLIENT_ID || process.env.OAUTH_GITHUB_CLIENT_ID;
     const clientSecret = process.env.GITHUB_CLIENT_SECRET || process.env.OAUTH_GITHUB_CLIENT_SECRET;
 
@@ -25,6 +18,13 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'OAuth not configured' }));
       return;
     }
+
+    res.statusCode = 200;
+    res.end(JSON.stringify({ 
+      step: 'env check passed',
+      clientId: clientId ? 'set' : 'missing'
+    }));
+    return;
 
     const response = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
