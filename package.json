@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Minimalist dark mode starter template for 11ty used for tannerbyers.com",
   "scripts": {
-    "build": "rm -rf _site && tinacms build && ELEVENTY_ENV=production eleventy && npx pagefind --site _site",
+    "build": "rm -rf _site && tinacms build --skip-cloud-checks && ELEVENTY_ENV=production eleventy && npx pagefind --site _site",
     "build:fast": "rm -rf _site && ELEVENTY_ENV=production eleventy --incremental && npx pagefind --site _site",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",

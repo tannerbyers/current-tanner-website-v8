@@ -6,7 +6,7 @@ var config_default = defineConfig({
   token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
-    publicFolder: "src"
+    publicFolder: "."
   },
   media: {
     tina: {
@@ -20,8 +20,6 @@ var config_default = defineConfig({
         name: "posts",
         label: "Blog Posts",
         path: "src/posts",
-        frontmatterFormat: "yaml",
-        extension: "md",
         fields: [
           {
             type: "string",
@@ -40,17 +38,13 @@ var config_default = defineConfig({
           {
             type: "datetime",
             name: "date",
-            label: "Date",
-            dateFormat: "YYYY-MM-DD"
+            label: "Date"
           },
           {
             type: "string",
             name: "tags",
             label: "Tags",
-            list: true,
-            ui: {
-              component: "tags"
-            }
+            list: true
           },
           {
             type: "image",
@@ -60,21 +54,17 @@ var config_default = defineConfig({
           {
             type: "datetime",
             name: "lastModified",
-            label: "Last Modified",
-            dateFormat: "YYYY-MM-DD"
+            label: "Last Modified"
           },
           {
             type: "boolean",
             name: "draft",
-            label: "Draft",
-            default: false
+            label: "Draft"
           },
           {
             type: "rich-text",
             name: "body",
-            label: "Body",
-            templates: [],
-            paths: []
+            label: "Body"
           }
         ]
       },
@@ -84,7 +74,7 @@ var config_default = defineConfig({
         path: "src",
         frontmatterFormat: "yaml",
         match: {
-          include: ["about/index", "speaking/index", "newsletter/index", "tech-services/index", "6-figure-tech-job/index", "contact-me/index", "privacy/index", "terms/index"]
+          include: "about/index,speaking/index,newsletter/index,tech-services/index,6-figure-tech-job/index,contact-me/index,privacy/index,terms/index"
         },
         fields: [
           {
