@@ -417,31 +417,87 @@
       setupMarkdownPreview();
     });
 
-    // Auth
-    function login() {
-      const clientId = 'YOUR_GITHUB_CLIENT_ID'; // User needs to set this
-      const redirectUri = encodeURIComponent(window.location.origin + '/admin/');
-      window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=repo`;
-    }
-
-    async function handleOAuthCallback() {
-      const params = new URLSearchParams(window.location.search);
-      const code = params.get('code');
-      if (code) {
-        document.getElementById('login-status').innerHTML = '<span class="spinner"></span> Authenticating...';
-        try {
-          const response = await fetch('/api/auth', { method: 'POST', body: JSON.stringify({ code }) });
-          const data = await response.json();
-          if (data.token) {
-            localStorage.setItem('github_token', data.token);
-            githubToken = data.token;
-            await fetchGitHubUser();
-            window.location.href = window.location.pathname;
-          }
-        } catch (err) {
-          document.getElementById('login-status').textContent = 'Auth failed: ' + err.message;
-        }
+    // Auth - GitHub Device Flow (no client secret needed)
+    async function login() {
+      const statusEl = document.getElementById('login-status');
+      statusEl.innerHTML = '<span class="spinner"></span> Starting authentication...';
+      
+      try {
+        // Get device code
+        const deviceResponse = await fetch('https://github.com/login/device/code', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            client_id: 'Ov23liZ059WwqZlRDtSJ',
+            scope: 'repo'
+          })
+        });
+        
+        if (!deviceResponse.ok) throw new Error('Failed to start device auth');
+        
+        const data = await deviceResponse.json();
+        
+        // Show device code to user
+        statusEl.innerHTML = `
+          <div style="background: var(--bg-light); padding: 2rem; border-radius: 8px; margin: 1rem 0;">
+            <p style="margin-bottom: 1rem;">Go to: <strong style="color: var(--accent);">${data.verification_url}</strong></p>
+            <p style="margin-bottom: 1rem;">Enter code: <strong style="font-size: 1.5rem; letter-spacing: 0.2em;">${data.user_code}</strong></p>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">Waiting for authorization...</p>
+          </div>
+        `;
+        
+        // Poll for token
+        pollForToken(data.device_code, data.interval);
+        
+      } catch (err) {
+        statusEl.textContent = 'Auth failed: ' + err.message;
       }
+    }
+    
+    async function pollForToken(deviceCode, interval) {
+      const statusEl = document.getElementById('login-status');
+      
+      const poll = async () => {
+        try {
+          const response = await fetch('https://github.com/login/oauth/access_token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              client_id: 'Ov23liZ059WwqZlRDtSJ',
+              device_code: deviceCode,
+              grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
+            })
+          });
+          
+          const data = await response.json();
+          
+          if (data.access_token) {
+            localStorage.setItem('github_token', data.access_token);
+            githubToken = data.access_token;
+            await fetchGitHubUser();
+            statusEl.innerHTML = '<p style="color: var(--accent);">✓ Authentication successful!</p>';
+            setTimeout(() => {
+              window.location.href = window.location.pathname;
+            }, 500);
+            return;
+          }
+          
+          if (data.error === 'authorization_pending') {
+            setTimeout(poll, interval * 1000);
+            return;
+          }
+          
+          if (data.error === 'expired_token') {
+            statusEl.textContent = 'Code expired. Please try again.';
+            return;
+          }
+          
+        } catch (err) {
+          statusEl.textContent = 'Auth failed: ' + err.message;
+        }
+      };
+      
+      poll();
     }
 
     async function fetchGitHubUser() {
@@ -767,10 +823,6 @@ ${content}
       }
     }
 
-    // Check for OAuth callback
-    if (window.location.search.includes('code=')) {
-      handleOAuthCallback();
-    }
   </script>
 </body>
 </html>
