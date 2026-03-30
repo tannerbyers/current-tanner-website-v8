@@ -19,13 +19,6 @@ export default async function handler(req, res) {
       return;
     }
 
-    res.statusCode = 200;
-    res.end(JSON.stringify({ 
-      step: 'env check passed',
-      clientId: clientId ? 'set' : 'missing'
-    }));
-    return;
-
     const response = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: {
@@ -40,6 +33,13 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+
+    res.statusCode = 200;
+    res.end(JSON.stringify({ 
+      step: 'fetch done',
+      data: data
+    }));
+    return;
 
     if (data.error) {
       res.statusCode = 400;
