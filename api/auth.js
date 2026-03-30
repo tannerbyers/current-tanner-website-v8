@@ -1,4 +1,10 @@
 const handler = async (req, res) => {
+  // Debug logging
+  console.log('API called:', req.method, req.url);
+  console.log('Query:', req.query);
+  console.log('Client ID exists:', !!process.env.GITHUB_CLIENT_ID);
+  console.log('OAuth Client ID exists:', !!process.env.OAUTH_GITHUB_CLIENT_ID);
+
   // Support both GET (query param) and POST (body)
   let code = req.query.code || (req.body && req.body.code);
   
@@ -17,7 +23,12 @@ const handler = async (req, res) => {
   const clientSecret = process.env.GITHUB_CLIENT_SECRET || process.env.OAUTH_GITHUB_CLIENT_SECRET;
 
   if (!clientId || !clientSecret) {
-    return res.status(500).json({ error: 'OAuth not configured' });
+    return res.status(500).json({ error: 'OAuth not configured', env: {
+      hasGithubClientId: !!process.env.GITHUB_CLIENT_ID,
+      hasOauthClientId: !!process.env.OAUTH_GITHUB_CLIENT_ID,
+      hasGithubClientSecret: !!process.env.GITHUB_CLIENT_SECRET,
+      hasOauthClientSecret: !!process.env.OAUTH_GITHUB_CLIENT_SECRET
+    }});
   }
 
   try {
