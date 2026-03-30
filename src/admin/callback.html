@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authenticating - Tanner Byers Admin</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <style>
+    :root {
+      --bg: #1b1b1b;
+      --bg-light: #252525;
+      --text: #e0e0e0;
+      --text-muted: #888;
+      --accent: #00e5ff;
+      --danger: #ff4444;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { color: var(--accent); }
+    .spinner {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--bg-light);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 1rem 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .error { color: var(--danger); }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Authenticating...</h1>
+    <div id="status">
+      <div class="spinner"></div>
+      <p>Completing GitHub authentication</p>
+    </div>
+  </div>
+
+  <script>
+    async function handleCallback() {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      const error = params.get('error');
+      const statusEl = document.getElementById('status');
+
+      if (error) {
+        statusEl.innerHTML = `
+          <p class="error">Authentication failed: ${error}</p>
+          <p><a href="/admin/">Try again</a></p>
+        `;
+        return;
+      }
+
+      if (!code) {
+        statusEl.innerHTML = `
+          <p class="error">No authorization code received</p>
+          <p><a href="/admin/">Try again</a></p>
+        `;
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/auth?code=' + encodeURIComponent(code));
+        const data = await response.json();
+
+        if (data.error) {
+          statusEl.innerHTML = `
+            <p class="error">Error: ${data.error}</p>
+            <p><a href="/admin/">Try again</a></p>
+          `;
+          return;
+        }
+
+        if (data.token) {
+          localStorage.setItem('github_token', data.token);
+          
+          // Fetch user info
+          const userResponse = await fetch('https://api.github.com/user', {
+            headers: { Authorization: 'token ' + data.token }
+          });
+          const user = await userResponse.json();
+          localStorage.setItem('github_user', JSON.stringify(user));
+
+          statusEl.innerHTML = `
+            <p style="color: var(--accent);">✓ Authentication successful!</p>
+            <p>Redirecting to admin...</p>
+          `;
+          
+          setTimeout(() => {
+            window.location.href = '/admin/';
+          }, 500);
+          return;
+        }
+
+        statusEl.innerHTML = `
+          <p class="error">No token received</p>
+          <p><a href="/admin/">Try again</a></p>
+        `;
+      } catch (err) {
+        statusEl.innerHTML = `
+          <p class="error">Auth failed: ${err.message}</p>
+          <p><a href="/admin/">Try again</a></p>
+        `;
+      }
+    }
+
+    handleCallback();
+  </script>
+</body>
+</html>
