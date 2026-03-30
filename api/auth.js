@@ -2,9 +2,11 @@ module.exports = async (req, res) => {
   // Support both GET (query param) and POST (body)
   let code = req.query.code || (req.body && req.body.code);
   
-  // URL decode the code
+  // URL decode and clean the code
   if (code) {
     code = decodeURIComponent(code);
+    // Remove any fragment or invalid characters (keep only hex alphanumeric)
+    code = code.replace(/[^a-fA-F0-9]/g, '');
   }
 
   if (!code) {
@@ -35,7 +37,7 @@ module.exports = async (req, res) => {
     const data = await response.json();
 
     if (data.error) {
-      return res.status(400).json({ error: data.error_description || data.error, receivedCode: code });
+      return res.status(400).json({ error: data.error_description || data.error });
     }
 
     res.json({ token: data.access_token });

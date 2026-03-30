@@ -78,7 +78,7 @@
       }
 
       try {
-        const response = await fetch('/api/auth?code=' + encodeURIComponent(code));
+        const response = await fetch('/api/auth?code=' + encodeURIComponent(code.trim()));
         const data = await response.json();
 
         if (data.error) {
