@@ -155,6 +155,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
@@ -268,7 +269,7 @@ module.exports = function (eleventyConfig) {
   });
 
   const shouldHide = ({ date, draft }) => {
-    if (process.env.BUILD_DRAFTS || process.env.TINA_CMS) {
+    if (process.env.BUILD_DRAFTS || process.env.ELEVENTY_CMS) {
       return false
     }
     const isDraft = draft
@@ -311,7 +312,7 @@ module.exports = function (eleventyConfig) {
   
     // Check if we're in a CMS context
     if (process.env.CONTEXT === 'deploy-preview' || process.env.CMS_ENVIRONMENT) {
-      process.env.TINA_CMS = true
+      process.env.ELEVENTY_CMS = true
     }
   })  
 
@@ -319,9 +320,6 @@ module.exports = function (eleventyConfig) {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: ["md", "njk", "html", "liquid"],
-
-    // Exclude admin folder from template processing
-    exclude: ["admin"],
 
     // -----------------------------------------------------------------
     // If your site deploys to a subdirectory, change `pathPrefix`.

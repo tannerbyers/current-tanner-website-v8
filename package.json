@@ -8,9 +8,7 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
-    "dev": "concurrently \"eleventy --serve\" \"tinacms dev\"",
-    "tinacms": "tinacms dev",
-    "build:tinacms": "tinacms build",
+    "dev": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
     "new-post": "bash scripts/new-post.sh"
   },
@@ -29,13 +27,11 @@
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@tinacms/cli": "^2.1.0",
     "html-minifier": "^4.0.0",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
-    "pagefind": "^1.4.0",
-    "tinacms": "^2.1.0"
+    "pagefind": "^1.4.0"
   },
   "devDependencies": {
     "axe-core": "^4.11.1",
