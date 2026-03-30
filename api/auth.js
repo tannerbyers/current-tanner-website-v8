@@ -1,6 +1,11 @@
 module.exports = async (req, res) => {
   // Support both GET (query param) and POST (body)
-  const code = req.query.code || (req.body && req.body.code);
+  let code = req.query.code || (req.body && req.body.code);
+  
+  // URL decode the code
+  if (code) {
+    code = decodeURIComponent(code);
+  }
 
   if (!code) {
     return res.status(400).json({ error: 'Missing code' });
@@ -30,7 +35,7 @@ module.exports = async (req, res) => {
     const data = await response.json();
 
     if (data.error) {
-      return res.status(400).json({ error: data.error_description || data.error });
+      return res.status(400).json({ error: data.error_description || data.error, receivedCode: code });
     }
 
     res.json({ token: data.access_token });
