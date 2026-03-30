@@ -1,4 +1,3 @@
-// OAuth step 2: exchange code for access token and send to Decap CMS
 const https = require("https");
 
 function postJSON(url, data) {
@@ -50,11 +49,6 @@ module.exports = async (req, res) => {
       return res.status(500).send("Failed to get access token from GitHub");
     }
 
-    // Decap CMS requires a two-way handshake:
-    // 1. Popup sends "authorizing:github" to opener
-    // 2. CMS parent responds with a message
-    // 3. Popup sends token back using the origin from step 2
-    const content = JSON.stringify({ token, provider: "github" });
     const html = `
 <!doctype html>
 <html>
@@ -62,19 +56,12 @@ module.exports = async (req, res) => {
 <p>Completing authentication...</p>
 <script>
 (function() {
-  function receiveMessage(e) {
-    console.log("callback received message", e);
-    window.opener.postMessage(
-      'authorization:github:success:${content}',
-      e.origin
-    );
-    window.removeEventListener("message", receiveMessage, false);
-    document.body.innerHTML = "<p>Login successful! This window will close.</p>";
-    setTimeout(function() { window.close(); }, 1500);
-  }
   if (window.opener) {
-    window.addEventListener("message", receiveMessage, false);
-    window.opener.postMessage("authorizing:github", "*");
+    window.opener.postMessage(
+      'tina::auth::success:' + JSON.stringify({ token: '${token}', provider: 'github' }),
+      window.location.origin
+    );
+    window.close();
   } else {
     document.body.innerHTML = "<p>Error: Lost reference to the CMS window. Please close this tab and try again.</p>";
   }

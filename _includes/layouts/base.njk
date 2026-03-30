@@ -54,7 +54,10 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    {% if tina %}
+    <link rel="stylesheet" href="https://unpkg.com/@tinacms/styles@^3.0.0/dist/tina.css">
+    {% endif %}
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -184,6 +187,10 @@
     </footer>
 
     <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</a>
+
+    {% if tina %}
+    <script id="tina-config" type="application/json">{{ tinaConfig | safe }}</script>
+    {% endif %}
 
     <script src="{{ '/js/nav-dropdown.js' | cacheBust }}" defer></script>
     <script src="{{ '/js/external-links.js' | cacheBust }}" defer></script>
