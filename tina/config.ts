@@ -1,12 +1,11 @@
 import { defineConfig } from "tinacms";
-import { filesystem } from "@tinacms/reader";
 
 export default defineConfig({
   branch: process.env.GITHUB_BRANCH || "main",
   clientId: process.env.TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
   build: {
-    outputFolder: "admin",
+    outputFolder: "src/admin",
     publicFolder: "src",
   },
   media: {
@@ -21,8 +20,6 @@ export default defineConfig({
         name: "posts",
         label: "Blog Posts",
         path: "src/posts",
-        frontmatterFormat: "yaml",
-        extension: "md",
         fields: [
           {
             type: "string",
@@ -42,16 +39,12 @@ export default defineConfig({
             type: "datetime",
             name: "date",
             label: "Date",
-            dateFormat: "YYYY-MM-DD",
           },
           {
             type: "string",
             name: "tags",
             label: "Tags",
             list: true,
-            ui: {
-              component: "tags",
-            },
           },
           {
             type: "image",
@@ -62,20 +55,16 @@ export default defineConfig({
             type: "datetime",
             name: "lastModified",
             label: "Last Modified",
-            dateFormat: "YYYY-MM-DD",
           },
           {
             type: "boolean",
             name: "draft",
             label: "Draft",
-            default: false,
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
-            templates: [],
-            paths: [],
           },
         ],
       },
@@ -85,7 +74,7 @@ export default defineConfig({
         path: "src",
         frontmatterFormat: "yaml",
         match: {
-          include: ["about/index", "speaking/index", "newsletter/index", "tech-services/index", "6-figure-tech-job/index", "contact-me/index", "privacy/index", "terms/index"],
+          include: "about/index,speaking/index,newsletter/index,tech-services/index,6-figure-tech-job/index,contact-me/index,privacy/index,terms/index",
         },
         fields: [
           {
