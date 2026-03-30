@@ -10,6 +10,13 @@ export default async function handler(req, res) {
       return;
     }
 
+    res.statusCode = 200;
+    res.end(JSON.stringify({ 
+      step: 'code received',
+      code: code.substring(0, 10)
+    }));
+    return;
+
     const clientId = process.env.GITHUB_CLIENT_ID || process.env.OAUTH_GITHUB_CLIENT_ID;
     const clientSecret = process.env.GITHUB_CLIENT_SECRET || process.env.OAUTH_GITHUB_CLIENT_SECRET;
 
