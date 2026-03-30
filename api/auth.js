@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+const handler = async (req, res) => {
   // Support both GET (query param) and POST (body)
   let code = req.query.code || (req.body && req.body.code);
   
@@ -45,3 +45,5 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+module.exports = handler;
