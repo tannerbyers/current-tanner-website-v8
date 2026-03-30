@@ -6,6 +6,13 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Missing code' });
   }
 
+  const clientId = process.env.GITHUB_CLIENT_ID || process.env.OAUTH_GITHUB_CLIENT_ID;
+  const clientSecret = process.env.GITHUB_CLIENT_SECRET || process.env.OAUTH_GITHUB_CLIENT_SECRET;
+
+  if (!clientId || !clientSecret) {
+    return res.status(500).json({ error: 'OAuth not configured' });
+  }
+
   try {
     const response = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
@@ -14,8 +21,8 @@ module.exports = async (req, res) => {
         Accept: 'application/json'
       },
       body: JSON.stringify({
-        client_id: 'Ov23liZ059WwqZlRDtSJ',
-        client_secret: process.env.GITHUB_CLIENT_SECRET,
+        client_id: clientId,
+        client_secret: clientSecret,
         code
       })
     });
