@@ -32,8 +32,8 @@ Eventually I landed a corporate dev job where I worked for an eternity (5 years)
 
 ## What I've worked on and with
 
-I've built tons of full stack projects either for companies and founders. 
-Here's a list of the ones I remember: Document repository, serverless file processor, AI Agent, syncing middleware, automated claim processor, accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, static site generator.
+I've built tons of full stack projects either for companies, founders or myself. 
+Here's a list of the ones I remember: enterprise document repository, serverless file processor, DB scraping/querying AI agent, API sync middleware, automated claim processor, 508 accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, custom static site generator (use for my blog!).
 
 **Stack**: TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform, SQL/NoSQL, Node.js, React, Angular, X12.
 
