@@ -34,10 +34,13 @@ templateClass: tmpl-post
 <div class="subscribe-cta">
   <h3>Enjoy this post?</h3>
   <p>Get dev tips, AWS insights, and project updates straight to your inbox.</p>
-  <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="subscribe-cta-form">
+  <form name="newsletter-subscription" method="post" data-netlify="true" netlify-honeypot="bot-field" class="subscribe-cta-form">
+    <input type="hidden" name="form-name" value="newsletter-subscription">
+    <p class="screen-reader-text" style="display:none;">
+      <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+    </p>
     <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
     <input type="submit" value="Subscribe">
-    <input type="hidden" value="1" name="embed">
   </form>
   <p class="subscribe-cta-note">No spam. Unsubscribe anytime.</p>
 </div>

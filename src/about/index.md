@@ -14,9 +14,9 @@ eleventyNavigation:
 
 ## Where I started
 
-My technical journey started with me taking apart Goodwill PC parts in middle school, throw back to when Goodwill sold PCs. I started to learn to code when I was around 15 and from there, I built over 20+ projects during my nights after work.
+My technical journey started when I was 8 or 9 and got to do typing classes at school. I had an hour of mandatory ocmputer access and when the teacher wasnt looking, I was changing backgrounds, flipping the display upside down, searching the internet, and overall having a blast. Cut to me having an IT class in middle school where I learned internet basics and learned how to edit the html on my schools online report card. I really learned to code when I was around 15 about wanted to hack the world and build games. While I worked random jobs, I built over 20+ side projects and got relly good at building things.
 
-Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then joined a large cloud consultancy building solutions for enterprise customers. I built up my experience building real-world applications across large-scale production systems serving enterprise teams down to small startups where I built prototypes and onboarded their first beta users. I share my experiences and lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
+Eventually I landed a corporate dev job where I worked for an eternity (5 years) and got recruited by a Healthcare SaaS (double the $$$). Worked there for a little and then joined a large cloud consultancy building all kinds of things for enterprise customers. This was where I built up my experience building small and large real-world applications. I share my experiences and lessons through [my blog](/posts/) and [speaking engagements](/speaking/).
 
 ## Where I've worked
 
@@ -32,8 +32,9 @@ Eventually I landed a corporate dev job where I worked for an eternity (5 years)
 
 ## What I've worked on and with
 
-I've built tons of full stack projects either for companies, founders or myself. 
-Here's a list of the ones I remember: enterprise document repository, serverless file processor, DB scraping/querying AI agent, API sync middleware, automated claim processor, 508 accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, custom static site generator (use for my blog!).
+I've built a virtual ton of full stack projects, integrations, documents, bug fixes for companies, founders and myself. 
+
+Here's a list of the ones I remember: enterprise document repository, serverless file processor, DB scraping/querying AI agent, API sync middleware, basic custom format file processor, 508 accessibility auditing automation, API to manage codesets, 3d room editor SaaS, paid scheduling SaaS, Zoom transcription web app, astrology SPA, food truck finder web app, screenshot web app, git repo to coding tutorial generator, custom static site generator (I use this for my blog!).
 
 **Stack**: TypeScript, Python, Java, AWS (Lambda, CDK, DynamoDB), Terraform, SQL/NoSQL, Node.js, React, Angular, X12.
 

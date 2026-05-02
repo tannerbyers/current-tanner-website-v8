@@ -59,7 +59,7 @@ draft: true                          # optional, hides from production builds
 - **UX**: Reading progress bar, back-to-top button, auto TOC, related posts, subscribe CTA
 - **Feeds**: Atom XML (`/feed/feed.xml`) and JSON Feed (`/feed/feed.json`)
 - **Drafts**: Set `draft: true` in frontmatter to hide from production. Drafts show during `serve`/`watch`.
-- **Newsletter**: Buttondown (account: `tannerbyers`). Forms in post template and footer.
+- **Newsletter**: Native signup forms collected via Netlify Forms. Forms in post template and footer.
 
 ## Editing Tips
 - Global site metadata (title, description, author, social links) lives in `_data/metadata.json`

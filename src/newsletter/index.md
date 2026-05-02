@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 # Newsletter
 
-Get development tips, cloud architecture insights, and project updates delivered to your inbox.
+Right now I'm collecting email addresses so I can notify you when the newsletter launches. Get development tips, cloud architecture insights, and project updates delivered to your inbox.
 
 ## What you'll get:
 
@@ -33,13 +33,16 @@ Get development tips, cloud architecture insights, and project updates delivered
 </div>
 
 <div style="margin: 2rem 0; padding: 2rem; border: 1px solid #444; border-radius: 12px; background-color: #222; text-align: center;">
-  <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="embeddable-buttondown-form" style="max-width: 400px; margin: 0 auto;">
+  <form name="newsletter-subscription" method="post" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-signup-form" style="max-width: 400px; margin: 0 auto;">
+    <input type="hidden" name="form-name" value="newsletter-subscription">
+    <p class="screen-reader-text" style="display:none;">
+      <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+    </p>
     <div style="margin-bottom: 1rem;">
-      <label for="bd-email-newsletter" style="display: block; margin-bottom: 0.5rem; font-weight: 500; text-align: left; color: #ffffff;">Email Address</label>
-      <input type="email" name="email" id="bd-email-newsletter" required style="width: 100%; padding: 0.75rem; border: 1px solid #555; border-radius: 6px; font-size: 1rem; background-color: #1a1a1a; color: #ffffff;">
+      <label for="newsletter-email-newsletter" style="display: block; margin-bottom: 0.5rem; font-weight: 500; text-align: left; color: #ffffff;">Email Address</label>
+      <input type="email" name="email" id="newsletter-email-newsletter" required style="width: 100%; padding: 0.75rem; border: 1px solid #555; border-radius: 6px; font-size: 1rem; background-color: #1a1a1a; color: #ffffff;">
     </div>
     <input type="submit" value="Subscribe" style="width: 100%; padding: 0.75rem 1.5rem; background-color: #FF9900; color: #1a1a1a; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 1rem;">
-    <input type="hidden" value="1" name="embed">
   </form>
   <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">No spam. Unsubscribe at any time.</p>
 </div>

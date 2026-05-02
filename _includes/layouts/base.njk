@@ -163,13 +163,16 @@
 
     <footer>
       <div class="footer-subscribe">
-        <form action="https://buttondown.email/api/emails/embed-subscribe/tannerbyers" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/tannerbyers', 'popupwindow')" class="footer-subscribe-form">
-          <label for="bd-email-footer">Dev tips & AWS insights:</label>
+        <form name="newsletter-subscription" method="post" data-netlify="true" netlify-honeypot="bot-field" class="footer-subscribe-form">
+          <input type="hidden" name="form-name" value="newsletter-subscription">
+          <p class="screen-reader-text" style="display:none;">
+            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+          </p>
+          <label for="newsletter-email-footer">Dev tips & AWS insights:</label>
           <div class="footer-subscribe-inputs">
-            <input type="email" name="email" id="bd-email-footer" placeholder="your@email.com" required aria-label="Email address">
+            <input type="email" name="email" id="newsletter-email-footer" placeholder="your@email.com" required aria-label="Email address">
             <input type="submit" value="Subscribe">
           </div>
-          <input type="hidden" value="1" name="embed">
         </form>
       </div>
       <div>{{ metadata.title}}</div>
@@ -194,6 +197,7 @@
 
     <script src="{{ '/js/nav-dropdown.js' | cacheBust }}" defer></script>
     <script src="{{ '/js/external-links.js' | cacheBust }}" defer></script>
+    <script src="{{ '/js/newsletter-form.js' | cacheBust }}" defer></script>
     <script>
       // Reading progress bar
       (function() {

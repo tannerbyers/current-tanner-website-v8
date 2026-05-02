@@ -16,7 +16,7 @@ eleventyNavigation:
 
 ### Information You Provide
 - **Contact Information:** When you email me or fill out forms, I collect your name, email address, and any information you choose to share.
-- **Newsletter Subscription:** If you subscribe to my newsletter, I collect your email address through Buttondown.
+- **Newsletter Subscription:** If you subscribe to my newsletter, I collect your email address through this website's subscription form.
 
 ### Automatically Collected Information
 - **Analytics:** I use Google Analytics to understand how visitors use this site. This includes information like pages visited, time spent, and general location data.
@@ -33,7 +33,7 @@ eleventyNavigation:
 
 I do not sell, rent, or share your personal information with third parties except:
 
-- **Service Providers:** Tools like Google Analytics, Buttondown (newsletter), and Calendly (scheduling) that help operate this website
+- **Service Providers:** Tools like Google Analytics, Netlify Forms, and Calendly (scheduling) that help operate this website
 - **Legal Requirements:** If required by law or to protect legal rights
 
 ## Third-Party Services
@@ -41,13 +41,13 @@ I do not sell, rent, or share your personal information with third parties excep
 This website uses several third-party services:
 
 - **Google Analytics:** For website analytics ([Google's Privacy Policy](https://policies.google.com/privacy))
-- **Buttondown:** For newsletter management ([Buttondown's Privacy Policy](https://buttondown.email/privacy))
+- **Netlify Forms:** For newsletter signup collection via this website's hosting provider
 - **Calendly:** For appointment scheduling ([Calendly's Privacy Policy](https://calendly.com/privacy))
 
 ## Data Retention
 
 - **Contact Information:** Kept as long as needed for business purposes or until you request deletion
-- **Newsletter Subscriptions:** Until you unsubscribe
+- **Newsletter Subscriptions:** Until you unsubscribe or request deletion
 - **Analytics Data:** Retained according to Google Analytics settings (currently 14 months)
 
 ## Your Rights
