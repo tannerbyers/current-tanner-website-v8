@@ -11,9 +11,9 @@ image: /img/hcu0mg9beaadzym.png
 lastModified: 2026-03-02
 draft: false
 ---
-I saw this post on Hacker News [link](https://news.ycombinator.com/item?id=47278426) in which the author writes *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. 
+I saw this post on Hacker News ([link](https://news.ycombinator.com/item?id=47278426)) where the author proclaims *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. 
 
-I'm no expert, but that sounded exagerrated to me so I wasted an hour of my Friday to dive into the public data for tech jobs. I was mostly curious what the overall health of the tech market looks like now for these sectors along with the changes over time. 
+I'm no expert, but that sounded exagerrated to me so I wasted an hour of my Friday to dive into the public data for tech jobs. I was mostly curious what the overall health of the tech market looks like now along with overall trend over time. 
 
 ![Tech employment trends from 2016 to 2026 across software publishers, computer systems design, data processing, and web search sectors](/img/blog_tech_employment.png)
 
@@ -29,11 +29,9 @@ In other words, tech employment hasn’t collapsed. **It grew aggressively for y
 
 ## **The takeaway**
 
-Hiring cooled after the boom, but the industry is still significantly larger than it was a decade ago. The real shift appears to be who companies want to hire, not whether tech jobs exist.
+Hiring cooled after the boom, but the industry is still significantly larger than it was a decade ago w/ lots of job demand. The real shift appears to be who companies want to hire, not whether tech jobs exist.
 
 ## Data Sources
-
-Individual Series on FRED
 
 •  [Software Publishers (CES5051320001)](https://fred.stlouisfed.org/series/CES5051320001)
 
