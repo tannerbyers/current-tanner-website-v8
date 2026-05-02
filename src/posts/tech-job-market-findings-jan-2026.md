@@ -11,7 +11,9 @@ image: /img/hcu0mg9beaadzym.png
 lastModified: 2026-03-02
 draft: false
 ---
-I saw the above graph on [Hacker News](https://news.ycombinator.com/item?id=47278426) today saying *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. That sounded exagerrated so I wasted an hour of my Friday to dive into the numbers. I was curious what the overall health of the tech market looked like for these sectors (not just the change over time), so I pulled some public data to look at the broader trend.
+I saw this post on Hacker News [link](https://news.ycombinator.com/item?id=47278426) in which the author writes *"Tech employment now significantly worse than the 2008 or 2020 recessions"*. 
+
+I'm no expert, but that sounded exagerrated to me so I wasted an hour of my Friday to dive into the public data for tech jobs. I was mostly curious what the overall health of the tech market looks like now for these sectors along with the changes over time. 
 
 ![Tech employment trends from 2016 to 2026 across software publishers, computer systems design, data processing, and web search sectors](/img/blog_tech_employment.png)
 
@@ -23,7 +25,7 @@ Using Bureau of Labor Statistics employment data across similar tech industries,
 
 +951,100 jobs compared to January 2016 (+34.8%)
 
-In other words, tech employment hasn’t collapsed. **It grew aggressively for years, overshot during the 2021–2022 hiring surge, and is now sitting on a plateau** slightly below the peak. The market  shows that plateau are likely what people are reacting to where companies are hiring fewer entry-level devs and “pure architecture” roles while still needing experienced roles across the board.
+In other words, tech employment hasn’t collapsed. **It grew aggressively for years, overshot during the 2021–2022 hiring surge, and is now sitting on a plateau** slightly below the peak. Companies now are hiring fewer entry-level positions (less demand due to surplus of experienced labor) however experienced tech professionals are still needed across the board but you will have compeition w/ the employees who were part of mass layoffs. 
 
 ## **The takeaway**
 
