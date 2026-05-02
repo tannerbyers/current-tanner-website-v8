@@ -1,7 +1,7 @@
 # tannerbyers.com — Eleventy Development Guide
 
 ## Project Overview
-Personal blog and portfolio for Tanner Byers. Built with Eleventy v1, Nunjucks templates, deployed to Vercel.
+Personal blog and portfolio for Tanner Byers. Built with Eleventy v1, Nunjucks templates, deployed to Netlify.
 
 ## Architecture
 - **Input**: `src/` (content and pages)
