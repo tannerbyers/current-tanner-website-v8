@@ -58,7 +58,7 @@ draft: true                          # optional, hides from production builds
 - **Performance**: HTML minification, cache-busted CSS/JS, preconnect hints, lazy-loaded images
 - **UX**: Reading progress bar, back-to-top button, auto TOC, related posts, subscribe CTA
 - **Feeds**: Atom XML (`/feed/feed.xml`) and JSON Feed (`/feed/feed.json`)
-- **Drafts**: Set `draft: true` in frontmatter to hide from production. Drafts show during `serve`/`watch`.
+- **Drafts**: Set `draft: true` in frontmatter to hide from production. Drafts show during `serve`/`watch` and are visible locally at `/drafts/`.
 - **Newsletter**: Native signup forms collected via Netlify Forms. Forms in post template and footer.
 
 ## Editing Tips

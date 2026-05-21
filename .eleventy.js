@@ -142,6 +142,18 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // Draft review collection for local preview and writing workflow
+  eleventyConfig.addCollection("draftPosts", function (collection) {
+    return collection
+      .getAll()
+      .filter(
+        (item) =>
+          item.data.draft &&
+          item.inputPath &&
+          !item.inputPath.endsWith("drafts.njk")
+      );
+  });
+
   // Excerpt support: use --- as separator in post content
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,

@@ -15,16 +15,22 @@ if [ -f "$FILE" ]; then
   exit 1
 fi
 
+mkdir -p "$(dirname "$FILE")"
+
 cat > "$FILE" <<EOF
 ---
 title: "${TITLE}"
 description: 
 date: ${DATE}
 tags: []
+image: /img/
+lastModified: ${DATE}
+draft: true
 ---
 
 <!-- excerpt -->
 
+Write your post in Markdown with inline HTML as needed. Use /img/ references for local images.
 
 EOF
 

@@ -4,25 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - Tanner Byers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
   <link rel="stylesheet" href="/css/index.css">
   <style>
     :root {
-      --bg: #1b1b1b;
-      --bg-light: #252525;
-      --text: #e0e0e0;
-      --text-muted: #888;
-      --accent: #00e5ff;
-      --border: #333;
-      --danger: #ff4444;
+      --bg: #050505;
+      --bg-light: #111111;
+      --text: #f4f4f8;
+      --text-muted: #8a8f99;
+      --accent: #72d2ff;
+      --accent-soft: rgba(114, 210, 255, 0.18);
+      --border: #222;
+      --danger: #ff5a5f;
+      --font-sans: 'Space Grotesk', system-ui, sans-serif;
+      --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
     }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: var(--font-sans);
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       margin: 0;
       padding: 2rem;
+    }
+    textarea, input, select {
+      font-family: var(--font-mono);
+    }
+    .btn {
+      background: linear-gradient(135deg, var(--accent), #8c9dff);
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 12px 30px rgba(114, 210, 255, 0.15);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(114, 210, 255, 0.2);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .tab {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-muted);
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+    .tab.active {
+      background: var(--accent-soft);
+      color: var(--text);
+      border-color: rgba(114, 210, 255, 0.4);
+    }
+    .preview-pane {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .editor-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+    }
+    .writer-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .writer-stats span {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .writer-stats strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .fullscreen-editor {
+      min-height: calc(100vh - 220px);
+      border-radius: 18px;
+      padding: 1rem;
+      background: #07070a;
+      box-shadow: inset 0 0 120px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .fullscreen-editor textarea {
+      width: 100%;
+      height: calc(100% - 90px);
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      resize: none;
+      padding: 0;
+      min-height: 100%;
+    }
+    .fullscreen-editor textarea:focus {
+      outline: none;
+    }
+    .post-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+    }
+    .post-title {
+      text-transform: capitalize;
     }
     .container {
       max-width: 1200px;
@@ -279,9 +384,11 @@
 
       <div class="tabs">
         <button class="tab active" onclick="showTab('new-post')">New Post</button>
-        <button class="tab" onclick="showTab('new-page')">New Page</button>
-        <button class="tab" onclick="showTab('manage')">Manage Posts</button>
+        <button class="tab" onclick="showTab('drafts')">Drafts</button>
+        <button class="tab" onclick="showTab('writer')">Writer</button>
+        <button class="tab" onclick="showTab('manage')">All Posts</button>
         <button class="tab" onclick="showTab('images')">Images</button>
+        <button class="tab" onclick="showTab('new-page')">New Page</button>
       </div>
 
       <!-- New Post Tab -->
@@ -323,6 +430,10 @@
             <textarea id="post-content" placeholder="Write your post content in Markdown..."></textarea>
           </div>
           
+          <div class="form-group">
+            <label><input type="checkbox" id="post-draft" checked> Save as draft</label>
+          </div>
+          
           <div class="preview-container">
             <div class="preview-pane">
               <div class="preview-header">
@@ -339,11 +450,56 @@
             </div>
           </div>
           
-          <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <button type="submit" class="btn" id="post-submit-btn">Create Post</button>
             <button type="button" class="btn btn-secondary" onclick="clearPostForm()">Clear</button>
           </div>
         </form>
+      </div>
+
+      <!-- Drafts Tab -->
+      <div id="tab-drafts" class="tab-content">
+        <h2>Draft Review</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">Review all draft posts locally, open them in the writer, and see revision stats at a glance.</p>
+        <div id="draft-list-container">
+          <p>Loading drafts...</p>
+        </div>
+      </div>
+
+      <!-- Writer Tab -->
+      <div id="tab-writer" class="tab-content">
+        <div class="editor-toolbar">
+          <div>
+            <h2 style="margin:0;">Writer Mode</h2>
+            <p style="margin:0; color: var(--text-muted);">A minimalist dark fullscreen writing canvas with live stats.</p>
+          </div>
+          <div style="display:flex; gap:1rem; flex-wrap: wrap; align-items:center;">
+            <button class="btn" onclick="saveWriterDraft()">Save Draft</button>
+            <button class="btn btn-secondary" onclick="clearWriter()">New Draft</button>
+          </div>
+        </div>
+        <div class="writer-stats">
+          <span><strong id="writer-word-count">0</strong> words</span>
+          <span><strong id="writer-char-count">0</strong> chars</span>
+          <span><strong id="writer-last-updated">–</strong> last updated</span>
+          <span><strong id="writer-revisions">–</strong> revisions</span>
+        </div>
+        <div class="fullscreen-editor">
+          <textarea id="writer-textarea" placeholder="Start writing your draft here..."></textarea>
+        </div>
+        <div style="margin-top: 1rem; display:grid; gap:0.75rem;">
+          <div class="form-group">
+            <label for="writer-title">Title</label>
+            <input id="writer-title" type="text" placeholder="Draft title">
+          </div>
+          <div class="form-group">
+            <label for="writer-slug">Slug</label>
+            <input id="writer-slug" type="text" placeholder="my-new-post">
+          </div>
+          <div class="form-group">
+            <label><input type="checkbox" id="writer-draft" checked> Save as draft</label>
+          </div>
+        </div>
       </div>
 
       <!-- New Page Tab -->
@@ -400,9 +556,12 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
   <script>
     const REPO = 'tannerbyers/current-tanner-website-v8';
     const BRANCH = 'main';
+    let writerCurrentPath = null;
+    let writerInitialized = false;
 
     document.addEventListener('DOMContentLoaded', async () => {
       const status = document.getElementById('login-status');
@@ -487,6 +646,13 @@
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       document.querySelector(`[onclick="showTab('${tabName}')"]`).classList.add('active');
       document.getElementById(`tab-${tabName}`).classList.add('active');
+
+      if (tabName === 'drafts') {
+        loadDrafts();
+      }
+      if (tabName === 'writer') {
+        initWriter();
+      }
     }
 
     function showAlert(message, type = 'info') {
@@ -505,7 +671,8 @@
     function updatePreview() {
       const content = document.getElementById('post-content')?.value || '';
       document.getElementById('markdown-preview').textContent = content;
-      document.getElementById('html-preview').innerHTML = marked.parse(content);
+      const rawHtml = marked.parse(content);
+      document.getElementById('html-preview').innerHTML = DOMPurify.sanitize(rawHtml);
     }
 
     function previewImage(input, previewId) {
@@ -606,6 +773,7 @@
         imageLine = `image: /img/${imageInput.files[0].name}\n`;
       }
       
+      const isDraft = document.getElementById('post-draft').checked;
       const frontmatter = `---
 title: "${title}"
 description: >
@@ -613,7 +781,8 @@ description: >
 date: ${date}
 tags:
 ${tags.map(t => `  - ${t}`).join('\n')}
-${imageLine}draft: false
+${imageLine}lastModified: ${date}
+draft: ${isDraft}
 ---
 
 <!-- excerpt -->
@@ -682,7 +851,7 @@ ${content}
 `;
       
       try {
-        await githubCreateFile(filename, new Blob([frontmatter], { type: 'text/plain' }), `Create page: ${title}`);
+        await githubCreateFile(filename, frontmatter, `Create page: ${title}`);
         showAlert(`Page "${title}" created successfully!`, 'success');
         event.target.reset();
       } catch (err) {
@@ -711,7 +880,7 @@ ${content}
             <li class="post-item">
               <div>
                 <div class="post-title">${title}</div>
-                <div class="post-date">${new Date(post.commit.author.date).toLocaleDateString()}</div>
+                <div class="post-date">Draft or published post</div>
               </div>
               <div class="post-actions">
                 <a href="https://github.com/${REPO}/edit/${BRANCH}/${post.path}" target="_blank" class="btn btn-secondary">Edit on GitHub</a>
@@ -724,6 +893,236 @@ ${content}
       } catch (err) {
         container.innerHTML = `<p style="color: var(--danger);">Failed to load posts: ${err.message}</p>`;
       }
+    }
+
+    async function githubGetFile(path) {
+      const response = await fetch(`/api/github?path=${encodeURIComponent(path)}`);
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.error || 'Failed to fetch file contents');
+      }
+      const data = await response.json();
+      const raw = window.atob(data.content.replace(/\n/g, ''));
+      return { content: raw, sha: data.sha, path };
+    }
+
+    async function githubGetCommits(path) {
+      const response = await fetch(`/api/github?action=commits&path=${encodeURIComponent(path)}`);
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.error || 'Failed to fetch commit history');
+      }
+      return response.json();
+    }
+
+    function parseFrontmatter(content) {
+      const result = { data: {}, body: content };
+      const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
+      if (!match) return result;
+
+      const raw = match[1].split(/\r?\n/);
+      let collectingTags = false;
+      let collectingKey = null;
+      let multilineBuffer = '';
+      result.data.tags = [];
+
+      const flushMultiline = () => {
+        if (collectingKey) {
+          result.data[collectingKey] = multilineBuffer.trim();
+          collectingKey = null;
+          multilineBuffer = '';
+        }
+      };
+
+      raw.forEach((line) => {
+        const trimmed = line.trim();
+        if (!trimmed) return;
+
+        if (collectingTags && trimmed.startsWith('-')) {
+          result.data.tags.push(trimmed.replace(/^-\s*/, '').trim());
+          return;
+        }
+
+        if (collectingKey && line.startsWith('  ')) {
+          multilineBuffer += ` ${trimmed}`;
+          return;
+        }
+
+        flushMultiline();
+
+        const pair = trimmed.match(/^([a-zA-Z0-9_]+):\s*(.*)$/);
+        if (!pair) return;
+
+        const key = pair[1];
+        let value = pair[2];
+
+        if (key === 'tags') {
+          collectingTags = true;
+          if (value.startsWith('[') && value.endsWith(']')) {
+            value = value.slice(1, -1).trim();
+            result.data.tags = value ? value.split(',').map((t) => t.trim()) : [];
+            collectingTags = false;
+          }
+          return;
+        }
+
+        collectingTags = false;
+        if (value === '>') {
+          collectingKey = key;
+          multilineBuffer = '';
+          return;
+        }
+
+        if (value === 'true' || value === 'false') {
+          result.data[key] = value === 'true';
+        } else {
+          result.data[key] = value.replace(/^"|"$/g, '');
+        }
+      });
+
+      flushMultiline();
+      result.body = content.slice(match[0].length).trim();
+      return result;
+    }
+
+    async function loadDrafts() {
+      const container = document.getElementById('draft-list-container');
+      container.innerHTML = '<p>Loading drafts...</p>';
+      try {
+        const contents = await githubListContents('src/posts');
+        const files = contents.filter((item) => item.name.endsWith('.md'));
+        const drafts = await Promise.all(files.map(async (file) => {
+          try {
+            const fileData = await githubGetFile(file.path);
+            const parsed = parseFrontmatter(fileData.content);
+            if (!parsed.data.draft) return null;
+            const history = await githubGetCommits(file.path).catch(() => ({ latestDate: 'Unknown', count: 'Unknown' }));
+            return {
+              path: file.path,
+              title: parsed.data.title || file.name.replace('.md', '').replace(/-/g, ' '),
+              description: parsed.data.description || '',
+              tags: parsed.data.tags || [],
+              lastModified: parsed.data.lastModified || parsed.data.date || 'Unknown',
+              history,
+            };
+          } catch {
+            return null;
+          }
+        }));
+
+        const draftList = drafts.filter(Boolean);
+        if (!draftList.length) {
+          container.innerHTML = '<p>No draft posts found. Create one in the New Post or Writer tab.</p>';
+          return;
+        }
+
+        const html = '<ul class="post-list">' + draftList.map((draft) => {
+          return `
+            <li class="post-item">
+              <div>
+                <div class="post-title">${draft.title}</div>
+                <div class="post-date">Last modified: ${draft.lastModified}</div>
+                <div style="color: var(--text-muted); font-size:0.95rem; margin-top:0.35rem;">${draft.description}</div>
+                <div style="color: var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">${draft.tags.join(', ') || 'No tags'} • ${draft.history.count} revisions</div>
+              </div>
+              <div class="post-actions">
+                <button class="btn btn-secondary" onclick="openDraftInWriter('${encodeURIComponent(draft.path)}')">Open in Writer</button>
+                <a href="https://github.com/${REPO}/edit/${BRANCH}/${draft.path}" target="_blank" class="btn btn-secondary">Edit on GitHub</a>
+              </div>
+            </li>
+          `;
+        }).join('') + '</ul>';
+
+        container.innerHTML = html;
+      } catch (err) {
+        container.innerHTML = `<p style="color: var(--danger);">Failed to load drafts: ${err.message}</p>`;
+      }
+    }
+
+    function slugify(value) {
+      return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
+    async function openDraftInWriter(encodedPath) {
+      const path = decodeURIComponent(encodedPath);
+      try {
+        const fileData = await githubGetFile(path);
+        const parsed = parseFrontmatter(fileData.content);
+        const history = await githubGetCommits(path).catch(() => ({ latestDate: 'Unknown', count: 'Unknown' }));
+        writerCurrentPath = path;
+        document.getElementById('writer-title').value = parsed.data.title || '';
+        document.getElementById('writer-slug').value = path.split('/').pop().replace('.md', '');
+        document.getElementById('writer-textarea').value = parsed.body;
+        document.getElementById('writer-draft').checked = parsed.data.draft !== false;
+        document.getElementById('writer-last-updated').textContent = history.latestDate || parsed.data.lastModified || 'Unknown';
+        document.getElementById('writer-revisions').textContent = history.count || 'Unknown';
+        updateWriterStats();
+        showTab('writer');
+      } catch (err) {
+        showAlert(`Error loading draft: ${err.message}`, 'error');
+      }
+    }
+
+    function updateWriterStats() {
+      const value = document.getElementById('writer-textarea')?.value || '';
+      const wordCount = value.trim().split(/\s+/).filter(Boolean).length;
+      const charCount = value.length;
+      document.getElementById('writer-word-count').textContent = wordCount;
+      document.getElementById('writer-char-count').textContent = charCount;
+    }
+
+    function clearWriter() {
+      writerCurrentPath = null;
+      document.getElementById('writer-title').value = '';
+      document.getElementById('writer-slug').value = '';
+      document.getElementById('writer-textarea').value = '';
+      document.getElementById('writer-draft').checked = true;
+      document.getElementById('writer-last-updated').textContent = '–';
+      document.getElementById('writer-revisions').textContent = '–';
+      updateWriterStats();
+      showAlert('Writer reset. Start a fresh draft.', 'info');
+    }
+
+    async function saveWriterDraft() {
+      const title = document.getElementById('writer-title').value.trim();
+      const slugInput = document.getElementById('writer-slug').value.trim();
+      const content = document.getElementById('writer-textarea').value;
+      const isDraft = document.getElementById('writer-draft').checked;
+
+      if (!title || !content) {
+        showAlert('Please add a title and some content before saving.', 'error');
+        return;
+      }
+
+      const slug = slugInput ? slugify(slugInput) : slugify(title);
+      if (!slug) {
+        showAlert('Invalid slug; please use letters, numbers, or dashes.', 'error');
+        return;
+      }
+
+      const path = writerCurrentPath || `src/posts/${slug}.md`;
+      const today = new Date().toISOString().split('T')[0];
+      const frontmatter = `---\ntitle: "${title}"\ndescription: >\n  ${content.slice(0, 120).replace(/\n/g, ' ')}\ndate: ${today}\ntags:\n  - draft\nlastModified: ${today}\ndraft: ${isDraft}\n---\n\n<!-- excerpt -->\n\n${content}\n`;
+
+      try {
+        await githubCreateFile(path, frontmatter, `${writerCurrentPath ? 'Update' : 'Save'} draft: ${title}`);
+        writerCurrentPath = path;
+        const history = await githubGetCommits(path).catch(() => ({ latestDate: today, count: '1' }));
+        document.getElementById('writer-last-updated').textContent = history.latestDate || today;
+        document.getElementById('writer-revisions').textContent = history.count || '1';
+        showAlert(`Draft saved to ${path}`, 'success');
+      } catch (err) {
+        showAlert(`Failed to save draft: ${err.message}`, 'error');
+      }
+    }
+
+    function initWriter() {
+      if (writerInitialized) return;
+      const textarea = document.getElementById('writer-textarea');
+      if (!textarea) return;
+      textarea.addEventListener('input', updateWriterStats);
+      updateWriterStats();
+      writerInitialized = true;
     }
 
   </script>

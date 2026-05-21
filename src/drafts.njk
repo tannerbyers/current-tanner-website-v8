@@ -1,0 +1,28 @@
+---
+title: Draft posts
+layout: layouts/home.njk
+permalink: /drafts/
+eleventyExcludeFromCollections: true
+draft: true
+---
+
+<h1>Draft posts</h1>
+<p>These are draft posts visible only during local development. They are hidden from production builds until `draft: false` is set.</p>
+
+{% set drafts = collections.draftPosts | sort(attribute="date", reverse=true) %}
+
+{% if drafts.length %}
+  <ol class="postlist">
+  {% for post in drafts %}
+    <li>
+      <article>
+        <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+        <p class="post-meta">{{ post.data.date | readableDate }}{% if post.data.tags %} • {{ post.data.tags | join(", ") }}{% endif %}</p>
+        <p>{{ post.data.description }}</p>
+      </article>
+    </li>
+  {% endfor %}
+  </ol>
+{% else %}
+  <p>No draft posts found yet. Create one with <code>npm run new-post -- "My Post Title"</code>.</p>
+{% endif %}

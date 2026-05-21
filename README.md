@@ -41,6 +41,16 @@ DEBUG=* npx eleventy
   - `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
 - `_includes/postlist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `index.njk` has an example of how to use it.
 
+## Writing Blog Posts
+- Use `npm run new-post -- "Post Title"` to create a draft-ready post in `src/posts/`.
+- New posts scaffold with `draft: true` and are hidden from production builds until you set `draft: false`.
+- Preview drafts locally with `npm run serve` and open `/drafts/` to review all draft posts together.
+- Write in Markdown and include inline HTML freely; image references like `/img/my-image.jpg` work automatically.
+
+## Local Drafts
+- Draft posts are only visible during local development and are excluded from production output.
+- Keep revising drafts until you are ready, then remove or set `draft: false`.
+
 ## Shortcodes
 
 ### JSFiddle
