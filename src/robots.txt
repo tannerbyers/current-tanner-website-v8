@@ -13,8 +13,7 @@ Allow: /contact-me/
 Allow: /privacy/
 Allow: /terms/
 
-# Block example content
-Disallow: /examples_posts/
+# Block admin/internal paths
 Disallow: /documentation/
 
 # Sitemaps

@@ -465,34 +465,49 @@ a[href].post-tag:visited {
 /* Table of contents */
 .toc {
   margin: 1.5rem 0;
-  padding: 1rem 1.5rem;
-  border: 1px solid #444;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #555;
+  border-left: 4px solid #FF9900;
   border-radius: 8px;
-  background: rgba(30, 30, 50, 0.5);
+  background: rgba(30, 30, 50, 0.6);
 }
 .toc-title {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  color: #FF9900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .toc ol {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: toc;
 }
 .toc li {
-  padding: 0.2rem 0;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.toc li:last-child {
+  border-bottom: none;
 }
 .toc li a {
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  color: var(--lightgray);
+  display: inline-block;
+  padding: 0.1rem 0;
+  transition: color 0.15s ease, padding-left 0.15s ease;
 }
 .toc li a:hover {
-  color: var(--yellowgreen);
+  color: var(--white);
+  padding-left: 0.25rem;
 }
 .toc .toc-l3 {
   padding-left: 1.25rem;
-  font-size: 0.85rem;
+  font-size: 0.86rem;
+}
+.toc .toc-l3 a {
+  color: #999;
 }
 
 /* Related posts */
@@ -775,55 +790,11 @@ p > code {
   background: #FFB700;
 }
 
-/* Newsletter success message */
-.newsletter-success-message {
-  margin-top: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: rgba(76, 175, 80, 0.1);
-  border: 1px solid #4CAF50;
-  border-radius: 4px;
-  color: #81C784;
-  font-size: 0.9rem;
-  text-align: center;
-  animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Contact form styles */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 0;
-}
-
-.contact-form-note {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  text-align: center;
-}
-
-/* Success message for contact form */
-.contact-form-success {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  background: rgba(76, 175, 80, 0.1);
-  border: 1px solid #4CAF50;
-  border-radius: 4px;
-  color: #81C784;
-  font-size: 0.9rem;
-  text-align: center;
-  animation: fadeIn 0.3s ease-in;
 }
 
 footer {
@@ -921,6 +892,7 @@ footer {
   z-index: 2;
   overflow-wrap: break-word;
   word-break: break-word;
+  padding: 1rem;
 }
 
 
@@ -938,7 +910,7 @@ footer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) min(50em, 100%) minmax(0, 1fr);
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
   }
 
   .page-side {
@@ -946,10 +918,10 @@ footer {
   }
 
   .page-content {
+    align-self: start;
     backdrop-filter: blur(2px);
     background: rgba(27, 27, 27, 0.45);
     border-radius: 8px;
-    padding: 0 1rem;
     transition: backdrop-filter 0.3s ease, background 0.3s ease;
   }
 

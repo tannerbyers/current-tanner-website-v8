@@ -8,6 +8,7 @@ description: >
   highest priority) 
 date: 2026-03-21
 tags:
+  - coding
   - development
   - ai
 lastModified: 2026-03-21

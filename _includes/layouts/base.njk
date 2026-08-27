@@ -53,7 +53,6 @@
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | cacheBust }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {% if tina %}
     <link rel="stylesheet" href="https://unpkg.com/@tinacms/styles@^3.0.0/dist/tina.css">
     {% endif %}
@@ -114,12 +113,12 @@
     {%- endif %}
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB0Y5K6X23"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ metadata.gaId }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-HB0Y5K6X23');
+      gtag('config', '{{ metadata.gaId }}');
     </script>
     
   </head>
@@ -134,7 +133,22 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item"><a href="{{ '/about/' | url }}" class="nav-link{% if page.url == '/about/' %} nav-item-active{% endif %}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-          <li class="nav-item"><a href="{{ '/posts/' | url }}" class="nav-link{% if page.url and page.url.startsWith('/posts/') %} nav-item-active{% endif %}" {% if page.url and page.url.startsWith('/posts/') %}aria-current="page"{% endif %}>Blog</a></li>
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link nav-dropdown-trigger{% if page.url and (page.url.startsWith('/posts/') or page.url.startsWith('/tags/')) %} nav-item-active{% endif %}" aria-haspopup="true" aria-expanded="false">Posts</button>
+            <ul class="nav-dropdown-menu" aria-label="Posts menu" role="menu" aria-hidden="true">
+              <li role="none"><a role="menuitem" href="{{ '/posts/' | url }}" class="nav-link">All Posts</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/coding/' | url }}" class="nav-link">Coding</a></li>
+              {# Gaming – coming when I start writing about games and game dev
+              <li role="none"><a role="menuitem" href="{{ '/tags/gaming/' | url }}" class="nav-link">Gaming</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/game-dev/' | url }}" class="nav-link">Game Dev</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/design/' | url }}" class="nav-link">Design</a></li>
+              #}
+              <li role="none"><a role="menuitem" href="{{ '/tags/saas/' | url }}" class="nav-link">SAAS</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/business/' | url }}" class="nav-link">Business</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/project/' | url }}" class="nav-link">Project</a></li>
+              <li role="none"><a role="menuitem" href="{{ '/tags/learning/' | url }}" class="nav-link">Learning</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="{{ '/speaking/' | url }}" class="nav-link{% if page.url == '/speaking/' %} nav-item-active{% endif %}" {% if page.url == '/speaking/' %}aria-current="page"{% endif %}>Speaking</a></li>
           <li class="nav-item"><a href="{{ metadata.feed.path | url }}" class="nav-link" title="RSS feed">RSS</a></li>
           <li class="nav-item nav-dropdown">
@@ -163,11 +177,9 @@
 
     <footer>
       <div class="footer-subscribe">
-        <form name="newsletter-subscription" method="post" data-netlify="true" netlify-honeypot="bot-field" class="footer-subscribe-form">
-          <input type="hidden" name="form-name" value="newsletter-subscription">
-          <p class="screen-reader-text" style="display:none;">
-            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-          </p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="footer-subscribe-form" id="footer-newsletter-form">
+          <input type="hidden" name="access_key" value="75c73154-91dd-49c3-be82-11fa1945ca27">
+          <input type="hidden" name="subject" value="New newsletter subscriber from tannerbyers.com">
           <label for="newsletter-email-footer">Dev tips & AWS insights:</label>
           <div class="footer-subscribe-inputs">
             <input type="email" name="email" id="newsletter-email-footer" placeholder="your@email.com" required aria-label="Email address">
@@ -177,8 +189,8 @@
       </div>
       <div>{{ metadata.title}}</div>
       <div class="footer-social" style="margin: 0.5rem 0;">
-        <a href="{{ metadata.socialLinks.github }}" aria-label="GitHub" rel="noopener noreferrer" target="_blank" style="margin: 0 0.5rem;"><i class="fab fa-github" style="font-size: 1.4rem;"></i></a>
-        <a href="{{ metadata.socialLinks.linkedin }}" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank" style="margin: 0 0.5rem;"><i class="fab fa-linkedin" style="font-size: 1.4rem;"></i></a>
+        <a href="{{ metadata.socialLinks.github }}" aria-label="GitHub" rel="noopener noreferrer" target="_blank" style="margin: 0 0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:1.4rem;height:1.4rem;fill:currentColor;" aria-hidden="true" focusable="false"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+        <a href="{{ metadata.socialLinks.linkedin }}" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank" style="margin: 0 0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:1.4rem;height:1.4rem;fill:currentColor;" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
       </div>
       <div class="footer-text">
         © {% year %} {{ metadata.title }}, All rights reserved
@@ -302,24 +314,29 @@
         
         if (!leftContainer || !rightContainer) return;
 
-        // Random number of blobs per side (3-5)
-        const leftCount = Math.floor(Math.random() * 3) + 3;
-        const rightCount = Math.floor(Math.random() * 3) + 3;
+        // Random number of blobs per side — proportional to content height
+        const contentHeight = Math.max(
+          document.documentElement.scrollHeight,
+          window.innerHeight + 400
+        );
+        const blobDensity = Math.ceil(contentHeight / 400);
+        const leftCount = Math.min(blobDensity, 10);
+        const rightCount = Math.min(blobDensity, 10);
 
         // Create left side blobs
         for (let i = 0; i < leftCount; i++) {
-          const blob = createBlob(i, 'left');
+          const blob = createBlob(i, 'left', contentHeight);
           leftContainer.appendChild(blob);
         }
 
         // Create right side blobs
         for (let i = 0; i < rightCount; i++) {
-          const blob = createBlob(i, 'right');
+          const blob = createBlob(i, 'right', contentHeight);
           rightContainer.appendChild(blob);
         }
       }
 
-      function createBlob(index, side) {
+      function createBlob(index, side, contentHeight) {
         const blob = document.createElement('div');
         blob.className = 'floating-shape';
         
@@ -330,9 +347,8 @@
         const sizes = [240, 260, 280];
         const size = sizes[Math.floor(Math.random() * sizes.length)];
         
-        // Full page height randomization
-        const viewportHeight = window.innerHeight + 400;
-        const topPosition = Math.random() * viewportHeight - 100;
+        // Distribute blobs across full content height
+        const topPosition = Math.random() * contentHeight - 100;
         
         const leftOffset = -180 + Math.random() * 100;
         const rightOffset = -160 + Math.random() * 100;

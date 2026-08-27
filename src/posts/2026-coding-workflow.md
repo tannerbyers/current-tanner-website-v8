@@ -7,6 +7,7 @@ description: >
   look for to improve my dev experience.
 date: 2026-03-21
 tags:
+  - coding
   - development
   - ai
 lastModified: 2026-03-21

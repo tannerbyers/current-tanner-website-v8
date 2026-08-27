@@ -1,31 +1,62 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const forms = document.querySelectorAll('form[name="newsletter-subscription"]');
-  
+  const forms = document.querySelectorAll('#footer-newsletter-form, #post-newsletter-form, #newsletter-page-form');
+
   forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
       const submitButton = form.querySelector('input[type="submit"]');
       const originalValue = submitButton.value;
-      
-      // Show optimistic success state immediately
-      submitButton.value = '✓ Subscribed!';
-      submitButton.disabled = true;
-      
-      // Create or update success message
-      let successMsg = form.querySelector('.newsletter-success-message');
-      if (!successMsg) {
-        successMsg = document.createElement('p');
-        successMsg.className = 'newsletter-success-message';
-        form.parentNode.appendChild(successMsg);
+      const statusId = form.id === 'footer-newsletter-form'
+        ? 'footer-newsletter-status'
+        : form.id === 'newsletter-page-form'
+          ? 'newsletter-page-status'
+          : 'post-newsletter-status';
+
+      let statusEl = document.getElementById(statusId);
+      if (!statusEl) {
+        statusEl = document.createElement('p');
+        statusEl.id = statusId;
+        statusEl.style.cssText = 'margin-top: 0.75rem; font-size: 0.85rem; text-align: center;';
+        form.parentNode.appendChild(statusEl);
       }
-      successMsg.textContent = 'Thanks for subscribing! You\'ll hear from me soon.';
-      
-      // Netlify Forms handles the actual submission; we just need to provide UX feedback
-      // Reset after 5 seconds
-      setTimeout(() => {
+
+      submitButton.value = 'Subscribing...';
+      submitButton.disabled = true;
+      statusEl.textContent = '';
+      statusEl.style.color = '#aaa';
+
+      try {
+        const formData = new FormData(form);
+        formData.set('from_name', `Newsletter signup (${form.id})`);
+        const data = Object.fromEntries(formData.entries());
+
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          statusEl.textContent = 'Thanks! You\'re subscribed.';
+          statusEl.style.color = '#81C784';
+          form.reset();
+        } else {
+          statusEl.textContent = result.message || 'Something went wrong. Try again later.';
+          statusEl.style.color = '#ff5a5f';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Network error. Try again later.';
+        statusEl.style.color = '#ff5a5f';
+      } finally {
         submitButton.value = originalValue;
         submitButton.disabled = false;
-        successMsg.textContent = '';
-      }, 5000);
+      }
     });
   });
 });

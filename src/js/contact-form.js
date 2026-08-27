@@ -1,30 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.querySelector('form[name="contact"]');
-  
+  const contactForm = document.getElementById('contact-form');
   if (!contactForm) return;
-  
-  contactForm.addEventListener('submit', function(e) {
+
+  const statusEl = document.getElementById('contact-form-status');
+
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
     const submitButton = contactForm.querySelector('input[type="submit"]');
     const originalValue = submitButton.value;
     
-    // Show optimistic success state
-    submitButton.value = '✓ Message sent!';
+    submitButton.value = 'Sending...';
     submitButton.disabled = true;
-    
-    // Create or update success message
-    let successMsg = contactForm.querySelector('.contact-form-success');
-    if (!successMsg) {
-      successMsg = document.createElement('p');
-      successMsg.className = 'contact-form-success';
-      contactForm.parentNode.appendChild(successMsg);
-    }
-    successMsg.textContent = 'Thanks for reaching out! I\'ll get back to you soon.';
-    
-    // Reset after 5 seconds
-    setTimeout(() => {
+    statusEl.textContent = '';
+    statusEl.style.color = '#aaa';
+
+    try {
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        statusEl.textContent = 'Message sent! I\'ll get back to you within 24-48 hours.';
+        statusEl.style.color = '#81C784';
+        contactForm.reset();
+      } else {
+        statusEl.textContent = result.message || 'Something went wrong. Try emailing me directly at programtanner@gmail.com';
+        statusEl.style.color = '#ff5a5f';
+      }
+    } catch (err) {
+      statusEl.textContent = 'Network error. Try emailing me directly at programtanner@gmail.com';
+      statusEl.style.color = '#ff5a5f';
+    } finally {
       submitButton.value = originalValue;
       submitButton.disabled = false;
-      successMsg.textContent = '';
-    }, 5000);
+    }
   });
 });
